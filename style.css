@@ -10,25 +10,159 @@
 }
 
 body {
+    width: 100%;
     font-family:'NotoSansJP', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
+    color: rgb(105, 105, 105);
+}
+
+a {
+    color: rgb(55, 155, 155);
 }
 
 header {
-    margin: 0 auto;
-    padding: 1em;
+    width: 100%;
+    text-align: center;
 }
 
-main {
-    margin: 0 auto;
+#sitetitle {
+    font-size: 3em;
+    padding-top: 1em;
+}
+
+#sitetitle a, a:active, a:visited {
+    text-decoration: none;
+}
+
+#sitetitle a:hover {
+    text-decoration: underline 3px rgb(55, 155, 155);
+}
+
+@media screen and (max-width: 600px) {
+    #sitetitle {
+        font-size: 1.75em;
+    }
+}
+
+nav {
+    width: 100%;
+    height: fit-content;
+    margin-top: 1em;
+    background-color: rgb(55, 155, 155, 0.25);
+}
+
+#sitemenu {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#sitemenu li {
+    width: max-content;
+    float:left;
     padding: 1em;
+    background-color: rgb(55, 155, 155, 0.25);
+}
+
+#sitemenu li a, a:active, a:visited {
+    text-decoration: none;
+}
+
+#sitemenu li a:hover {
+    text-decoration: underline 1.5px rgb(55, 155, 155);
+}
+
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2.5em;
+}
+
+article {
+    margin: 0 auto;
+    padding: 6em;
+    background-color: rgb(55, 155, 155, 0.15);
+    min-height: 50vh;
+}
+
+#pagetitle {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    article {
+        padding: 2em;
+        min-height: 55vh;
+    }
+    
+    #pagetitle {
+        font-size: 1.5em;
+        text-align: center;
+    }
+}
+
+section {
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+#contentlist {
+    margin-top: 1em;
+}
+
+.sectiontitle {
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .sectiontitle {
+        font-size: 1.25em;
+        text-align: center;
+    }
 }
 
 footer {
-    margin: 0 auto;
     padding: 1em;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 ._uri {
+    padding-top: 1em;
+    color: rgb(0, 0, 0, 0.5);
+    font-size: 0.75em;
     font-style: italic;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+._desc {
+    color: rgb(0, 0, 0, 0.5);
+    padding-top: 1em;
+    margin-bottom: 2em;
+}
+
+._copy {
+    color: rgb(0, 0, 0, 0.5);
+    font-size: 0.75em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+@media screen and (max-width: 600px) {
+    ._desc {
+        font-size: 0.75em;
+    }
+
+    ._copy {
+        font-size: 0.65em;
+    }
 }
