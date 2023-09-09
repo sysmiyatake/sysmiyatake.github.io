@@ -5,18 +5,28 @@
 	src: url(/font/NotoSansJP-VariableFont_wght.ttf);
 }
 
-body {
-	font-family: MyFont;
-}
-
 * {
     margin: 0;
 }
 
-
-
 body {
     font-family:'NotoSansJP', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+header {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+main {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+footer {
+    margin: 0 auto;
+    padding: 1em;
 }
 
 ._uri {
