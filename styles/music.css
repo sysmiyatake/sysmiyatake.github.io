@@ -1,0 +1,241 @@
+@charset "utf-8";
+#content-list {
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.song-list {
+    padding-left: 6em;
+}
+
+#song-content {
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.song-title {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.song-title::before {
+    content: "\266b";
+}
+
+.song-part {
+    margin-left: 3em;
+    padding: 3em;
+    width: fit-content;
+    background-color: hsla(135, 35%, 75%, 0.25);
+    border: 1em  hsl(135, 35%, 75%) solid;
+}
+
+.audio_cap {
+    font-size: 0.75em;
+}
+
+.audio_cap::before {
+    content: "\266b\a0";
+}
+
+.audio_figure {
+    padding: 1em;
+}
+
+.controls {
+    width: 500px;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.25);
+    border-radius: 5px;
+    font-size: 0.75em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+#play {
+    margin-left: 1.5em;
+    padding: 0.25em;
+    width: 4em;
+    background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 90%);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7.5px;
+    float: left;
+}
+
+#stop {
+    margin-left: 1em;
+    padding: 0.25em;
+    width: 3em;
+    background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 7.5px;
+    float: left;
+}
+
+#play:hover, #stop:hover {
+    background: linear-gradient(hsla(135, 45%, 75%, 0.5), hsl(135, 45%, 75%)) no-repeat hsla(135, 100%, 96%);
+    cursor: pointer;
+}
+
+#time {
+    color: hsla(0, 0%, 0%, 0.75);
+}
+
+#current::after {
+    content: "\FF5C";
+}
+
+#seekbar {
+    width: 225px;
+    height: 15px;
+    margin: 2em;
+    border-radius: 5px;
+    background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 96%, 0.5);
+    float: left;
+    cursor: pointer;
+}
+
+
+
+#artworks-title {
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.artworks_fig {
+    margin-left: 3em;
+    padding: 3em;
+    width: fit-content;
+    background-color: hsla(135, 35%, 75%, 0.25);
+    border: 1em  hsl(135, 35%, 75%) solid;
+}
+
+.artwork_cap {
+    font-size: 0.75em;
+}
+
+/* for SP */
+@media screen and (max-width:768px) {
+    #content-list {
+        padding: 1em;
+        font-size: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .song-list {
+        padding-left: 1.5em;
+        font-size: 1em;
+    }
+
+    .song-list li {
+        font-size: 1em;
+    }
+
+    #song-content {
+        padding: 3em 1em 2em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+
+    .song-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+
+    .song-title::before {
+        content: "\266b";
+    }
+
+    .song-part {
+        margin: 0;
+        padding: 1.5em;
+        background-color: hsla(135, 35%, 75%, 0.25);
+        border: 0.5em  hsl(135, 35%, 75%) solid;
+    }
+
+    .audio_cap {
+        font-size: 0.6em;
+    }
+
+    .audio_cap::before {
+        content: "\266b\a0";
+    }
+
+    .audio_figure {
+        padding: 1em;
+    }
+
+    .controls {
+        display: table;
+        width: fit-content;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    #play {
+        margin: 1em 1em 0;
+        padding: 1.5em;
+        width: 3.5em;
+        background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 90%);
+        text-align: center;
+        cursor: pointer;
+        border-radius: 7.5px;
+    }
+
+    #stop {
+        margin: 1em 1em 0;
+        padding: 1.5em;
+        width: 3em;
+        background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
+        text-align: center;
+        cursor: pointer;
+        border-radius: 7.5px;
+    }
+
+    #play:hover, #stop:hover {
+        background: linear-gradient(hsla(135, 45%, 75%, 0.5), hsl(135, 45%, 75%)) no-repeat hsla(135, 100%, 96%);
+        cursor: pointer;
+    }
+
+    #time {
+        margin: 3.5em auto 0;
+        width: fit-content;
+        height: 2em;
+        color: hsla(0, 0%, 0%, 0.75);
+        font-size: 2em;
+    }
+
+    #current::after {
+        content: "\FF5C";
+    }
+
+    #seekbar {
+        display: none;
+    }
+
+    #artworks-title {
+        padding: 2em 1em;
+        font-size: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .artworks_fig {
+        margin-left: 3em;
+        padding: 1em;
+        width: fit-content;
+        background-color: hsla(135, 35%, 75%, 0.25);
+        border: 0.5em  hsl(135, 35%, 75%) solid;
+    }
+
+    .artwork_cap {
+        font-size: 0.75em;
+    }
+}

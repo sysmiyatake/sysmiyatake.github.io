@@ -10,8 +10,13 @@ body, header, main, footer, article, section {
     background-color: hsla(135, 35%, 75%, 0.25);
 }
 
-header, footer {
-    padding: 3em;
+header {
+    padding: 3em 2.5em 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    padding: 3em 2.5em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -21,7 +26,8 @@ header, footer {
 }
 
 .page-separate {
-    display: none;
+    padding: 0.25em;
+    background-color: hsla(135, 35%, 75%, 0.5);
 }
 
 a, a:visited, a:active {
@@ -57,37 +63,24 @@ a:hover {
 }
 
 #breadcrumb-list {
-    padding: 0.5em 3em;
-    font-size: 0.75em;
-    background-color: hsl(135, 35%, 75%);
-}
-
-#breadcrumb-list ol {
-    display: flex;
-    list-style: none;
-}
-
-#breadcrumb-list li {
-    padding-left: 1em;
-}
-
-#breadcrumb-list li+li::before {
-    content: "\203A\a0\a0";
+    display: none;
 }
 
 #fixed-menu {
-    margin: 2em;
-    top: 0;
-    right: 0;
+    width: fit-content;
+    min-width: 250px;
+    padding: 0.75em 0 0;
     display: flex;
-    position: fixed;
-    background-color: hsla(34, 78%, 91%, 0.5);
+    flex-wrap: wrap;
     border-radius: 1em;
 }
 
 #fixed-menu ul {
+    margin-top: 3em;
     display: flex;
+    justify-content: space-around;
     list-style: none;
+    position: relative;
 }
 
 .svgicon {
@@ -97,47 +90,56 @@ a:hover {
 
 .home-icon a::before {
     content: url(../media/svg-icon/home.svg);
-    padding-right: 0.5em;
+    position: absolute;
+    bottom: 2em;
 }
 
 .music-icon a::before {
     content: url(../media/svg-icon/music.svg);
-    padding-right: 0.75em;
+    position: absolute;
+    bottom: 2em;
 }
 
 .weblog-icon a::before {
     content: url(../media/svg-icon/weblog.svg);
-    padding-right: 0.25em;
+    position: absolute;
+    bottom: 2em;
 }
 
 .contact-icon a::before {
     content: url(../media/svg-icon/contact.svg);
-    padding-right: 0.75em;
+    position: absolute;
+    bottom: 2em;
 }
 
 #page-title {
     padding-left: 1em;
     padding-top: 0.5em;
     padding-bottom: 1em;
-    font-size: 2.5em;
+    font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #content-area {
-    padding: 2em;
+    padding: 1.5em;
 }
 
 #content-area p {
-    padding-left: 6em;
+    padding: 1em;
+    font-size: 0.75em;
 }
 
 #update-area {
-    padding: 2em;
+    padding-left: 1em;
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .update-box {
-    margin-left: 6em;
-    margin-bottom: 18em;
+    margin-left: 3em;
+    margin-bottom: 15em;
     padding: 1em;
     width: fit-content;
     background-color: hsla(34, 78%, 91%, 0.5);
@@ -145,6 +147,7 @@ a:hover {
 
 .update-list {
     list-style: inside;
+    font-size: 0.75em;
 }
 
 figcaption {
@@ -152,8 +155,8 @@ figcaption {
 }
 
 .address-box {
-    padding: 5em;
-    margin: 2em 6em 15em;
+    padding: 1em;
+    margin: 5em auto 15em;
     width: fit-content;
     display: block;
     font-style: italic;
