@@ -6,8 +6,12 @@
     box-sizing: inherit;
 }
 
-body, header, main, footer, article, section {
-    background-color: hsla(135, 35%, 75%, 0.25);
+body {
+    background-color: hsla(135, 15%, 35%);
+}
+
+header, main, footer, article, section {
+    background-color: hsla(135, 100%, 95%, 0.75);
 }
 
 header, footer {
@@ -16,12 +20,13 @@ header, footer {
 }
 
 .page-bar {
-    padding: 0.25em;
+    padding: .25em;
     background-color: hsla(135, 15%, 35%);
 }
 
 .page-separate {
-    display: none;
+    padding: .5em;
+    background-color: hsla(135, 35%, 75%, 0.5);
 }
 
 a, a:visited, a:active {
@@ -30,6 +35,11 @@ a, a:visited, a:active {
 
 a:hover {
     color: hsl(135, 35%, 35%);
+}
+
+.monospacing {
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #site-title {
@@ -68,7 +78,7 @@ a:hover {
 }
 
 #breadcrumb-list li {
-    padding-left: 1em;
+    padding-left: 0.75em;
 }
 
 #breadcrumb-list li+li::before {
@@ -81,6 +91,7 @@ a:hover {
     right: 0;
     display: flex;
     position: fixed;
+    z-index: 2;
     background-color: hsla(34, 78%, 91%, 0.5);
     border-radius: 1em;
 }
@@ -123,12 +134,61 @@ a:hover {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.page-headline-large {
+    padding: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-headline-small {
+    padding: 0 2em 2em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.question-n-colon {
+    margin: 0 3em;
+}
+
+.question-n-colon::before {
+    content: "Q:\a0";
+}
+
+.answer-n-colon {
+    margin: 0 1.75em 3em;
+}
+
+.answer-n-colon::before {
+    content: "A:\a0";
+    position: absolute;
+    margin-left: -1.25em;
+}
+
 #content-area {
     padding: 2em;
 }
 
 #content-area p {
     padding-left: 6em;
+}
+
+.weblog-text {
+    padding: 1em 2em;
+}
+
+.weblog-text h1 {
+    padding: 0 2em 1em;
+}
+
+.weblog-text p {
+    padding: 1em 6em;
+    line-height: 3.5em;
+    text-indent: 1em;
+}
+
+.my-sign {
+    margin-top: 3em;
+    font-style: italic;
+    text-align: right;
 }
 
 #update-area {
@@ -146,6 +206,61 @@ a:hover {
 
 .update-list {
     list-style: inside;
+}
+
+.tab-wrap {
+    margin: 1em 3.5em;
+    height: fit-content;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.tab-label {
+    margin: .5em .5em 1em;
+    padding: .75em .25em;
+    width: 100px;
+    order: -1;
+    position: relative;
+    color: White;
+    background: hsla(0, 0%, 0%, 0.35);
+    border-radius: 1em;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select:none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+.tab-label:hover {
+    color: White;
+    background: hsla(0, 0%, 0%, 0.5);
+}
+
+.tab-content {
+    margin: 0 1em 3em;
+    background: hsla(0, 0%, 100%, 0.5);
+    border-radius: 1em;
+}
+
+.tab-switch:checked+.tab-label {
+    color: hsla(0, 0%, 0%, 0.75);
+    background: hsla(0, 0%, 100%, 0.5);
+}
+
+.tab-switch:checked+.tab-label+.tab-content {
+    padding: 1em;
+    width: calc(100% - 150px);
+    height: 100%;
+    display: block;
+}
+
+.tab-switch, .tab-content {
+    display: none;
 }
 
 figcaption {
@@ -170,4 +285,12 @@ figcaption {
 .address-box::after {
     content:"\a0 miyatakehtml [at] gmail.com";
     color: hsl(0, 0%, 0%);
+}
+
+.copyright, #site-uri, .released-year {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
 }

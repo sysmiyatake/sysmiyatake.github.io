@@ -1,11 +1,28 @@
 @charset "utf-8";
-#content-list {
-    padding: 2em;
-    font-family: Arial, Helvetica, sans-serif;
+.song-list {
+    padding: 3em;
 }
 
-.song-list {
-    padding-left: 6em;
+.released-year {
+    padding: 1em 1em 0;
+    text-align: right;
+    color: hsla(0, 0%, 0%, 0.5);
+}
+
+.artist-name {
+    list-style: none;
+    list-style-position: inside;
+    font-weight: bold;
+}
+
+.artist-name:not(:first-child) {
+    margin-top: 3em;
+}
+
+.song-list-title {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-weight: normal;
 }
 
 #song-content {
@@ -22,6 +39,7 @@
 }
 
 .song-part {
+    margin-top: 3em;
     margin-left: 3em;
     padding: 3em;
     width: fit-content;
@@ -101,8 +119,6 @@
     cursor: pointer;
 }
 
-
-
 #artworks-title {
     padding: 2em;
     font-family: Arial, Helvetica, sans-serif;
@@ -122,19 +138,39 @@
 
 /* for SP */
 @media screen and (max-width:768px) {
-    #content-list {
-        padding: 1em;
-        font-size: 1em;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
     .song-list {
-        padding-left: 1.5em;
+        padding: 1em;
         font-size: 0.75em;
     }
 
     .song-list li {
         font-size: 1em;
+    }
+
+    .released-year {
+        padding: 1em 1em 0;
+        text-align: right;
+        font-size: 0.75em;
+        color: hsla(0, 0%, 0%, 0.5);
+    }
+
+    .artist-name {
+        list-style: none;
+        list-style-position: inside;
+        font-weight: bold;
+    }
+    
+    .artist-name:not(:first-child) {
+        margin-top: 3em;
+    }
+    
+    .song-list-title {
+        list-style-position: inside;
+        font-weight: normal;
+    }
+
+    .song-list-title li {
+        margin-top: 1.25em;
     }
 
     #song-content {
@@ -153,7 +189,7 @@
     }
 
     .song-part {
-        margin: 0;
+        margin: 1.5em 0 1.5em;
         padding: 1.5em;
         background-color: hsla(135, 35%, 75%, 0.25);
         border: 0.5em  hsl(135, 35%, 75%) solid;
