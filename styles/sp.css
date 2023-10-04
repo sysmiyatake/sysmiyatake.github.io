@@ -312,6 +312,15 @@ a:hover {
     display: none;
 }
 
+.enlarge-img {
+    font-size: .75em;
+    text-align: right;
+}
+
+.enlarge-img img {
+    margin-left: .5em;
+}
+
 .back-cat-index {
     padding: .5em 1.5em;
     font-size: .75em;
