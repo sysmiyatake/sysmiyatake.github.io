@@ -43,7 +43,7 @@ a:hover {
 }
 
 #site-title {
-    padding-bottom: 0.5em;
+    padding-bottom: .5em;
     font-size: 1em;
 }
 
@@ -58,7 +58,7 @@ a:hover {
 
 #site-uri, #contact-address {
     color: hsla(0, 0%, 0%, 0.75);
-    font-size: 0.75em;
+    font-size: .75em;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -67,8 +67,8 @@ a:hover {
 }
 
 #breadcrumb-list {
-    padding: 0.5em 3em;
-    font-size: 0.75em;
+    padding: .5em 3em;
+    font-size: .75em;
     background-color: hsl(135, 35%, 75%);
 }
 
@@ -78,7 +78,7 @@ a:hover {
 }
 
 #breadcrumb-list li {
-    padding-left: 0.75em;
+    padding-left: .75em;
 }
 
 #breadcrumb-list li+li::before {
@@ -103,32 +103,32 @@ a:hover {
 
 .svgicon {
     padding: 1em;
-    font-size: 0.75em;
+    font-size: .75em;
 }
 
 .home-icon a::before {
     content: url(../media/svg-icon/home.svg);
-    padding-right: 0.5em;
+    padding-right: .5em;
 }
 
 .music-icon a::before {
     content: url(../media/svg-icon/music.svg);
-    padding-right: 0.75em;
+    padding-right: .75em;
 }
 
 .weblog-icon a::before {
     content: url(../media/svg-icon/weblog.svg);
-    padding-right: 0.25em;
+    padding-right: .25em;
 }
 
 .contact-icon a::before {
     content: url(../media/svg-icon/contact.svg);
-    padding-right: 0.75em;
+    padding-right: .75em;
 }
 
 #page-title {
     padding-left: 1em;
-    padding-top: 0.5em;
+    padding-top: .5em;
     padding-bottom: 1em;
     font-size: 2.5em;
     font-family: Arial, Helvetica, sans-serif;
@@ -191,21 +191,38 @@ a:hover {
     text-align: right;
 }
 
+
 #update-area {
-    padding: 2em;
+    padding-left: 1em;
+    padding-top: 3em;
+    padding-bottom: 1.5em;
 }
 
 .update-box {
-    margin-left: 6em;
-    margin-bottom: 18em;
-    padding: 1em;
+    margin: 0 1.5em 5em;
     width: fit-content;
     background-color: hsla(34, 78%, 91%, 0.5);
-    font-family: monospace;
 }
 
-.update-list {
-    list-style: inside;
+.update-table {
+    padding: .5em;
+    border: .25em hsla(0, 0%, 0%, 0.25) solid;
+}
+
+.update-table td {
+    vertical-align: text-top;
+}
+
+.update-date {
+    width: 7.75em;
+    padding: .5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.update-content {
+    padding: 0 1em;
+    border-left: .25em hsla(0, 0%, 0%, 0.25) dotted;
+    font-family: sans-serif;
 }
 
 .tab-wrap {
@@ -219,7 +236,7 @@ a:hover {
 
 .tab-label {
     margin: .5em .5em 1em;
-    padding: .75em .25em;
+    padding: 1em .5em;
     width: 100px;
     order: -1;
     position: relative;
@@ -228,12 +245,14 @@ a:hover {
     border-radius: 1em;
     white-space: nowrap;
     text-align: center;
+    font-size: .75em;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
     -moz-user-select:none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
+    transition: 128ms;
 }
 
 .tab-label:hover {
@@ -261,6 +280,26 @@ a:hover {
 
 .tab-switch, .tab-content {
     display: none;
+}
+
+.enlarge-img {
+    font-size: .75em;
+    text-align: right;
+}
+
+.enlarge-img img {
+    margin-left: .5em;
+}
+
+.back-cat-index {
+    padding: .5em 3em;
+    font-size: .75em;
+    background-color: hsl(135, 35%, 75%);
+}
+
+.back-cat-index>p::before {
+    padding-right: .5em;
+    content: "\226A";
 }
 
 figcaption {

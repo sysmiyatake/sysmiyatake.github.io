@@ -60,7 +60,7 @@
 }
 
 .controls {
-    width: 500px;
+    width: min-content;
     margin: 0 auto;
     padding: 1em;
     display: flex;
@@ -102,6 +102,7 @@
 }
 
 #time {
+    width: 100px;
     color: hsla(0, 0%, 0%, 0.75);
 }
 
@@ -210,6 +211,7 @@
     .controls {
         display: table;
         width: fit-content;
+        font-size: 1.25em;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
@@ -217,9 +219,9 @@
     }
 
     #play {
-        margin: 1em 1em 0;
-        padding: 1.5em;
-        width: 3.5em;
+        margin: 1em .25em;
+        padding: .5em;
+        width: 3.25em;
         background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 90%);
         text-align: center;
         cursor: pointer;
@@ -227,8 +229,8 @@
     }
 
     #stop {
-        margin: 1em 1em 0;
-        padding: 1.5em;
+        margin: 1em .25em;
+        padding: .5em;
         width: 3em;
         background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
         text-align: center;
@@ -242,11 +244,10 @@
     }
 
     #time {
-        margin: 3.5em auto 0;
+        margin: 3.5em auto 1em;
         width: fit-content;
         height: 2em;
         color: hsla(0, 0%, 0%, 0.75);
-        font-size: 2em;
     }
 
     #current::after {

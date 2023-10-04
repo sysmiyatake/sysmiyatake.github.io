@@ -227,21 +227,36 @@ a:hover {
     padding-top: 3em;
     padding-bottom: 1.5em;
     font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .update-box {
-    margin-left: 3em;
-    margin-bottom: 15em;
-    padding: 1em;
+    margin: 0 .25em 5em;
     width: fit-content;
     background-color: hsla(34, 78%, 91%, 0.5);
-    font-family: monospace;
+    font-size: .75em;
 }
 
-.update-list {
-    list-style: inside;
-    font-size: 0.75em;
+.update-table {
+    padding: .5em;
+    border: .25em hsla(0, 0%, 0%, 0.25) solid;
+    table-layout: fixed;
+    width: fit-content;
+}
+
+.update-table td {
+    padding: .5em;
+    vertical-align: top;
+}
+
+.update-date {
+    width: 3.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.update-content {
+    border-left: .25em hsla(0, 0%, 0%, 0.25) dotted;
+    padding-left: 1em!important;
+    font-family: sans-serif;
 }
 
 .tab-wrap {
@@ -295,6 +310,17 @@ a:hover {
 
 .tab-switch, .tab-content {
     display: none;
+}
+
+.back-cat-index {
+    padding: .5em 1.5em;
+    font-size: .75em;
+    background-color: hsl(135, 35%, 75%);
+}
+
+.back-cat-index>p::before {
+    padding-right: .5em;
+    content: "\226A";
 }
 
 figcaption {
