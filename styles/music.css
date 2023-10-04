@@ -265,7 +265,7 @@
     }
 
     .artworks_fig {
-        margin-left: 3em;
+        margin-left: 0;
         padding: 1em;
         width: fit-content;
         background-color: hsla(135, 35%, 75%, 0.25);
