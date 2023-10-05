@@ -55,7 +55,19 @@ a:hover {
   font-family: 'Courier New', Courier, monospace;
 }
 
+#site-header {
+  position: relative;
+  margin-left: 84px;
+}
+
+#site-header::before {
+  content: url(../media/svg-icon/logo.svg);
+  position: absolute;
+  margin-left: -84px;
+}
+
 #site-title {
+  padding-top: 4px;
   padding-bottom: .5em;
   font-size: 1em;
 }
@@ -93,6 +105,14 @@ a:hover {
 
 #breadcrumb-list li {
   padding-left: .75em;
+}
+
+#breadcrumb-list li.first-bc {
+  font-weight: bold;
+}
+
+#breadcrumb-list li.second-bc {
+  font-weight: bold;
 }
 
 #breadcrumb-list li+li::before {
