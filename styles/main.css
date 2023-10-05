@@ -50,6 +50,14 @@ a:hover {
   font-weight: bold;
 }
 
+.solid-under-line {
+  text-decoration: underline solid 2px hsl(135, 35%, 35%);
+}
+
+.dotted-under-line {
+  text-decoration: underline dotted 3px hsla(135, 35%, 35%);
+}
+
 .monospacing {
   padding: 0;
   font-family: 'Courier New', Courier, monospace;

@@ -50,6 +50,18 @@ a:hover {
   color: hsl(135, 35%, 35%);
 }
 
+.bold-font {
+  font-weight: bold;
+}
+
+.solid-under-line {
+  text-decoration: underline solid 1px hsl(135, 35%, 35%);
+}
+
+.dotted-under-line {
+  text-decoration: underline dotted 1.5px hsl(135, 35%, 35%);
+}
+
 .monospacing,
 .monospacing p {
   padding: 0 1em !important;
