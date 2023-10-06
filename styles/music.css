@@ -139,6 +139,12 @@
   font-size: 0.75em;
 }
 
+.img-classics img {
+  margin-top: 3em;
+  margin-right: 1em;
+  max-width: 150px;
+}
+
 /* for SP */
 @media screen and (max-width:768px) {
   .song-list {
@@ -277,5 +283,10 @@
 
   .artwork_cap {
     font-size: 0.75em;
+  }
+
+  .img-classics img {
+    margin-left: 0!important;
+    max-width: 150px;
   }
 }
