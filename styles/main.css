@@ -134,7 +134,7 @@ a:hover {
   display: flex;
   position: fixed;
   z-index: 2;
-  background-color: hsla(34, 78%, 91%, 0.5);
+  background-color: hsla(34, 78%, 91%, 0.85);
   border-radius: 1em;
 }
 
