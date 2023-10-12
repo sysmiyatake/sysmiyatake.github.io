@@ -245,16 +245,17 @@ a:hover {
 }
 
 .weblog-text {
-  padding: 0 1em 8.5em;
+  padding: 0 0 3.5em;
+  background-color: hsl(135, 15%, 80%);
 }
 
 .weblog-text h1 {
-  padding: 0 .5em 1em;
+  padding: 1.5em 1em 1em;
   font-size: 1.5em;
 }
 
 .weblog-text p {
-  padding: .5em 1em;
+  padding: .5em 1.75em;
   font-size: 1em;
   line-height: 1.5em;
   text-indent: 1em;
@@ -405,15 +406,26 @@ a:hover {
   margin-left: 5px;
 }
 
-.back-cat-index {
-  padding: .5em 1.5em;
+.back-index {
+  padding: 1.5em 1.5em;
   font-size: .75em;
   background-color: hsl(135, 35%, 75%);
 }
 
-.back-cat-index>p::before {
+.back-root-index::before {
+  width: .5em;
+  display: block;
+  float: left;
   padding-right: .5em;
   content: "\226A";
+}
+
+.back-cat-index::before {
+  width: .5em;
+  display: block;
+  float: left;
+  padding-right: .5em;
+  content: "\3c";
 }
 
 figcaption {
