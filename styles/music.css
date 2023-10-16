@@ -72,6 +72,14 @@
   padding: 1em;
 }
 
+.video_figure {
+  padding: 1em;
+}
+
+.video_figure video {
+  height: 270px;
+}
+
 .controls {
   width: min-content;
   margin: 0 auto;
@@ -238,6 +246,16 @@
 
   .audio_figure {
     padding: 1em;
+  }
+
+  .video_figure {
+  padding: .75em .25em;
+  }
+
+  .video_figure video {
+    width: 58vw;
+    height: auto;
+    min-width: 230px;
   }
 
   .controls {
