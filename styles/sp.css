@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: "Noto Sans JP";
+  src:
+    url("../fonts/NotoSansJP-VariableFont_wght.ttf") format("woff");
+}
+
 *,
 *::before,
 *::after {
@@ -8,13 +14,20 @@
   box-sizing: inherit;
 }
 
-body,
+html[lang="ja"] {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+body {
+  background-color: hsla(135, 15%, 35%);
+}
+
 header,
 main,
 footer,
 article,
 section {
-  background-color: hsla(135, 35%, 75%, 0.25);
+  background-color: hsla(135, 100%, 95%, 0.75);
   min-width: 250px;
 }
 
@@ -24,7 +37,7 @@ header {
 }
 
 footer {
-  padding: 1em 1.5em;
+  padding: 1.5em;
   color: hsla(0, 0%, 0%, 0.75);
   font-size: 0.75em;
   font-family: 'Courier New', Courier, monospace;
@@ -40,6 +53,11 @@ footer {
   background-color: hsla(135, 35%, 75%, 0.5);
 }
 
+.open-in-new-tab::after {
+  content: url(../media/svg-icon/open-in-new-tab.svg);
+  margin-left: 3px;
+}
+
 a,
 a:visited,
 a:active {
@@ -52,6 +70,11 @@ a:hover {
 
 .bold-font {
   font-weight: bold;
+}
+
+.spacing-font {
+  padding: 0 .25em;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .solid-under-line {
@@ -71,19 +94,19 @@ a:hover {
 
 #site-header {
   position: relative;
-  margin-left: 64px;
+  margin-left: 68px;
 }
 
 #site-header::before {
   content: url(../media/svg-icon/logo_sp.svg);
   position: absolute;
-  margin-left: -68px;
+  margin-left: -64px;
   margin-top: 4px;
 }
 
 #site-title {
-  padding-bottom: .5em;
-  font-size: 1em;
+  padding: .5em 0 .25em;
+  font-size: .75em;
 }
 
 #site-title a {
@@ -98,7 +121,7 @@ a:hover {
 #site-uri,
 #contact-address {
   color: hsla(0, 0%, 0%, 0.75);
-  font-size: .75em;
+  font-size: .65em;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -129,11 +152,11 @@ a:hover {
 
 #breadcrumb-list li.first-bc::before {
   content: "\2514\a0";
+  font-family:'Times New Roman', Times, serif;
 }
 
 #breadcrumb-list li.second-bc {
-  padding-left: 1.5em;
-  font-weight: bold;
+  padding: 0 2.5em;
 }
 
 #breadcrumb-list li.second-bc+li.second-bc::before {
@@ -163,31 +186,31 @@ a:hover {
 }
 
 .home-icon a::before {
-  content: url(../media/svg-icon/home.svg);
+  content: url(../media/svg-icon/home_sp.svg);
   position: absolute;
   bottom: 2em;
 }
 
 .music-icon a::before {
-  content: url(../media/svg-icon/music.svg);
+  content: url(../media/svg-icon/music_sp.svg);
   position: absolute;
   bottom: 2em;
 }
 
 .picture-icon a::before {
-  content: url(../media/svg-icon/picture.svg);
+  content: url(../media/svg-icon/picture_sp.svg);
   position: absolute;
   bottom: 2em;
 }
 
 .weblog-icon a::before {
-  content: url(../media/svg-icon/weblog.svg);
+  content: url(../media/svg-icon/weblog_sp.svg);
   position: absolute;
   bottom: 2em;
 }
 
 .contact-icon a::before {
-  content: url(../media/svg-icon/contact.svg);
+  content: url(../media/svg-icon/contact_sp.svg);
   position: absolute;
   bottom: 2em;
 }
@@ -197,23 +220,20 @@ a:hover {
   padding-top: .5em;
   padding-bottom: 1em;
   font-size: 1.5em;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-#content-list {
+#content-list, #content-list-ii, #content-list-iii {
   margin-bottom: -1em;
 }
 
 .page-headline-large {
-  padding: 2em 1em 2em;
-  font-family: Arial, Helvetica, sans-serif;
+  padding: 1.5em 1em;
   font-size: 1em;
 }
 
 .page-headline-small {
   padding: 0 1em 1em;
   font-size: 1em;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .question-n-colon {
@@ -269,7 +289,7 @@ a:hover {
 }
 
 .column-flex {
-  margin: 1em .5em 5em;
+  margin: 1em .5em 1.5em;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -277,7 +297,7 @@ a:hover {
 }
 
 .column-area {
-  padding-left:.5em;
+  padding-left: .5em;
   padding-top: 2em;
   padding-bottom: 1em;
   font-size: 1em;
@@ -294,6 +314,7 @@ a:hover {
   background-color: hsla(34, 78%, 91%, 0.5);
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 1em;
 }
 
 .two-box {
@@ -302,6 +323,7 @@ a:hover {
   background-color: hsla(34, 78%, 91%, 0.5);
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 1em;
 }
 
 .three-box {
@@ -310,25 +332,69 @@ a:hover {
   background-color: hsla(34, 78%, 91%, 0.5);
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 1em;
+}
+
+.update-area {
+  padding-left: .5em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .update-box {
   margin: 0 .25em;
-  width: fit-content;
+  width: 100px;
+  min-width: max-content;
+  height: fit-content;
   background-color: hsla(34, 78%, 91%, 0.5);
   font-size: .75em;
-  border: 3px hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 1em 0 0 1em;
+}
+
+.ud-table-wrapper {
+  padding: 1em;
+  max-height: 30em;
+  border: .25em hsla(0, 0%, 0%, 0.25) solid;
+  overflow-y: scroll;
+  scrollbar-color: hsla(0, 0%, 0%, 0.25) hsla(0, 0%, 0%, 0);
+  border-radius: 1em 0 0 1em;
+}
+
+.ud-table-wrapper::-webkit-scrollbar {
+  width: 8px;
+  background: hsla(0, 0%, 0%, 0);
+}
+
+.ud-table-wrapper::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 0%, 0.25);
+}
+
+.ud-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(0, 0%, 0%, 0.35);
 }
 
 .update-table {
   padding: .5em;
   table-layout: fixed;
-  width: fit-content;
+  width: 68vw;
+  min-width: 250px;
 }
 
 .update-table td {
   padding: .5em;
   vertical-align: top;
+}
+
+.update-year {
+  margin: .5em 0;
+  border-top: .25em hsla(0, 0%, 0%, 0.25) dotted;
+  border-bottom: .25em hsla(0, 0%, 0%, 0.25) dotted;
+  text-indent: .75em;
+  font-size: 1em!important;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 .update-date {
@@ -412,20 +478,22 @@ a:hover {
   background-color: hsl(135, 35%, 75%);
 }
 
-.back-root-index::before {
-  width: .5em;
+.back-cat-index::before {
+  width: 1.5em;
   display: block;
   float: left;
-  padding-right: .5em;
-  content: "\226A";
+  padding-right: .25em;
+  text-align: right;
+  content: "\3c";
 }
 
-.back-cat-index::before {
-  width: .5em;
+.back-root-index::before {
+  width: 1.5em;
   display: block;
   float: left;
-  padding-right: .5em;
-  content: "\3c";
+  padding-right: .25em;
+  text-align: right;
+  content: "\3c\3c";
 }
 
 figcaption {
@@ -454,7 +522,8 @@ figcaption {
 
 .copyright,
 #site-uri,
-.released-year {
+.released-year,
+.song-type {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
