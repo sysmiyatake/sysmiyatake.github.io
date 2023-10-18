@@ -330,6 +330,7 @@ a:hover {
 .ud-table-wrapper {
   padding: 1em;
   max-height: 30em;
+  max-width: 75vw;
   border: .25em hsla(0, 0%, 0%, 0.25) solid;
   overflow-y: scroll;
   scrollbar-color: hsla(0, 0%, 0%, 0.25) hsla(0, 0%, 0%, 0);
@@ -475,6 +476,12 @@ a:hover {
 
 figcaption {
   padding: 1em;
+}
+
+.site-logo-img img {
+  width: 100%;
+  max-width: fit-content;
+  padding-bottom: 16em;
 }
 
 .address-box {
