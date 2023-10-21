@@ -241,6 +241,14 @@ a:hover {
   padding: 0 6em 1em;
 }
 
+.weblog-article-list p::before {
+  content: "\30FB";
+}
+
+.weblog-article-list span::before {
+  content: "\a0\a0-\a0\a0";
+}
+
 .weblog-text {
   padding: 2em 2em 3em;
   background-color: hsla(0, 0%, 100%, 0.5);
@@ -449,6 +457,16 @@ a:hover {
   margin-left: 5px;
 }
 
+.back-top {
+  height: fit-content;
+  margin: 0 3em;
+  padding: 1.5em 3em;
+  font-size: .75em;
+  background-color: hsla(0, 0%, 100%, 0.75);
+  display: flex;
+  flex-direction: column;
+}
+
 .back-index {
   height: fit-content;
   padding: 1.5em 3em;
@@ -458,7 +476,7 @@ a:hover {
   flex-direction: column;
 }
 
-.back-cat-index::before {
+.back-cat-index a::before {
   width: 1.5em;
   float: left;
   padding-right: .25em;
@@ -466,12 +484,20 @@ a:hover {
   content: "\3c";
 }
 
-.back-root-index::before {
+.back-root-index a::before {
   width: 1.5em;
   float: left;
   padding-right: .25em;
   text-align: right;
   content: "\3c\3c";
+}
+
+.back-page-top a::before {
+  width: 1.5em;
+  float: left;
+  padding-right: .25em;
+  text-align: right;
+  content: "\2191";
 }
 
 figcaption {

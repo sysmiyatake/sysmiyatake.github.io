@@ -85,9 +85,14 @@ a:hover {
   text-decoration: underline dotted 1.5px hsl(135, 35%, 35%);
 }
 
-.monospacing,
+.monospacing {
+  padding: 0 1em 1em!important;
+  font-size: .8em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .monospacing p {
-  padding: 0 1em !important;
+  padding: 0 1em !important;;
   font-size: .8em;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -262,6 +267,15 @@ a:hover {
 #content-area p {
   padding: 1em;
   font-size: 0.75em;
+}
+
+
+.weblog-article-list p::before {
+  content: "\30FB";
+}
+
+.weblog-article-list span {
+  display: none;
 }
 
 .weblog-text {
@@ -472,13 +486,19 @@ a:hover {
   margin-left: 5px;
 }
 
+.back-top {
+  padding: .75em 1.5em;
+  font-size: .75em;
+  background-color: hsla(0, 0%, 100%, 0.25);
+}
+
 .back-index {
   padding: 1.5em 1.5em;
   font-size: .75em;
   background-color: hsl(135, 35%, 75%);
 }
 
-.back-cat-index::before {
+.back-cat-index a::before {
   width: 1.5em;
   display: block;
   float: left;
@@ -487,13 +507,21 @@ a:hover {
   content: "\3c";
 }
 
-.back-root-index::before {
+.back-root-index a::before {
   width: 1.5em;
   display: block;
   float: left;
   padding-right: .25em;
   text-align: right;
   content: "\3c\3c";
+}
+
+.back-page-top a::before {
+  width: 1.5em;
+  float: left;
+  padding-right: .25em;
+  text-align: right;
+  content: "\2191";
 }
 
 figcaption {

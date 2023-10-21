@@ -65,6 +65,13 @@
   border-radius: 1em;
 }
 
+.related-content-list {
+  margin: 0 6em 6em;
+  list-style-type: disc;
+  list-style-position: inside;
+  font-weight: normal;
+}
+
 .audio_cap {
   font-size: 0.75em;
 }
@@ -77,11 +84,20 @@
   padding: 1em;
 }
 
+.video_cap {
+  font-size: 0.75em;
+}
+
+.video_cap::before {
+  content: "\25B6\FE0E\a0\a0";
+}
+
 .video_figure {
   padding: 1em;
 }
 
 .video_figure video {
+  margin-top: 1em;
   height: 270px;
 }
 
@@ -153,12 +169,31 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#lyrics-title {
+  padding: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lyrics_fig {
+  margin-left: 3em;
+  padding: 3em;
+  width: fit-content;
+  background-color: hsla(135, 35%, 75%, 0.25);
+  border: 1em hsl(135, 35%, 75%) solid;
+  border-radius: 1em;
+}
+
+.lyrics_fig  figure:hover {
+  opacity: .75;
+}
+
 .artworks_fig {
   margin-left: 3em;
   padding: 3em;
   width: fit-content;
   background-color: hsla(135, 35%, 75%, 0.25);
   border: 1em hsl(135, 35%, 75%) solid;
+  border-radius: 1em;
 }
 
 .artwork_cap {
@@ -250,6 +285,13 @@
     border-radius: 1em;
   }
 
+  .related-content-list {
+    margin: 0 3em 2em;
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: .85em;
+  }
+
   .audio_cap {
     font-size: 0.6em;
   }
@@ -259,11 +301,19 @@
   }
 
   .audio_figure {
-    padding: 1em;
+    padding: 1em 1em 0;
+  }
+
+  .video_cap {
+    font-size: 0.6em;
+  }
+
+  .video_cap::before {
+    content: "\25B6\FE0E\a0\a0";
   }
 
   .video_figure {
-  padding: .75em .25em;
+    padding: 1em .25em;
   }
 
   .video_figure video {
@@ -273,7 +323,8 @@
   }
 
   .controls {
-    display: table;
+    margin-top: 1em;
+    display: inline-block;
     width: fit-content;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25em;
@@ -331,12 +382,32 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  #lyrics-title {
+    padding: 2em 1em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .lyrics_fig {
+    margin-left: 0;
+    padding: 1em;
+    width: fit-content;
+    background-color: hsla(135, 35%, 75%, 0.25);
+    border: 0.5em hsl(135, 35%, 75%) solid;
+    border-radius: 1em;
+  }
+
+  .lyrics_fig figure:hover {
+    opacity: .75;
+  }
+
   .artworks_fig {
     margin-left: 0;
     padding: 1em;
     width: fit-content;
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
+    border-radius: 1em;
   }
 
   .artwork_cap {
