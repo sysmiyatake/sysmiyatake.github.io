@@ -59,6 +59,28 @@ a:active {
 
 a:hover {
   color: hsl(135, 35%, 35%);
+  transition: 16ms;
+}
+
+summary {
+  margin: 1.5em 5.25em;
+  width: fit-content;
+  color: hsl(135, 35%, 25%);
+  font-weight: bold;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+summary span {
+  text-decoration: underline solid 2px hsl(135, 35%, 35%);
+}
+
+summary:hover {
+  color: hsl(135, 35%, 35%);
+  cursor: pointer;
+  transition: 16ms;
 }
 
 .bold-font {
@@ -198,6 +220,23 @@ a:hover {
   content: url(../media/svg-icon/contact.svg);
   padding-right: .75em;
 }
+
+/* index.html only */
+.music-top-icon a::before {
+  content: url(../media/svg-icon/music.svg);
+  padding-right: .5em;
+}
+
+.picture-top-icon a::before {
+  content: url(../media/svg-icon/picture.svg);
+  padding-right: .5em;
+}
+
+.weblog-top-icon a::before {
+  content: url(../media/svg-icon/weblog.svg);
+  padding-right: .25em;
+}
+/* fin -- index.html only */
 
 #page-title {
   padding-left: 1em;
