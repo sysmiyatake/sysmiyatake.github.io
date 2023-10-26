@@ -318,7 +318,7 @@ summary:hover {
 
 .weblog-text {
   padding: 0 0 3.5em;
-  background-color: hsl(135, 15%, 80%);
+  background-color:  hsla(33, 78%, 91%, 0.85);
 }
 
 .weblog-text h1 {
