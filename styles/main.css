@@ -290,17 +290,15 @@ summary:hover {
 
 .weblog-text {
   padding: 2em 2em 3em;
-  background-color: hsla(0, 0%, 100%, 0.5);
+  background-color:  hsla(33, 78%, 91%, 0.85);
 }
 
 .weblog-text h1 {
   padding: 2em 2em 1em;
-  background-color: hsla(0, 0%, 100%, 0.5);
 }
 
 .weblog-text p {
   padding: 1em 6em;
-  background-color: hsla(0, 0%, 100%, 0.5);
   line-height: 3.5em;
   text-indent: 1em;
 }
