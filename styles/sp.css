@@ -32,7 +32,7 @@ section {
 }
 
 header {
-  padding: 3em 2.5em 1.5em;
+  padding: 3em 2.5em 3em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -190,55 +190,79 @@ summary:hover {
 }
 
 #fixed-menu {
-  width: fit-content;
-  min-width: 250px;
-  padding: 0.75em 0 0;
+  margin: 5.5em 1em;
+  padding: .5em;
+  bottom: 0;
+  right: 0;
   display: flex;
-  flex-wrap: wrap;
+  position: fixed;
+  z-index: 2;
+  background-color: hsla(34, 78%, 91%, 0.75);
+  border: .25em hsla(0, 0%, 0%, 0.25) solid; 
+  border-radius: 1em;
+}
+
+.fixed-menu-toggle {
+  margin: 1.5em 1em;
+  padding: .5em;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 2;
+  background-color: hsla(34, 78%, 91%, 0.75);
+  border: .25em hsla(0, 0%, 0%, 0.25) solid; 
   border-radius: 1em;
 }
 
 #fixed-menu ul {
-  margin-top: 3em;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   list-style: none;
-  position: relative;
 }
 
 .svgicon {
-  padding: 1em;
-  font-size: 0.75em;
+  padding: .75em .5em;
+  font-size: .75em;
 }
 
 .home-icon a::before {
-  content: url(../media/svg-icon/home_sp.svg);
-  position: absolute;
-  bottom: 2em;
+  content: url(../media/svg-icon/home.svg);
+  padding-right: .5em;
 }
 
 .music-icon a::before {
-  content: url(../media/svg-icon/music_sp.svg);
-  position: absolute;
-  bottom: 2em;
+  content: url(../media/svg-icon/music.svg);
+  padding-right: .5em;
 }
 
 .picture-icon a::before {
-  content: url(../media/svg-icon/picture_sp.svg);
-  position: absolute;
-  bottom: 2em;
+  content: url(../media/svg-icon/picture.svg);
+  padding-right: .5em;
 }
 
 .weblog-icon a::before {
-  content: url(../media/svg-icon/weblog_sp.svg);
-  position: absolute;
-  bottom: 2em;
+  content: url(../media/svg-icon/weblog.svg);
+  padding-right: .5em;
+}
+
+.document-icon a::before {
+  content: url(../media/svg-icon/document.svg);
+  padding-right: .5em;
+}
+
+.others-icon a::before {
+  content: url(../media/svg-icon/others.svg);
+  padding-right: .5em;
+}
+
+.information-icon a::before {
+  content: url(../media/svg-icon/information.svg);
+  padding-right: .5em;
 }
 
 .contact-icon a::before {
-  content: url(../media/svg-icon/contact_sp.svg);
-  position: absolute;
-  bottom: 2em;
+  content: url(../media/svg-icon/contact.svg);
+  padding-right: .5em;
 }
 
 /* index.html only */
