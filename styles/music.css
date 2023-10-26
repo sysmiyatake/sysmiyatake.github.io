@@ -55,10 +55,8 @@
 }
 
 .song-part {
-  margin-top: 3em;
-  margin-left: 3em;
+  margin: 3em;
   padding: 3em;
-  margin-bottom: 3em;
   width: fit-content;
   background-color: hsla(135, 35%, 75%, 0.25);
   border: 1em hsl(135, 35%, 75%) solid;
@@ -101,9 +99,33 @@
   height: 270px;
 }
 
+.drive-video {
+  padding: 0!important;
+  margin: 1em;
+  width: 95%;
+  height: 95%;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.iframe-vid {
+  margin-top: 1.5em;
+  padding-left: 1em!important;
+  padding-right: 1em!important;
+  font-size: .75em;
+}
+
+.video-title {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.video-title::before {
+  content: "\25B6\FE0E";
+}
+
 .controls {
-  width: min-content;
-  margin: 0 auto;
+  width: fit-content;
+  margin: 1em 1em 3.5em;
   padding: 1em;
   display: flex;
   align-items: center;
@@ -159,7 +181,7 @@
 }
 
 #seekbar {
-  width: 225px;
+  width: 256px;
   height: 15px;
   margin: 2em;
   border-radius: 5px;
@@ -330,12 +352,27 @@
     min-width: 230px;
   }
 
+  .drive-video {
+    padding: 0!important;
+    margin: 1em 1em 0;
+    width: 88%;
+    height: 88%;
+    aspect-ratio: 16 / 9;
+    border: none;
+  }
+
+  .iframe-vid {
+    margin-top: .5em!important;
+    padding-left: .5em!important;
+    padding-right: .5em!important;
+    font-size: .33em;
+  }
+
   .controls {
-    margin-top: 1em;
+    margin: 1em 1em 3em;
     display: inline-block;
     width: fit-content;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.25em;
     border-radius: 1em;
     user-select: none;
     -moz-user-select: none;
@@ -348,21 +385,23 @@
   }
 
   #play {
-    margin: 1em .25em;
+    margin: 1.75em .5em;
     padding: .5em;
-    width: 3.25em;
+    width: 4.15em;
     background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 90%);
     text-align: center;
+    font-size: 1.25em;
     cursor: pointer;
     border-radius: 7.5px;
   }
 
   #stop {
-    margin: 1em .25em;
+    margin: 1.75em .5em;
     padding: .5em;
-    width: 3em;
+    width: 4.15em;
     background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
     text-align: center;
+    font-size: 1.25em;
     cursor: pointer;
     border-radius: 7.5px;
   }
@@ -374,9 +413,10 @@
   }
 
   #time {
-    margin: 3.5em auto 1em;
+    margin: 4.15em auto 1em;
     width: fit-content;
     height: 2em;
+    font-size: 1.5em;
     color: hsla(0, 0%, 0%, 0.75);
   }
 
