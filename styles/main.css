@@ -25,9 +25,12 @@ body {
 header,
 main,
 footer,
-article,
-section {
+article {
   background-color: hsla(135, 100%, 95%, 0.75);
+}
+
+section {
+  background-color: hsla(135, 100%, 98%, 0.75);
 }
 
 header,
@@ -62,8 +65,16 @@ a:hover {
   transition: 16ms;
 }
 
+hr {
+  margin: 1em;
+  height: 3px;
+  border-style: none;
+  border-radius: 1.5px;
+  background-color: hsla(135, 35%, 35%, 0.25);
+}
+
 summary {
-  margin: 1.5em 5.25em;
+  margin: 1.5em 5.25em 3em;
   width: fit-content;
   color: hsl(135, 35%, 25%);
   font-weight: bold;
@@ -269,13 +280,36 @@ summary:hover {
   padding: 2em;
 }
 
-.page-headline-small {
-  padding: 0 2em 2em;
+.page-headline-middle {
+  padding: 1em 8em;
   font-size: 1em;
 }
 
+.page-headline-small {
+  padding: 0 6em 2em;
+  font-size: 1em;
+}
+
+.document-date {
+  text-align: right;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+
+.item-headline {
+  padding: 1.5em 3.5em;
+}
+
+.innner-list {
+  margin: 0 8em 1.5em;
+}
+
+.innner-list_second {
+  margin: 1.5em 1.5em;
+}
+
 .question-n-colon {
-  margin: 0 3em;
+  margin: 0!important;
 }
 
 .question-n-colon::before {

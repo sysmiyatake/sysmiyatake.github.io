@@ -25,10 +25,12 @@ body {
 header,
 main,
 footer,
-article,
-section {
+article {
   background-color: hsla(135, 100%, 95%, 0.75);
-  min-width: 250px;
+}
+
+section {
+  background-color: hsla(135, 100%, 98%, 0.75);
 }
 
 header {
@@ -68,7 +70,16 @@ a:hover {
   color: hsl(135, 35%, 35%);
 }
 
+hr {
+  margin: 1em;
+  height: 3px;
+  border-style: none;
+  border-radius: 1.5px;
+  background-color: hsla(135, 35%, 35%, 0.25);
+}
+
 summary {
+  margin: 1em;
   width: fit-content;
   color: hsl(135, 35%, 25%);
   font-size: .75em;
@@ -298,13 +309,38 @@ summary:hover {
   font-size: 1em;
 }
 
+.page-headline-middle {
+  padding: 1em 2em;
+  font-size: 1em;
+}
+
 .page-headline-small {
-  padding: 0 1em 1em;
+  padding: 0 2em 1em;
+  font-size: 1em;
+}
+
+.document-date {
+  margin: .5em 0 1.5em;
+  text-align: right;
+}
+
+.item-headline {
+  padding: .5em;
+  font-size: 1em;
+}
+
+.innner-list {
+  margin: .5em 2em;
+  font-size: .75em;
+}
+
+.innner-list_second {
+  margin: .5em 2em;
   font-size: 1em;
 }
 
 .question-n-colon {
-  margin: 0.5em 0.5em 0;
+  margin: 0.5em 0 0;
   font-weight: normal;
 }
 
@@ -330,7 +366,6 @@ summary:hover {
   padding: 1em;
   font-size: 0.75em;
 }
-
 
 .weblog-article-list p::before {
   content: "\30FB";
