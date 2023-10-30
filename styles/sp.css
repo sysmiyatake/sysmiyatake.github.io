@@ -339,6 +339,10 @@ summary:hover {
   font-size: 1em;
 }
 
+.innner-list a {
+  word-break: break-all;
+}
+
 .question-n-colon {
   margin: 0.5em 0 0;
   font-weight: normal;
