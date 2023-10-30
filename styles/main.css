@@ -591,6 +591,26 @@ summary:hover {
   content: "\2191";
 }
 
+footer nav {
+  padding-bottom: 2.5em;
+}
+
+.footer-nav {
+  display: flex;
+  list-style-type: none;
+  font-size: .75em;
+}
+
+.footer-nav li:not(:first-child) {
+  padding-left: 1em;
+}
+
+.footer-nav li:before {
+  content: "\25B8\a0";
+  color: hsl(135, 35%, 25%);
+}
+
+
 figcaption {
   padding: 1em;
 }
