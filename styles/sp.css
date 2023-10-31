@@ -319,6 +319,32 @@ summary:hover {
   font-size: 1em;
 }
 
+.pic-garally {
+padding: 1em;
+}
+
+.pic-garally img {
+  width: 150px;
+  height: auto;
+}
+
+.pic-garally a img:hover {
+  opacity: .75;
+}
+
+.works-list {
+  padding: 1em 3em;
+}
+
+.pic-content figure {
+  padding: 1em;
+  font-size: .75em;
+}
+
+.pic-img {
+  width: 75vw;
+}
+
 .document-date {
   margin: .5em 0 1.5em;
   text-align: right;
@@ -672,13 +698,22 @@ footer nav {
   color: hsl(0, 0%, 0%);
 }
 
+.sp-text {
+  font-size: .75em;
+}
+
 .copyright,
 #site-uri,
 .released-year,
-.song-type {
+.song-type,
+.pic-img {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-touch-callout: none;
+  pointer-events: none;
 }

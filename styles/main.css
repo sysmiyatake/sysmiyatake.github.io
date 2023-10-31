@@ -290,6 +290,30 @@ summary:hover {
   font-size: 1em;
 }
 
+.pic-garally {
+padding: 1em 6em;
+}
+
+.pic-garally img {
+  max-height: 250px;
+}
+
+.pic-garally a img:hover {
+  opacity: .75;
+}
+
+.works-list {
+  padding: 0 6em 3em;
+}
+
+.pic-content figure {
+  padding: 1em 3em;
+}
+
+.pic-img {
+  width: 75vw;
+}
+
 .document-date {
   text-align: right;
   font-size: 0.75em;
@@ -640,13 +664,22 @@ figcaption {
   color: hsl(0, 0%, 0%);
 }
 
+.sp-text {
+  display: none;
+}
+
 .copyright,
 #site-uri,
 .released-year,
-.song-type {
+.song-type,
+.pic-img {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-touch-callout: none;
+  pointer-events: none;
 }
