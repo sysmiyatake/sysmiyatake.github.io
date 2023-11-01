@@ -626,12 +626,14 @@ footer nav {
 }
 
 .footer-nav li:not(:first-child) {
-  padding-left: 1em;
+  padding-left: 1.5em;
 }
 
 .footer-nav li:before {
-  content: "\25B8\a0";
+  padding-right: 5px;
+  content: "\25B8";
   color: hsl(135, 35%, 25%);
+  font-weight: bold;
 }
 
 figcaption {
