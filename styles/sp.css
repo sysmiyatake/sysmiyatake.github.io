@@ -702,6 +702,10 @@ footer nav {
   font-size: .75em;
 }
 
+.sp-none {
+  display: none;
+}
+
 .copyright,
 #site-uri,
 .released-year,
