@@ -415,6 +415,11 @@ padding: 1em;
   font-size: 1.5em;
 }
 
+.weblog-text h2 {
+  padding: 1.5em 1.25em 1em;
+  font-size: 1.25em;
+}
+
 .weblog-text p {
   padding: .5em 1.75em;
   font-size: 1em;

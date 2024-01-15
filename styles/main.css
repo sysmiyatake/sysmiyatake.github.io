@@ -373,6 +373,12 @@ padding: 1em 6em;
 
 .weblog-text h1 {
   padding: 2em 2em 1em;
+  font-size: xx-large;
+}
+
+.weblog-text h2 {
+  padding: 2em 2em 1em;
+  font-size: x-large;
 }
 
 .weblog-text p {
