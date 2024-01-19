@@ -291,19 +291,25 @@ summary:hover {
 }
 
 .pic-garally {
-padding: 1em 6em;
+  padding: 1em 6em;
 }
 
 .pic-garally img {
   max-height: 250px;
+  transition: .5s;
 }
 
 .pic-garally a img:hover {
   opacity: .75;
+  transition: .5s;
 }
 
 .works-list {
   padding: 0 6em 3em;
+}
+
+.pic-content {
+  padding: 1em;
 }
 
 .pic-content figure {
@@ -312,6 +318,12 @@ padding: 1em 6em;
 
 .pic-img {
   width: 75vw;
+  border-radius: .5%;
+}
+
+.picture-btt {
+  font-size: .75em;
+  padding: 3em 0;
 }
 
 .document-date {

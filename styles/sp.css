@@ -334,6 +334,8 @@ padding: 1em;
 
 .works-list {
   padding: 1em 3em;
+  font-size: .75em;
+  line-height: 2.25em;
 }
 
 .pic-content figure {
@@ -343,6 +345,7 @@ padding: 1em;
 
 .pic-img {
   width: 75vw;
+  border-radius: .5%;
 }
 
 .document-date {
