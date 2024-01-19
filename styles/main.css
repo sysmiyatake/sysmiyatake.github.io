@@ -118,6 +118,44 @@ summary:hover {
   font-family: 'Courier New', Courier, monospace;
 }
 
+::-moz-selection {
+  text-shadow: 0 0 5px hsl(135, 35%, 35%);
+}
+
+::selection {
+  text-shadow: 0 0 5px hsl(135, 35%, 35%);
+}
+
+article p::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article span::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article a::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article h1::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article h2::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article summary::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
 #site-header {
   position: relative;
   margin-left: 84px;
@@ -309,11 +347,18 @@ summary:hover {
 }
 
 .pic-content {
+  margin: 1vw;
   padding: 1em;
+  background-color:hsla(0, 0%, 100%, 0.5);
+  border-radius: 15px;
 }
 
 .pic-content figure {
-  padding: 1em 3em;
+  padding: 3em;
+}
+
+.pic-content picture {
+  padding: 3em 1em;
 }
 
 .pic-img {
@@ -702,4 +747,11 @@ figcaption {
   -webkit-user-select: none;
   -moz-touch-callout: none;
   pointer-events: none;
+}
+
+#fixed-menu, #site-title, .my-sign {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }

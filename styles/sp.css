@@ -129,6 +129,44 @@ summary:hover {
   font-family: 'Courier New', Courier, monospace;
 }
 
+p::-moz-selection {
+  text-shadow: 0 0 5px hsla(135, 35%, 35%);
+}
+
+p::selection {
+  text-shadow: 0 0 5px hsla(135, 35%, 35%);
+}
+
+article p::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article span::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article a::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article h1::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article h2::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+article summary::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
 #site-header {
   position: relative;
   margin-left: 68px;
@@ -324,12 +362,14 @@ padding: 1em;
 }
 
 .pic-garally img {
-  width: 150px;
+  width: 128px;
   height: auto;
+  transition: .5s;
 }
 
 .pic-garally a img:hover {
   opacity: .75;
+  transition: .5s;
 }
 
 .works-list {
@@ -338,7 +378,18 @@ padding: 1em;
   line-height: 2.25em;
 }
 
+.pic-content {
+  padding: 1vw;
+  background-color:hsla(0, 0%, 100%, 0.5);
+  border-radius: 15px;
+}
+
 .pic-content figure {
+  padding: 1em;
+  font-size: .75em;
+}
+
+.pic-content picture {
   padding: 1em;
   font-size: .75em;
 }
@@ -728,4 +779,11 @@ footer nav {
   -webkit-user-select: none;
   -moz-touch-callout: none;
   pointer-events: none;
+}
+
+#fixed-menu, #site-title, .my-sign {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
