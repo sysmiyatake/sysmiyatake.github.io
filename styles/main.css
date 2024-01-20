@@ -438,6 +438,14 @@ article summary::selection {
   font-size: x-large;
 }
 
+.weblog-text h2::before {
+  content:"\02014\00020";
+}
+
+.weblog-text h2::after {
+  content:"\00020\02014";
+}
+
 .weblog-text p {
   padding: 1em 6em;
   line-height: 3.5em;
