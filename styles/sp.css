@@ -365,7 +365,7 @@ padding: 1em;
   width: 128px;
   height: auto;
   transition: .5s;
-  border-radius: .5%;
+  border-radius: 5%;
 }
 
 .pic-garally a img:hover {
@@ -397,7 +397,7 @@ padding: 1em;
 
 .pic-img {
   width: 75vw;
-  border-radius: .5%;
+  border-radius: 1%;
 }
 
 .document-date {
