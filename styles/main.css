@@ -333,8 +333,10 @@ article summary::selection {
 }
 
 .pic-garally img {
+  margin: .5em;
   max-height: 250px;
   transition: .5s;
+  border: hsl(135, 35%, 25%) solid 3px;
   border-radius: 5%;
 }
 
