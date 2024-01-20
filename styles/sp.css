@@ -365,10 +365,11 @@ padding: 1em;
   width: 128px;
   height: auto;
   transition: .5s;
+  border-radius: .5%;
 }
 
 .pic-garally a img:hover {
-  opacity: .75;
+  opacity: .5;
   transition: .5s;
 }
 
