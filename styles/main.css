@@ -335,7 +335,7 @@ article summary::selection {
 .pic-garally img {
   max-height: 250px;
   transition: .5s;
-  border-radius: .5%;
+  border-radius: 5%;
 }
 
 .pic-garally a img:hover {
@@ -351,7 +351,7 @@ article summary::selection {
   margin: 1vw;
   padding: 1em;
   background-color:hsla(0, 0%, 100%, 0.5);
-  border-radius: 15px;
+  border-radius: 1%;
 }
 
 .pic-content figure {
@@ -364,7 +364,7 @@ article summary::selection {
 
 .pic-img {
   width: 75vw;
-  border-radius: .5%;
+  border-radius: 1%;
 }
 
 .picture-btt {
