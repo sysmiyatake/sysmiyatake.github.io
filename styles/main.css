@@ -745,7 +745,6 @@ figcaption {
 }
 
 .copyright,
-#site-uri,
 .released-year,
 .song-type,
 .pic-img {
@@ -758,6 +757,7 @@ figcaption {
   -webkit-user-select: none;
   -moz-touch-callout: none;
   pointer-events: none;
+	-webkit-touch-callout: none;
 }
 
 #fixed-menu, #site-title, .my-sign {
@@ -765,4 +765,5 @@ figcaption {
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+	-webkit-touch-callout: none;
 }
