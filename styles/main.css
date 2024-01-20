@@ -335,10 +335,11 @@ article summary::selection {
 .pic-garally img {
   max-height: 250px;
   transition: .5s;
+  border-radius: .5%;
 }
 
 .pic-garally a img:hover {
-  opacity: .75;
+  opacity: .5;
   transition: .5s;
 }
 
