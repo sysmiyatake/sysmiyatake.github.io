@@ -358,14 +358,16 @@ article summary::selection {
 }
 
 .pic-garally {
-padding: 1em;
+  padding: .5em;
 }
 
 .pic-garally img {
-  width: 128px;
+  margin: 3px;
+  width: 6em;
   height: auto;
   transition: .5s;
   border-radius: 5%;
+  border: hsl(135, 35%, 25%) solid 3px;
 }
 
 .pic-garally a img:hover {
@@ -396,8 +398,10 @@ padding: 1em;
 }
 
 .pic-img {
-  width: 75vw;
+  width: 100%;
+  max-width: 75vw;
   border-radius: 1%;
+  border: hsl(0, 0%, 0%) solid 1px;
 }
 
 .document-date {
