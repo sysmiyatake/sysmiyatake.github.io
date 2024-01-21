@@ -23,6 +23,7 @@
   <meta name="copyright" content="(C)SYS.T.Miyatake">
   <link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen and (min-width:769px)">
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
+  <link rel="stylesheet" type="text/css" href="../styles/music.css" media="screen">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
 </head>
 
@@ -64,8 +65,26 @@
     <section id="content-area">
       <h1 id="page-title">Weblog&colon;</h1>
       <p>&quot;そこには, いつかの残り香.&quot; Sys. T. Miyatake (2023-2024)</p>
+      
+      <h2 class="page-headline-large" id="radio-talk">ラジオ配信コーナー！（音声で聴くブログ）</h2>
+        <figure class="audio_figure index-figure">
+            <figcaption class="audio_cap">【ラジオ配信】好きなゲームを語るよ！ Sys. T. Miyatake (Jan 21, 2024)</figcaption>
+            <audio id="songPlayer" preload="metadata" src="../media/mp3-audio/radio/2024-01-21.mp3">
+              お使いのブラウザはこのプレイヤーでの再生に対応していないようです．代替案として<a href="../media/mp3-audio/radio/2024-01-21.mp3">こちらからお聴きください</a>．
+            </audio>
+        </figure>
+        <div class="controls index-controls" style="width: 85vw;">
+          <div id="play">Play</div>
+          <div id="stop">Stop</div>
+          <div id="seekbar" style="width: 85vw;"></div>
+          <div id="time">
+            <span id="current">00:00</span><span id="duration">00:00</span>
+          </div>
+        </div>
+
       <h2 class="page-headline-large">記事一覧（題と<span class="sp-none">著者と</span>初版日と）</h2>
       <div class="weblog-article-list">
+        <p><a href="#num15">私が好きなゲームさんたち</a><span>Sys. T. Miyatake</span> (Jan 21, 2024)</p>
         <p><a href="#num14">いい思い出 その２「土地別：東京」</a><span>Sys. T. Miyatake</span> (Jan 20, 2024)</p>
         <p><a href="#num13">ショート集（匂い，マゾヒズム，余など）</a><span>Sys. T. Miyatake</span> (Jan 19, 2024)</p>
         <p><a href="#num12">限りないダンス</a><span>Sys. T. Miyatake</span> (Jan 17, 2024)</p>
@@ -691,6 +710,7 @@
     <p class="copyright"><small>&copy; 2023-2024 SYS.T.Miyatake</small></p>
   </footer>
   <div class="page-bar"></div>
+  <script src="../js/mplayer.js" charset="utf-8"></script>
 </body>
 
 </html>
