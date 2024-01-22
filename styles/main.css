@@ -58,11 +58,12 @@ a,
 a:visited,
 a:active {
   color: hsl(135, 35%, 25%);
+  transition: 1.5s;
 }
 
 a:hover {
   color: hsl(135, 35%, 35%);
-  transition: 16ms;
+  transition: .5s;
 }
 
 hr {
@@ -335,18 +336,19 @@ article summary::selection {
 .pic-garally img {
   margin: .5em;
   max-height: 250px;
-  transition: .5s;
+  transition: 1.5s;
   border: hsl(135, 35%, 25%) solid 3px;
   border-radius: 5%;
 }
 
 .pic-garally a img:hover {
   opacity: .5;
-  transition: .5s;
+  transition: .85s;
 }
 
 .works-list {
   padding: 0 6em 3em;
+  font-weight: bold;
 }
 
 .pic-content {
