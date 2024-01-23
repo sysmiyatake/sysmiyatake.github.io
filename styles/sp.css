@@ -129,13 +129,49 @@ summary:hover {
   font-family: 'Courier New', Courier, monospace;
 }
 
-p::-moz-selection {
+::-moz-selection {
   text-shadow: 0 0 5px hsla(135, 35%, 35%);
 }
 
-p::selection {
+::selection {
   text-shadow: 0 0 5px hsla(135, 35%, 35%);
 }
+
+blockquote {
+  margin: 1em 3em;
+  padding: 1em .5em;
+  border-left: 4px solid hsla(0, 0%, 0%, 0.5);
+  color: hsl(0, 0%, 20%);
+  background-color: hsla(0, 0%, 0%, 0.125);
+  font-style: italic;
+}
+
+blockquote:has(cite) {
+  padding: 1.5em .5em 2em;
+}
+
+blockquote p::before {
+  content: "\201C";
+  font-weight: bold;
+}
+
+blockquote p::after {
+  content: "\201D";
+  font-weight: bold;
+}
+
+cite {
+  margin: 1em 1.5em;
+  display: block;
+  color: hsl(0, 0%, 45%);
+  font-size: .8em;
+  text-align: right;
+}
+
+cite::before {
+  content: "出典：";
+}
+
 
 article p::selection {
   color: hsl(0, 0%, 100%);
@@ -499,6 +535,10 @@ article summary::selection {
   font-size: 1em;
   font-style: italic;
   text-align: right;
+}
+
+.blog-inner-player {
+  margin: 1.5em 4.5em;
 }
 
 .column-flex {

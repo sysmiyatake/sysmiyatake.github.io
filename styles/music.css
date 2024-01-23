@@ -142,6 +142,10 @@
   margin-bottom: .5em;
 }
 
+.full-width {
+  width: 100%;
+}
+
 #play {
   margin-left: 1.5em;
   padding: 0.25em;
@@ -187,6 +191,10 @@
   background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 96%, 0.5);
   float: left;
   cursor: pointer;
+}
+
+.full-width {
+  width: 100%!important;
 }
 
 #artworks-title {
@@ -365,6 +373,7 @@
     padding-right: 1em!important;
     font-size: .75em;
   }
+
   .controls {
     margin: 1em 1em 3em;
     display: inline-block;
@@ -379,6 +388,10 @@
 
   .index-controls {
     margin-bottom: .5em;
+  }
+
+  .full-width {
+    max-width: fit-content!important;
   }
 
   #play {
