@@ -191,6 +191,7 @@
   background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 96%, 0.5);
   float: left;
   cursor: pointer;
+  transition: .5s;
 }
 
 .full-width {
