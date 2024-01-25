@@ -451,7 +451,26 @@ img.garally-img:hover {
   width: 100%;
   max-width: 75vw;
   border-radius: 1%;
-  border: hsl(0, 0%, 0%) solid 1px;
+}
+
+.pic_num4 {
+  width: 75vw;
+  border-radius: 1%;
+  background:url('../media/picture-webp/tbovc.webp');
+  background-size: 75vw;
+  background-repeat: no-repeat;
+}
+
+.pic_num4:active {
+  width: 75vw;
+  border-radius: 1%;
+  background:url('../media/picture-webp/tbovc_2.webp');
+  background-size: 75vw;
+  background-repeat: no-repeat;
+}
+
+.pic_num4 img {
+  opacity: 0;
 }
 
 .document-date {
