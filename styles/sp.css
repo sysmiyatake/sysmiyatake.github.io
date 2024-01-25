@@ -397,13 +397,23 @@ article summary::selection {
   padding: .5em;
 }
 
-.pic-garally img {
-  margin: 3px;
-  width: 6em;
-  height: auto;
+.garally-wrapper {
+  margin: .5em;
+  padding: 0;
+  float: left;
+  border-radius: 100%;
+  border-spacing: 0;
+}
+
+img.garally-img {
+  height: 15vw;
+  transition: 1.5s;
+  border-radius: 100%;
+}
+
+img.garally-img:hover {
+  opacity: .75;
   transition: .5s;
-  border-radius: 5%;
-  border: hsl(135, 35%, 25%) solid 3px;
 }
 
 .pic-garally a img:hover {
@@ -415,6 +425,10 @@ article summary::selection {
   padding: 1em 3em;
   font-size: .75em;
   line-height: 2.25em;
+}
+
+#works-list-h {
+  clear: both;
 }
 
 .pic-content {
