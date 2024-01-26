@@ -259,6 +259,7 @@ article summary::selection {
 #fixed-menu {
   margin: 6.75em 2em;
   padding: 1em;
+  width: 7.5em;
   top: 0;
   right: 0;
   display: flex;
@@ -272,6 +273,7 @@ article summary::selection {
 .fixed-menu-toggle {
   margin: 2em;
   padding: 1em;
+  width: 7.5em;
   top: 0;
   right: 0;
   position: fixed;
@@ -279,6 +281,7 @@ article summary::selection {
   background-color: hsla(34, 78%, 91%, 0.75);
   border: .25em hsla(0, 0%, 0%, 0.15) solid; 
   border-radius: 1em;
+  text-align: center;
 }
 
 #fixed-menu ul {
@@ -346,6 +349,11 @@ article summary::selection {
 .weblog-top-icon a::before {
   content: url(../media/svg-icon/weblog.svg);
   padding-right: .25em;
+}
+
+.others-top-icon a::before {
+  content: url(../media/svg-icon/others.svg);
+  padding-right: .5em;
 }
 /* fin -- index.html only */
 
@@ -584,6 +592,21 @@ img.garally-img:hover {
   background-color: hsla(34, 78%, 91%, 0.5);
   border: .25em hsla(0, 0%, 0%, 0.25) solid; 
   border-radius: 1em;
+}
+
+.four-box {
+  margin: 0 1.5em 1.5em;
+  padding: 1.25em;
+  width: 20vw;
+  min-width: max-content;
+  background-color: hsla(34, 78%, 91%, 0.5);
+  border: .25em hsla(0, 0%, 0%, 0.25) solid; 
+  border-radius: 1em;
+}
+
+.wip-h {
+  margin-top: 1em;
+  font-weight: bold;
 }
 
 .update-area {

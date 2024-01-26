@@ -279,7 +279,7 @@ article summary::selection {
 }
 
 #fixed-menu {
-  margin: 5.5em 1em;
+  margin: 1.5em 1em;
   padding: .5em;
   bottom: 0;
   right: 0;
@@ -368,6 +368,11 @@ article summary::selection {
 .weblog-top-icon a::before {
   content: url(../media/svg-icon/weblog.svg);
   padding-right: .25em;
+}
+
+.others-top-icon a::before {
+  content: url(../media/svg-icon/others.svg);
+  padding-right: .5em;
 }
 /* fin -- index.html only */
 
@@ -621,6 +626,28 @@ img.garally-img:hover {
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
   border-radius: 1em;
+}
+
+.four-box {
+  margin: 0 .25em;
+  width: fit-content;
+  background-color: hsla(34, 78%, 91%, 0.5);
+  padding: 1.25em;
+  border: 3px hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 1em;
+}
+
+.four-box label {
+  font-size: .75em;
+}
+
+.wip-h {
+  margin-top: .5em;
+  font-weight: bold;
+}
+
+.wip-image {
+  width: 80vw;
 }
 
 .update-area {
