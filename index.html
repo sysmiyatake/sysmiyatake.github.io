@@ -17,7 +17,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sysmiyatake.github.io/">
   <meta property="og:image" content="https://sysmiyatake.github.io/media/sysmiyatake.png">
-  <meta name="description" content="SYS.T.Miyatakeが管理・運営・更新している個人のウェブサイトです．音楽や絵画などの独自作品公開や，ブログを執筆しています．">
+  <meta name="description" content="SYS.T.Miyatakeが管理している個人のウェブサイトです．音楽や絵画などの独自作品公開や，ブログを執筆しています．">
   <meta name="format-detection" content="email=no, telephone=no, address=no">
   <meta name="author" content="SYS.T.Miyatake">
   <meta name="copyright" content="(C)SYS.T.Miyatake">
@@ -30,14 +30,14 @@
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "SYS.T.Miyatake",
-          "description": "SYS.T.Miyatakeが管理・運営・更新している個人のウェブサイトです．音楽や絵画などの独自作品公開や，ブログを執筆しています．",
+          "description": "SYS.T.Miyatakeが管理している個人のウェブサイトです．音楽や絵画などの独自作品公開や，ブログを執筆しています．",
           "url": "https://sysmiyatake.github.io/",
           "image": "https://sysmiyatake.github.io/media/sysmiyatake.png"
       }
   </script>
 </head>
 <body>
-  <div class="page-bar"></div>
+  <div class="page-bar" id="page-start"></div>
   <header>
     <hgroup id="site-header">
       <h1 id="site-title"><a href="https://sysmiyatake.github.io/"
@@ -71,7 +71,7 @@
     <section id="content-area">
       <h1 id="page-title">Welcome!</h1>
       <p><span class="solid-under-line bold-font"><a href="music/index.html" title="Music Top">音楽</a>や<a href="picture/index.html" title="Picture Top">絵画</a>などの独自作品</span>公開や，<span class="solid-under-line bold-font"><a href="weblog/index.html" title="Weblog Top">ブログ</a>を執筆</span>しています．</p>
-      <p>SYS. T. Miyatake &#40;システィみやたけ&#41; が管理・運営・更新している個人のウェブサイトです．</p>
+      <p>SYS. T. Miyatake &#40;システィみやたけ&#41; が管理している個人のウェブサイトです．</p>
       <details>
         <summary><span>直下に詳しく表示</span>...</summary>
         <p><span class="bold-font">ご挨拶</span><br>ようこそ，おいでくださいました．<br><span class="dotted-under-line">このサイトは現在，事前公開の未完成状態</span>です．少しずつ着実に考えながら組み立ててみようかなと思い，取りかかっております．<br>
@@ -167,11 +167,13 @@
                 <tr>
                   <td class="update-date">Jan 27, 2024</td>
                   <td class="update-content">
-                  ブログ記事更新（<a href="./weblog/index.html#num19" title="Weblog: ショート集 IV，今後の目標">1件執筆</a>，各記事の装飾：下線・太字付け&#65372;校閲：修正・補足作業）,<br>
+                  ブログ記事更新（<a href="./weblog/index.html#num19" title="Weblog: ショート集 IV，今後の目標">1件執筆</a>，各記事の装飾：実線＆点線下線付け・太字化・読みやすさを意識した段組の再構成&#65372;校閲：修正・補足作業）,<br>
+                  ブログページ更新 (記事の目次をスクロール仕様に刷新),<br>
                   サイトトップページに Others - WIP 枠を用意,<br>
                   WIP 枠内の情報更新,<br>
                   <a href="./others/index.html" title="Other Contents">その他のコンテンツ群ページ</a> に WIP履歴 項を作成し記録開始,<br>
-                  サイトメインメニューの「メニューを表示・非表示」の文字列を「Main Menu」に簡素化する変更,<br>
+                  サイトメインメニューの「メニューを表示・非表示」の文字列を「Main menu」に簡素化する変更,<br>
+                  すべてのページの右下の固定領域に「ページトップに戻る」の意味を付与したリンクト矢印を配置 (PC/SP両対応),<br>
                   その他軽微な修正・改善&#59;</td>
                 </tr>
                 <tr>
@@ -209,7 +211,7 @@
                   <td class="update-date">Jan 21, 2024</td>
                   <td class="update-content">
                   ブログページにて音声ラジオをお試し配信,<br>
-                  ブログ音声更新（<a href="./weblog/index.html#num15">1本ラジオ公開</a><!-- 好きなゲームを語るよ！ -->）&#59;</td>
+                  ブログ音声更新（<a href="./weblog/index.html#num15">1本ラジオ公開</a><!-- 好きなゲームを語りますよ！ -->）&#59;</td>
                 </tr>
                 <tr>
                   <td class="update-date">Jan 20, 2024</td>
@@ -354,10 +356,12 @@
       </div>
 
       <h2 class="page-headline-large">About Me&colon;</h2>
+      <p class="bold-font">SYS. T. Miyatake</p>
       <p>管理人です．普通人です．ちょっとした偏屈人でもあります．<br>さらに詳らかな情報を取得されることをご希望の場合は，<a href="about.html" title="About page">当サイトとその管理人について</a>ページをご覧ください．</p>
     </section>
   </main>
   <div class="page-separate"></div>
+  <div class="back-page-top-button"><a href="#page-start" title="Back to Page-top"></a></div>
   <footer>
     <nav>
       <ul class="footer-nav">

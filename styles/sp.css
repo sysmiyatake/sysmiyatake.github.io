@@ -121,6 +121,18 @@ summary:hover {
   text-decoration: underline dotted 1.5px hsl(135, 35%, 35%);
 }
 
+.hyphenated::before {
+  content: "\a0\a0-\a0\a0";
+}
+
+.down-arrow-mark {
+  text-decoration: none;
+}
+
+.down-arrow-mark::before {
+  content: "\FF3B\2193\FF3D";
+}
+
 .monospacing {
   padding: 0 1em 1em!important;
   font-size: .8em;
@@ -279,7 +291,7 @@ article summary::selection {
 }
 
 #fixed-menu {
-  margin: 1.5em 1em;
+  margin: 6.5em 1em;
   padding: .5em;
   bottom: 0;
   right: 0;
@@ -297,7 +309,7 @@ article summary::selection {
   top: 0;
   right: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   background-color: hsla(34, 78%, 91%, 0.75);
   border: .25em hsla(0, 0%, 0%, 0.25) solid; 
   border-radius: 1em;
@@ -534,8 +546,26 @@ img.garally-img:hover {
   font-size: 0.75em;
 }
 
-.weblog-article-list p::before {
-  content: "\30FB";
+.weblog-article-list {
+  margin: 1.5em;
+  padding: 1.5em 3.5em;
+  height: 15em;
+  max-width: 60vw;
+  overflow-y: scroll;
+  background-color: hsla(34, 78%, 91%, 0.5);
+  border: hsl(135, 35%, 35%) solid thin;
+  border-radius: 50% 20% / 10% 40%;
+  font-size: .75em;
+  border-radius: 5%;
+}
+
+.weblog-article-list li {
+  padding-bottom: 1em;
+}
+
+.weblog-article-list p {
+  margin: 2em;
+  text-align: center;
 }
 
 .weblog-article-list span {
@@ -827,6 +857,30 @@ img.garally-img:hover {
 
 figcaption {
   padding: 1em;
+}
+
+.back-page-top-button {
+  margin: 2.5em;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: hsl(135, 15%, 35%);
+  border: hsla(135, 15%, 35%, .5) solid .25em;
+  border-radius: 100%;
+  text-align: center;
+  transition: .5s;
+}
+
+.back-page-top-button a {
+  display: block;
+  font-size: 1em;
+}
+
+.back-page-top-button a::before {
+  content: url(../media/svg-icon/backtopagetop_sp.svg);
 }
 
 footer nav {
