@@ -554,9 +554,7 @@ img.garally-img:hover {
   overflow-y: scroll;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: hsl(135, 35%, 35%) solid thin;
-  border-radius: 50% 20% / 10% 40%;
   font-size: .75em;
-  border-radius: 5%;
 }
 
 .weblog-article-list li {
