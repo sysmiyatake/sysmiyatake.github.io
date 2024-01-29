@@ -135,6 +135,10 @@ summary:hover {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.opacity-font {
+  opacity: .5;
+}
+
 ::-moz-selection {
   text-shadow: 0 0 5px hsl(135, 35%, 35%);
 }
@@ -389,26 +393,30 @@ article summary::selection {
 }
 
 .pic-garally {
-  padding: 1em 6em;
+  padding: 0 6em;
 }
 
 .garally-wrapper {
   margin: 1.5em;
-  padding: 0;
-  float: left;
+  width: 12.5vw;
+  height: 12.5vw;
   border-radius: 100%;
   border-spacing: 0;
+  overflow: hidden;
+  float: left;
 }
 
 img.garally-img {
-  height: 15vw;
-  transition: 1.5s;
+  width: 12.5vw;
+  height: 12.5vw;
+  transition: 3.5s;
   border-radius: 100%;
 }
 
 img.garally-img:hover {
-  opacity: .75;
-  transition: .5s;
+  opacity: .95;
+  transform: scale(1.3);
+  transition: .25s;
 }
 
 .works-list {
@@ -513,8 +521,7 @@ img.garally-img:hover {
   margin: 1em 0 4.5em 6em;
   padding: 1.5em 3.5em;
   height: 25em;
-  width: 100%;
-  max-width: 60vw;
+  width: 60vw;
   overflow-y: scroll;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: hsl(135, 35%, 35%) solid thin;
