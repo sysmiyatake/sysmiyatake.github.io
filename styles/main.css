@@ -897,6 +897,11 @@ figcaption {
   color: hsl(0, 0%, 0%);
 }
 
+.others-music {
+ width: 80vw;
+ padding: 0 6em;
+}
+
 .sp-text {
   display: none;
 }
