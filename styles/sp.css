@@ -619,6 +619,19 @@ img.garally-img:hover {
   margin: 1.5em 4.5em;
 }
 
+.poem_fig {
+  margin-left: 0;
+  padding: 1em;
+  width: fit-content;
+  background-color: hsla(135, 35%, 75%, 0.25);
+  border: 0.5em hsl(135, 35%, 75%) solid;
+  border-radius: 1em;
+}
+
+.poem_fig figure:hover {
+  opacity: .85;
+}
+
 .column-flex {
   margin: 1em .5em 1.5em;
   width: fit-content;
@@ -863,6 +876,7 @@ img.garally-img:hover {
 
 figcaption {
   padding: 1em;
+  font-size: .75em;
 }
 
 .back-page-top-button {
@@ -940,6 +954,12 @@ footer nav {
 }
 
 .sp-text {
+  font-size: .75em;
+}
+
+.file_list {
+  margin: 1em 0;
+  padding: 0 3em;
   font-size: .75em;
 }
 
