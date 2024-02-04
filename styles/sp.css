@@ -400,6 +400,17 @@ article summary::selection {
   font-size: 1.5em;
 }
 
+#page-title::after {
+  content: "\a0{";
+  color: hsla(135, 15%, 35%, .25);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+
+.strict-content::after {
+  content: ""!important;
+}
+
 #content-list, #content-list-ii, #content-list-iii {
   margin-bottom: -1em;
 }
@@ -874,6 +885,18 @@ img.garally-img:hover {
   content: "\2191";
 }
 
+#page-end {
+  margin: 1em 0;
+}
+
+#page-end::after {
+  padding: .5em;
+  content: "}";
+  font-size: 1.5em;
+  font-family: 'Times New Roman', Times, serif;
+  color: hsla(135, 15%, 35%, .25);
+}
+
 figcaption {
   padding: 1em;
   font-size: .75em;
@@ -925,12 +948,12 @@ footer nav {
 .site-logo-img img {
   width: 100%;
   max-width: fit-content;
-  padding-bottom: 16em;
+  padding-bottom: 1.5em;
 }
 
 .address-box {
-  padding: 1em;
-  margin: 3.5em auto;
+  padding: 1em 0 .5em;
+  margin: 1.5em auto 3.5em;
   width: fit-content;
   display: block;
   font-style: italic;

@@ -378,6 +378,17 @@ article summary::selection {
   font-size: 2.5em;
 }
 
+#page-title::after {
+  content: "\a0{";
+  color: hsla(135, 15%, 35%, .25);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+
+.strict-content::after {
+  content: ""!important;
+}
+
 .page-headline-large {
   padding: 2em;
 }
@@ -880,6 +891,18 @@ footer nav {
   font-weight: bold;
 }
 
+#page-end {
+  margin: 1em;
+}
+
+#page-end::after {
+  padding: 1em;
+  content: "}";
+  font-size: 2.5em;
+  font-family: 'Times New Roman', Times, serif;
+  color: hsla(135, 15%, 35%, .25);
+}
+
 figcaption {
   padding: 1em;
 }
@@ -887,12 +910,12 @@ figcaption {
 .site-logo-img img {
   width: 100%;
   max-width: fit-content;
-  padding-bottom: 16em;
+  padding-bottom: 1.5em;
 }
 
 .address-box {
   padding: 5em!important;
-  margin: 2em 6em 15em;
+  margin: 1em 6em 3em;
   width: fit-content;
   display: block;
   font-style: italic;
