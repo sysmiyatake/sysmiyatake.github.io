@@ -193,6 +193,12 @@ cite::before {
   content: "出典：";
 }
 
+.site-index-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  content: url("../media/sysmiyatake_wide.png");
+}
 
 article p::selection {
   color: hsl(0, 0%, 100%);
