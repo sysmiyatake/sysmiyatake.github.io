@@ -189,6 +189,22 @@ cite::before {
   content: url("../media/sysmiyatake_wide.png");
 }
 
+.top-pic-thumb {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.top-pic-thumb img {
+  width: 5vw;
+  height: auto;
+  transition: .75s;
+  border-radius: 5%;
+}
+
+.top-pic-thumb img:hover {
+  opacity: 0;
+}
+
 article p::selection {
   color: hsl(0, 0%, 100%);
   background-color: hsl(135, 15%, 35%);
@@ -639,8 +655,8 @@ img.garally-img:hover {
 .two-box {
   margin: 0 1.5em 1.5em;
   padding: 1.25em;
-  width: 20vw;
-  min-width: max-content;
+  width: 35vw;
+  min-width: 15vw;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: .25em hsla(0, 0%, 0%, 0.25) solid;
   border-radius: 1em;

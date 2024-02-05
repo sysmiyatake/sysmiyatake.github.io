@@ -200,6 +200,18 @@ cite::before {
   content: url("../media/sysmiyatake_wide.png");
 }
 
+.top-pic-thumb {
+  text-align: center;
+  padding: 1em 0!important;
+}
+
+.top-pic-thumb img {
+  margin: 1em;
+  width: 15vw;
+  height: auto;
+  border-radius: 15%;
+}
+
 article p::selection {
   color: hsl(0, 0%, 100%);
   background-color: hsl(135, 15%, 35%);
