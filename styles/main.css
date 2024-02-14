@@ -197,12 +197,12 @@ cite::before {
 .top-pic-thumb img {
   width: 5vw;
   height: auto;
-  transition: .75s;
+  transition: 1.75s;
   border-radius: 5%;
 }
 
 .top-pic-thumb img:hover {
-  opacity: 0;
+  opacity: 0.1;
 }
 
 article p::selection {
