@@ -508,6 +508,12 @@ img.garally-img:hover {
   border-radius: 1%;
 }
 
+.pic-img-vertical {
+  width: 100%;
+  max-width: 75vw;
+  border-radius: 1%;
+}
+
 .pic_num4 {
   width: 75vw;
   border-radius: 1%;

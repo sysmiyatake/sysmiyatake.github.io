@@ -190,15 +190,16 @@ cite::before {
 }
 
 .top-pic-thumb {
-  margin: 1em 0;
-  text-align: center;
+  margin: 1em;
+  text-align: left;
 }
 
 .top-pic-thumb img {
+  padding: .5em;
   width: 5vw;
   height: auto;
   transition: 1.75s;
-  border-radius: 5%;
+  border-radius: 15%;
 }
 
 .top-pic-thumb img:hover {
@@ -469,8 +470,12 @@ img.garally-img:hover {
   border-radius: 1%;
 }
 
+.pic-content summary {
+  margin: 0 6em 1em;
+}
+
 .pic-content figure {
-  padding: 3em;
+  padding: 1.5em 3em 3em;
 }
 
 .pic-content picture {
@@ -479,6 +484,13 @@ img.garally-img:hover {
 
 .pic-img {
   width: 75vw;
+  height: auto;
+  border-radius: 1%;
+}
+
+.pic-img-vertical {
+  width: auto;
+  height: 75vh;
   border-radius: 1%;
 }
 
