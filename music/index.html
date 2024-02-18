@@ -604,7 +604,7 @@
       <p>注目の作品を，高音質バージョンでお届けしております！<br>具体的には，該当曲のみ320kbps &#40;他は通常 96-160kbps 近辺で公開中&#41; の mp3 ファイルフォーマットでの公開となります．
       </p>
 
-      <div class="song-part">
+      <div class="song-part"><div class="song-part-inner">
         <h3 class="song-title">&#x300E;<a href="./2023/0001_RCA.html">参照</a>&#x300F;システィみやたけ, 2023</h3>
         <figure class="audio_figure">
           <figcaption class="audio_cap">Listen to the &quot;Reference Consultation Applause - SYS. T.
@@ -614,14 +614,16 @@
           </audio>
         </figure>
         <div class="controls">
-          <div id="play">Play</div>
-          <div id="stop">Stop</div>
+          <div class="ctrlsbutton">
+            <div id="play">Play</div>
+            <div id="stop">Stop</div>
+          </div>
           <div id="seekbar"></div>
           <div id="time">
             <span id="current">00:00</span><span id="duration">00:00</span>
           </div>
         </div>
-      </div>
+      </div></div>
 
       <h2 class="page-headline-large">Questions and Answers</h2>
 
@@ -640,7 +642,8 @@
     </div>
   </main>
   <div class="page-separate"></div>
-  <div class="back-page-top-button"><a href="#page-start" title="Back to Page-top"></a></div>
+  <div class="back-page-top-button"><a href="#page-start" title="Back to Page-start"></a></div>
+  <div class="go-page-fin-button"><a href="#page-fin" title="Go to Page-end"></a></div>
   <footer>
     <nav>
       <ul class="footer-nav">
@@ -651,7 +654,7 @@
     </nav>
     <p class="copyright"><small>&copy; 2023-2024 SYS.T.Miyatake</small></p>
   </footer>
-  <div class="page-bar"></div>
+  <div class="page-bar" id="page-fin"></div>
   <script src="../js/mplayer.js" charset="utf-8"></script>
 </body>
 </html>

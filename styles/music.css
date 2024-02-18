@@ -56,10 +56,14 @@
 
 .song-part {
   margin: 3em;
-  padding: 3em;
   width: fit-content;
   background-color: hsla(135, 35%, 75%, 0.25);
   border: 1em hsl(135, 35%, 75%) solid;
+  border-radius: 1em;
+}
+
+.song-part-inner {
+  padding: 3em 3em 1.25em;
   border-radius: 1em;
 }
 
@@ -174,6 +178,11 @@
   cursor: pointer;
 }
 
+.ctrlsbutton {
+  margin: 1.5em auto;
+  display: flex;
+}
+
 #time {
   width: 100px;
   color: hsla(0, 0%, 0%, 0.75);
@@ -184,8 +193,8 @@
 }
 
 #seekbar {
-  width: 256px;
-  height: 15px;
+  width: 25vw;
+  height: 25px;
   margin: 2em;
   border-radius: 5px;
   background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 96%, 0.5);
@@ -313,9 +322,13 @@
 
   .song-part {
     margin: 1.5em 0 1.5em;
-    padding: 1.5em;
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
+    border-radius: 1em;
+  }
+
+  .song-part-inner {
+    padding: 1.5em;
     border-radius: 1em;
   }
 
@@ -376,9 +389,9 @@
   }
 
   .controls {
-    margin: 1em 1em 3em;
-    display: inline-block;
-    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    width: 85%;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 1em;
     user-select: none;
@@ -396,7 +409,7 @@
   }
 
   #play {
-    margin: 1.75em .5em;
+    margin: 0 auto;
     padding: .5em;
     width: 4.15em;
     background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 90%);
@@ -407,7 +420,7 @@
   }
 
   #stop {
-    margin: 1.75em .5em;
+    margin: 0 auto;
     padding: .5em;
     width: 4.15em;
     background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
@@ -417,6 +430,11 @@
     border-radius: 7.5px;
   }
 
+  .ctrlsbutton {
+    margin: 1.5em auto;
+    display: flex;
+  }
+
   #play:hover,
   #stop:hover {
     background: linear-gradient(hsla(135, 45%, 75%, 0.5), hsl(135, 45%, 75%)) no-repeat hsla(135, 100%, 96%);
@@ -424,7 +442,7 @@
   }
 
   #time {
-    margin: 4.15em auto 1em;
+    margin: 3em auto 1em;
     width: fit-content;
     height: 2em;
     font-size: 1.5em;
@@ -436,7 +454,13 @@
   }
 
   #seekbar {
-    display: none;
+    width: 80%;
+    height: 25px;
+    margin: .5em 1.5em 2.5em!important;
+    border-radius: 5px;
+    background: linear-gradient(hsla(135, 35%, 75%, 0.5), hsl(135, 35%, 75%)) no-repeat hsla(135, 100%, 96%, 0.5);
+    cursor: pointer;
+    transition: .5s;
   }
 
   #artworks-title {

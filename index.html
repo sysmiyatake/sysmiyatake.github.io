@@ -121,8 +121,10 @@
                     </audio>
                   </figure>
                   <div class="controls index-controls">
-                    <div id="play">Play</div>
-                    <div id="stop">Stop</div>
+                    <div class="ctrlsbutton">
+                      <div id="play">Play</div>
+                      <div id="stop">Stop</div>
+                    </div>
                     <div id="seekbar"></div>
                     <div id="time">
                       <span id="current">00:00</span><span id="duration">00:00</span>
@@ -168,6 +170,9 @@
           <h2 class="column-area others-icon"><a href="./others/index.html#wip" title="Others Top - WIP">Other Contents - WIP</a>&colon;</h2>
           <div class="four-box">
             <p>Last updated: Feb 18, 2024;</p>
+            <p class="wip-h">&#12304;サイトデザイン&#12305;</p>
+            <p>SP版横向き表示でのメインメニュー対応を目指す</p>
+            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="1">1%</progress>
 
             <p class="wip-h">&#12304;音声記事を収録する&#12305;</p>
             <p>3人目のキュートな分霊出演者，現る！？<br>
@@ -196,7 +201,9 @@
                 <tr>
                   <td class="update-date">Feb 18, 2024</td>
                   <td class="update-content">
-                  絵画ページ更新（<a href="picture/index.html" title="Picture Top">追加3枚展示公開</a><!-- num13-15 -->，縦長縦横比の絵画であってもディスプレイ及びウインドウ表示領域に収まるようスタイルをクラスで再定義 "pic-img-vertical"，作品詳細を開閉可能にして初期値は格納）,<br>
+                  絵画ページ更新（<a href="picture/index.html" title="Picture Top">追加3枚展示公開</a><!-- num13-15 -->，縦長縦横比の絵画であってもディスプレイ及びウインドウ表示領域に収まるようスタイルをクラスで再定義 "pic-img-vertical"，作品詳細を開閉可能・初期値は格納）,<br>
+                  オリジナル音声プレイヤー更新（SP表示版でシークバーに対応・但しスライド操作は未実装，PC表示版のシークバーの高さを従来より少し高くなるよう変更）,<br>
+                  従来のページ先頭に戻るボタンに加えページ末尾に向かうボタンを実装,<br>
                   その他軽微な修正・改善&#59;</td>
                 </tr>
                 <tr>
@@ -494,7 +501,8 @@
     </section>
   </main>
   <div class="page-separate"></div>
-  <div class="back-page-top-button"><a href="#page-start" title="Back to Page-top"></a></div>
+  <div class="back-page-top-button"><a href="#page-start" title="Back to Page-start"></a></div>
+  <div class="go-page-fin-button"><a href="#page-fin" title="Go to Page-end"></a></div>
   <footer>
     <nav>
       <ul class="footer-nav">
@@ -505,7 +513,7 @@
     </nav>
     <p class="copyright"><small>&copy; 2023-2024 SYS.T.Miyatake</small></p>
   </footer>
-  <div class="page-bar"></div>
+  <div class="page-bar" id="page-fin"></div>
   <script src="./js/mplayer.js" charset="utf-8"></script>
 </body>
 </html>

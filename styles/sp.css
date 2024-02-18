@@ -314,7 +314,7 @@ article summary::selection {
 }
 
 #fixed-menu {
-  margin: 6.5em 1em;
+  margin: 8.5em 1em;
   padding: .5em;
   bottom: 0;
   right: 0;
@@ -927,7 +927,7 @@ figcaption {
 }
 
 .back-page-top-button {
-  margin: 2.5em;
+  margin: 4em 1.5em;
   width: 25px;
   height: 25px;
   position: fixed;
@@ -948,6 +948,30 @@ figcaption {
 
 .back-page-top-button a::before {
   content: url(../media/svg-icon/backtopagetop_sp.svg);
+}
+
+.go-page-fin-button {
+  margin: 1.5em;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: hsl(135, 15%, 35%);
+  border: hsla(135, 15%, 35%, .5) solid .25em;
+  border-radius: 100%;
+  text-align: center;
+  transition: .5s;
+}
+
+.go-page-fin-button a {
+  display: block;
+  font-size: 1em;
+}
+
+.go-page-fin-button a::before {
+  content: url(../media/svg-icon/gotopagefin_sp.svg);
 }
 
 footer nav {

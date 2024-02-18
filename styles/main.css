@@ -878,7 +878,7 @@ img.garally-img:hover {
 }
 
 .back-page-top-button {
-  margin: 3em;
+  margin: 7em 3em;
   width: 50px;
   height: 50px;
   position: fixed;
@@ -903,6 +903,42 @@ img.garally-img:hover {
 
 .back-page-top-button a::before {
   content: url(../media/svg-icon/backtopagetop.svg);
+}
+
+.go-page-fin a::before {
+  width: 1.5em;
+  float: left;
+  padding-right: .25em;
+  text-align: right;
+  content: "\2191";
+}
+
+.go-page-fin-button {
+  margin: 3em;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: hsl(135, 15%, 35%);
+  border: hsla(135, 15%, 35%, .5) solid .25em;
+  border-radius: 100%;
+  text-align: center;
+  transition: .5s;
+}
+
+.go-page-fin-button a {
+  display: block;
+  font-size: 1em;
+}
+
+.go-page-fin-button:hover {
+  opacity: .75;
+}
+
+.go-page-fin-button a::before {
+  content: url(../media/svg-icon/gotopagefin.svg);
 }
 
 footer nav {

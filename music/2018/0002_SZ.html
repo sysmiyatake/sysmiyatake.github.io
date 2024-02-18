@@ -99,7 +99,7 @@
             <p>Copyright &copy; &colon; SYS. T. Miyatake&#59;</p>
           </div>
       </details>
-      <div class="song-part">
+      <div class="song-part"><div class="song-part-inner">
         <h3 class="song-title">&#x300E;スキゾフレニアン・ララバイ（天卿）&#x300F;T.Miyatake Classics, 2018</h3>
         <figure>
           <figcaption class="audio_cap">Listen to the &quot;SZ Lullaby &#40;0002&#41;&quot; -
@@ -109,14 +109,16 @@
           </audio>
         </figure>
         <div class="controls">
-          <div id="play">Play</div>
-          <div id="stop">Stop</div>
+          <div class="ctrlsbutton">
+            <div id="play">Play</div>
+            <div id="stop">Stop</div>
+          </div>
           <div id="seekbar"></div>
           <div id="time">
             <span id="current">00:00</span><span id="duration">00:00</span>
           </div>
         </div>
-      </div>
+      </div></div>
     <div id="page-end"></div>
     </section>
     <div class="back-index">
@@ -125,7 +127,8 @@
     </div>
   </main>
   <div class="page-separate"></div>
-  <div class="back-page-top-button"><a href="#page-start" title="Back to Page-top"></a></div>
+  <div class="back-page-top-button"><a href="#page-start" title="Back to Page-start"></a></div>
+  <div class="go-page-fin-button"><a href="#page-fin" title="Go to Page-end"></a></div>
   <footer>
     <nav>
       <ul class="footer-nav">
@@ -137,7 +140,7 @@
     <p class="copyright"><small>&copy; 2023-2024 SYS.T.Miyatake</small></p>
   </footer>
   <script src="../../js/mplayer.js" charset="utf-8"></script>
-  <div class="page-bar"></div>
+  <div class="page-bar" id="page-fin"></div>
 </body>
 
 </html>
