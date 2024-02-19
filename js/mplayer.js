@@ -58,6 +58,14 @@ const audio = document.getElementsByTagName("audio")[0]
           return hms
         }
 
+        function attenuateVolume() { 
+          audio.volume = 0.3;
+        }
+
+        function fullVolume() { 
+          audio.volume = 1.0;
+        }
+
         window.onload = function(){
           setCurrentTime(0);
           document.getElementById("playerCurrentTime").value = 0;

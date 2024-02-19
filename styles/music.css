@@ -172,8 +172,34 @@
   float: left;
 }
 
+#attenuater {
+  margin-left: 1em;
+  padding: 0.25em;
+  width: 3em;
+  background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
+  text-align: center;
+  font-size: .75em;
+  cursor: pointer;
+  border: hsl(135, 15%, 35%) solid .25em;
+  border-radius: 7.5px;
+}
+
+#fullVolume {
+  margin-left: 1em;
+  padding: 0.25em;
+  width: 3em;
+  background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
+  text-align: center;
+  font-size: .75em;
+  cursor: pointer;
+  border: hsl(135, 15%, 35%) solid .25em;
+  border-radius: 7.5px;
+}
+
 #play:hover,
-#stop:hover {
+#stop:hover,
+#attenuater:hover,
+#fullVolume:hover {
   background: linear-gradient(hsla(135, 45%, 75%, 0.5), hsl(135, 45%, 75%)) no-repeat hsla(135, 100%, 96%);
   cursor: pointer;
 }
@@ -181,6 +207,14 @@
 .ctrlsbutton {
   margin: 1.5em auto;
   display: flex;
+  position: relative;
+}
+
+.volumebutton {
+  margin: 1em;
+  position: fixed;
+  bottom: 5px;
+  right: 25px;
 }
 
 #time {
@@ -433,6 +467,13 @@
   .ctrlsbutton {
     margin: 1.5em auto;
     display: flex;
+  }
+
+  .volumebutton {
+  margin: 1em;
+  position: fixed;
+  bottom: 1em;
+  left: 50%;
   }
 
   #play:hover,
