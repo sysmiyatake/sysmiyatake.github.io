@@ -1018,10 +1018,18 @@ figcaption {
   padding: 0 10em;
 }
 
+.inline_img {
+  margin: 1.5em 0;
+  display: inline;
+  width: 35vw;
+  height: auto;
+}
+
 .copyright,
 .released-year,
 .song-type,
-.pic-img {
+.pic-img,
+.inline_img {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;

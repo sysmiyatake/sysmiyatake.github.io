@@ -1034,6 +1034,13 @@ footer nav {
   font-size: .75em;
 }
 
+.inline_img {
+  margin: 1.5em 0;
+  display: inline;
+  width: 80vw;
+  height: auto;
+}
+
 .sp-none {
   display: none;
 }
@@ -1042,7 +1049,8 @@ footer nav {
 #site-uri,
 .released-year,
 .song-type,
-.pic-img {
+.pic-img,
+.inline_img {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
