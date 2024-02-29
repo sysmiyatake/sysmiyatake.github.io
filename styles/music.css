@@ -143,7 +143,7 @@
 }
 
 .index-controls {
-  margin-bottom: .5em;
+  margin: .5em auto;
 }
 
 .full-width {
@@ -208,6 +208,11 @@
   margin: 1.5em auto;
   display: flex;
   position: relative;
+}
+
+.index-ctrlsb {
+  margin-right: 1.5em;
+  width: 4em!important;
 }
 
 .volumebutton {

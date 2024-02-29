@@ -397,6 +397,23 @@ article summary::selection {
 }
 /* fin -- index.html only */
 
+.news-box {
+  margin: 0 1.5em 1.5em;
+  padding: 1.25em;
+  width: 75vw;
+  height: 8em;
+  max-height: 80vh;
+  background-color: hsla(34, 78%, 91%, 0.5);
+  border: .25em hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 1em 0 0 1em;
+  overflow-y: scroll;
+  scrollbar-color: hsla(0, 0%, 0%, 0.25) hsla(0, 0%, 0%, 0);
+}
+
+.news-box p {
+  margin-bottom: 1em;
+}
+
 #page-title {
   padding: .5em 1em 1em;
   font-size: 2.5em;
@@ -657,8 +674,7 @@ img.garally-img:hover {
 .one-box {
   margin: 0 1.5em 1.5em;
   padding: 1.25em;
-  width: 20vw;
-  min-width: max-content;
+  width: 25vw;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: .25em hsla(0, 0%, 0%, 0.25) solid;
   border-radius: 1em;
@@ -705,8 +721,8 @@ img.garally-img:hover {
 
 .update-box {
   margin: 0 1.5em 1.5em;
-  width: fit-content;
-  min-width: max-content;
+  width: 50em;
+  max-width: 80vw;
   height: fit-content;
   background-color: hsla(34, 78%, 91%, 0.5);
   border-radius: 1em 0 0 1em;
@@ -715,7 +731,7 @@ img.garally-img:hover {
 .ud-table-wrapper {
   padding: 1em;
   max-height: 30em;
-  max-width: 75vw;
+  width: fit-content;
   border: .25em hsla(0, 0%, 0%, 0.25) solid;
   overflow-y: scroll;
   scrollbar-color: hsla(0, 0%, 0%, 0.25) hsla(0, 0%, 0%, 0);

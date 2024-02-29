@@ -87,14 +87,19 @@
         それでは，ただ流れるこのひとときを，ごゆっくりお愉しみくださいませ．</p>
       </details>
 
-      <h2 class="page-headline-large">News&colon;</h2>
-        <p><span class="bold-font" style="color:brown">NEW!</span> <span class="solid-under-line"><a href="./weblog/index.html#num34" title="Weblog article: 妄想バナ詩が聴こえる頃に" class="bold-font">新しい詩集記事&colon; 妄想バナ詩が聴こえる頃に</a> を公開しました．</span> (Feb 24, 2024)</p>
-        <p><span class="bold-font" style="color:brown">NEW!</span> <span class="solid-under-line"><a href="./weblog/num32.html" title="Weblog article: 【ラジオ配信】私のインターネット活動の歴史と思考などなど（BGM有）【第4回】" class="bold-font">新しい音声トーク&colon; 第４回ラジオ記事</a> を収録・公開しました．</span> (Feb 21, 2024)</p>
-        <p><span class="bold-font" style="color:brown">NEW!</span> スマートフォン版横向表示（ランドスケープ）対応しました．お使いのブラウザの履歴消去機能あたりにあるであろう「キャッシュの削除」を実行されることで初めて適用されることがあります（過去のバージョンがキャッシュとして残っている場合など）． (Feb 21, 2024)</p>
-        <p><span class="solid-under-line"><a href="./weblog/num29.html" title="Weblog article: 【ラジオ配信】私なりの哲学とゲームとお菓子（BGM有）【第3回】">新しい音声トーク&colon; 第３回ラジオ記事</a> を収録・公開しました．</span> (Feb 14, 2024)</p>
-        <p><span class="solid-under-line">進捗状況や今後の計画を示す <a href="#wip-column" class="bold-font">WIP</a> をこのトップページ内に設置しました．</span> (Jan 27, 2024)</p>
-
       <div class="column-flex">
+        <div class="column-item">
+          <h2 class="column-area">News&colon;</h2>
+          <div class="news-box">
+            <p><span class="bold-font" style="color:brown">NEW!</span> <span class="solid-under-line"><a href="./weblog/num38.html" title="Weblog article: 【ラジオ配信】今後の展望（BGM有）【第5回・最終回】" class="bold-font">新しい音声トーク&colon; 第５回ラジオ記事</a> を収録・公開しました．</span> (Feb 29, 2024)</p>
+            <p><span class="solid-under-line"><a href="./weblog/index.html#num34" title="Weblog article: 妄想バナ詩が聴こえる頃に">新しい詩集記事&colon; 妄想バナ詩が聴こえる頃に</a> を公開しました．</span> (Feb 24, 2024)</p>
+            <p><span class="solid-under-line"><a href="./weblog/num32.html" title="Weblog article: 【ラジオ配信】私のインターネット活動の歴史と思考などなど（BGM有）【第4回】">新しい音声トーク&colon; 第４回ラジオ記事</a> を収録・公開しました．</span> (Feb 21, 2024)</p>
+            <p>スマートフォン版横向表示（ランドスケープ）対応しました．お使いのブラウザの履歴消去機能あたりにあるであろう「キャッシュの削除」を実行されることで初めて適用されることがあります（過去のバージョンがキャッシュとして残っている場合など）． (Feb 21, 2024)</p>
+            <p><span class="solid-under-line"><a href="./weblog/num29.html" title="Weblog article: 【ラジオ配信】私なりの哲学とゲームとお菓子（BGM有）【第3回】">新しい音声トーク&colon; 第３回ラジオ記事</a> を収録・公開しました．</span> (Feb 14, 2024)</p>
+            <p><span class="solid-under-line">進捗状況や今後の計画を示す <a href="#wip-column" class="bold-font">WIP</a> をこのトップページ内に設置しました．</span> (Jan 27, 2024)</p>
+          </div>
+        </div>
+
         <div class="column-item">
           <h2 class="column-area music-top-icon"><a href="music/index.html" title="Music Top">Music</a>&colon;</h2>
           <div class="one-box">
@@ -120,7 +125,7 @@
             </details>
                 <p>公開中の作品から，たとえばこちらはいかがでしょうか？</p>
                   <figure class="audio_figure index-figure">
-                    <figcaption class="audio_cap">&#x300E;<a href="./music/2023/0001_RCA.html">参照</a>&#x300F;システィみやたけ, 2023</figcaption>
+                    <figcaption class="audio_cap">&#x300E;<a href="./music/2023/0001_RCA.html" class="bold-font">参照</a>&#x300F;システィみやたけ, 2023</figcaption>
                     <audio id="songPlayer" preload="metadata" src="./media/mp3-audio/RCA_MAS2_320kbps.mp3">
                       お使いのブラウザはこのプレイヤーでの再生に対応していないようです．詳しくは設置サイト管理者にお問い合わせください．
                     </audio>
@@ -128,11 +133,7 @@
                   <div class="controls index-controls">
                     <div class="ctrlsbutton">
                       <div id="play">Play</div>
-                      <div id="stop">Stop</div>
-                    </div>
-                    <div id="seekbar"></div>
-                    <div id="time">
-                      <span id="current">00:00</span><span id="duration">00:00</span>
+                      <div id="stop" class="index-ctrlsb">Stop</div>
                     </div>
                     <div class="volumebutton">
                       <button id="attenuater" onclick="attenuateVolume()" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button><button id="fullVolume" onclick="fullVolume()" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
@@ -169,24 +170,22 @@
         <div class="column-item">
           <h2 class="column-area weblog-top-icon"><a href="weblog/index.html" title="Weblog Top">Weblog</a>&colon;</h2>
           <div class="three-box">
-            <p>公開中の記事(音声記事含む)数は<a href="weblog/index.html" title="Weblog Top" class="bold-font spacing-font">37</a>件です．</p>
-            <p>公開中のラジオ記事回数は<a href="weblog/index.html" title="Weblog Top" class="bold-font spacing-font">4</a>本です．</p>
+            <p>公開中の記事(音声記事含む)数は<a href="weblog/index.html" title="Weblog Top" class="bold-font spacing-font">38</a>件です．</p>
+            <p>公開中のラジオ記事回数は<a href="weblog/index.html" title="Weblog Top" class="bold-font spacing-font">5</a>本です．</p>
           </div>
         </div>
 
         <div class="column-item" id="wip-column">
           <h2 class="column-area others-icon"><a href="./others/index.html#wip" title="Others Top - WIP">Other Contents - WIP</a>&colon;</h2>
           <div class="four-box">
-            <p>Last updated: Feb 21, 2024;</p>
+            <p>Last updated: Feb 29, 2024;</p>
             <p class="wip-h">&#12304;サイトデザイン&#12305;</p>
             <p>直感的に扱い易い UI 設計を目指す．</p>
-            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="3">3%</progress>
+            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="4">4%</progress>
 
             <p class="wip-h">&#12304;音声記事を収録する&#12305;</p>
-            <p>3人目のキュートな分霊出演者，現る！？<br>
-            ウェブ制作の歴史や解説などを引き続き行う予定．<br>
-            普段扱うソフトや環境の紹介なども？</p>
-            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="5">5%</progress>
+            <p>一旦，おやすみ．</p>
+            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="6">6%</progress>
 
             <p class="wip-h">&#12304;文章記事を執筆する&#12305;</p>
             <p>"いい思い出 その３「横浜」" の題名・内容で公開する予定．</p>
@@ -206,6 +205,13 @@
             <div class="ud-table-wrapper">
               <p class="update-year">revisions 2024</p>
               <table class="update-table">
+                 <tr>
+                  <td class="update-date">Feb 29, 2024</td>
+                  <td class="update-content">
+                  ブログ記事更新（<a href="./weblog/num38.html" title="Weblog article: 【ラジオ配信】今後の展望（BGM有）【第５回・最終回】">1本ラジオ公開</a>）,<br>
+                  トップページのニュース欄を可スクロールでコンパクトで調和的なデザインのカラムに更新,<br>
+                  その他軽微な修正・改善&#59;</td>
+                </tr>
                 <tr>
                   <td class="update-date">Feb 28, 2024</td>
                   <td class="update-content">
