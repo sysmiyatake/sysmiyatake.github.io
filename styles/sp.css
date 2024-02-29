@@ -411,6 +411,23 @@ article summary::selection {
 }
 /* fin -- index.html only */
 
+.news-box {
+  margin: 0 .25em;
+  padding: 1.25em;
+  width: 75vw;
+  height: 8em;
+  max-height: 80vh;
+  background-color: hsla(34, 78%, 91%, 0.5);
+  border: 3px hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 1em;
+  overflow-y: scroll;
+  scrollbar-color: hsla(0, 0%, 0%, 0.25) hsla(0, 0%, 0%, 0);
+}
+
+.news-box p {
+  margin-bottom: 1em;
+}
+
 #page-title {
   padding-left: .5em;
   padding-top: .5em;
