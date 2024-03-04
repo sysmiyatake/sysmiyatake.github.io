@@ -1025,6 +1025,24 @@ figcaption {
   padding: 0 6em;
 }
 
+.sitemap-table {
+  margin: 0 1em 3em 6em;
+  font-size: .85em;
+}
+
+.sitemap-ja {
+  padding-left: 1em;
+}
+
+.sitemap-en {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+}
+
+.align-right {
+  text-align: right;
+}   
+
 .sp-text {
   display: none;
 }

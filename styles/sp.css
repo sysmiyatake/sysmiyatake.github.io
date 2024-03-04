@@ -1041,6 +1041,20 @@ footer nav {
  padding: 0;
 }
 
+.sitemap-table {
+  margin: .75em;
+  width: 50vw;
+  font-size: .75em;
+}
+
+.sitemap-ja {
+  padding-left: 1em;
+}
+
+.sitemap-en {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .sp-text {
   font-size: .75em;
 }
