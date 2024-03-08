@@ -1036,9 +1036,17 @@ footer nav {
   color: hsl(0, 0%, 0%);
 }
 
+.others-video {
+  padding: .5em;
+}
+
+.others-video video {
+  width: 75vw;
+}
+
 .others-music {
- width: 70vw;
- padding: 0;
+  width: 70vw;
+  padding: 0;
 }
 
 .sitemap-table {
@@ -1081,6 +1089,7 @@ footer nav {
 .released-year,
 .song-type,
 .pic-img,
+.pic-img-vertical,
 .inline_img {
   user-select: none;
   -ms-user-select: none;
