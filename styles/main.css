@@ -721,8 +721,7 @@ img.garally-img:hover {
 
 .update-box {
   margin: 0 1.5em 1.5em;
-  width: 75vw;
-  max-width: 80vw;
+  width: fit-content;
   height: fit-content;
   background-color: hsla(34, 78%, 91%, 0.5);
   border-radius: 1em 0 0 1em;
@@ -731,7 +730,7 @@ img.garally-img:hover {
 .ud-table-wrapper {
   padding: 1em;
   max-height: 30em;
-  width: fit-content;
+  width: 75vw;
   border: .25em hsla(0, 0%, 0%, 0.25) solid;
   overflow-y: scroll;
   scrollbar-color: hsla(0, 0%, 0%, 0.25) hsla(0, 0%, 0%, 0);
