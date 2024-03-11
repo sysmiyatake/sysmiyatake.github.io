@@ -577,6 +577,10 @@
     border-radius: 1em;
   }
 
+  .artworks_fig figure {
+    text-align: center;
+  }
+
   .artwork_cap {
     font-size: 0.75em;
   }
