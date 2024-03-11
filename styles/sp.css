@@ -206,7 +206,7 @@ cite::before {
 }
 
 .top-pic-thumb img {
-  margin: 1em;
+  margin: 5px;
   width: 15vw;
   height: auto;
   border-radius: 15%;
@@ -414,7 +414,7 @@ article summary::selection {
 .news-box {
   margin: 0 .25em;
   padding: 1.25em;
-  width: 75vw;
+  width: fit-content;
   height: 8em;
   max-height: 80vh;
   background-color: hsla(34, 78%, 91%, 0.5);
@@ -698,6 +698,10 @@ img.garally-img:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.column-item {
+  max-width: 80vw;
+}
+
 .column-item p {
   padding-left: 0!important;
 }
@@ -761,7 +765,7 @@ img.garally-img:hover {
 
 .update-box {
   margin: 0 .25em;
-  width: 100px;
+  width: 70vw;
   min-width: max-content;
   height: fit-content;
   background-color: hsla(34, 78%, 91%, 0.5);
@@ -1112,7 +1116,7 @@ footer nav {
 /* for SP-Landscape */
 @media screen and (max-height: 710px) {
   #fixed-menu {
-    margin: 3.5em 1em;
+    margin: 8.5em 1em;
     padding: .5em;
     width: fit-content;
     height: fit-content;

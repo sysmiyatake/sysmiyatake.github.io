@@ -721,7 +721,7 @@ img.garally-img:hover {
 
 .update-box {
   margin: 0 1.5em 1.5em;
-  width: 50em;
+  width: 75vw;
   max-width: 80vw;
   height: fit-content;
   background-color: hsla(34, 78%, 91%, 0.5);

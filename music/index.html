@@ -71,6 +71,44 @@
         <summary><span>直下に詳しく表示</span>...</summary>
         <p>はじめに作品の一覧があり，その中には現在もお聴きいただける公開作品が含まれています．<br>おそらく，公開作品数は日に日に逓増するかと思われます．<br>それでは，ごゆっくりご鑑賞ください！</p>
       </details>
+
+      <h2 class="page-headline-large">Top Artwork</h2>
+      <p class="top-artwork">
+      <a href="./2023/0003_FACE.html"><img src="../media/png-artwork/2023_FACE_mas.png" title="そんな貌 &#40;カオ&#41; しないで"></a>
+      <a href="./2023/0005_MMM.html"><img src="../media/img-classics/monmon.png" title="悶Monもんっ！"></a>
+      <a href="./2018/0001_PC.html"><img src="../media/png-artwork/2018_0001_PC_mas_numbered_thumb.webp" title="Personal Condition"></a>
+      <a href="./2018/0002_SZ.html"><img src="../media/png-artwork/2018_0002_SZ_mas_numbered_thumb.webp" title="SZ Lullaby"></a>
+      <a href="./2017/0001_SHOZ-doba.html"><img src="../media/img-classics/doba.gif" title="ドバミミズくん の画像"></a>
+      </p>
+
+      <h2 id="song-content">Top Song</h2>
+      <p>注目の作品を，高音質バージョンでお届けしております！<br>具体的には，該当曲のみ320kbps &#40;他は通常 96-160kbps 近辺で公開中&#41; の mp3 ファイルフォーマットでの公開となります．
+      </p>
+
+      <div class="song-part"><div class="song-part-inner">
+        <h3 class="song-title">&#x300E;<a href="./2023/0001_RCA.html">参照</a>&#x300F;システィみやたけ, 2023</h3>
+        <figure class="audio_figure">
+          <figcaption class="audio_cap">Listen to the &quot;Reference Consultation Applause - SYS. T.
+            Miyatake&quot;&colon;</figcaption>
+          <audio id="songPlayer" preload="metadata" src="../media/mp3-audio/RCA_MAS2_320kbps.mp3">
+            お使いのブラウザはこのプレイヤーでの再生に対応していないようです．詳しくは設置サイト管理者にお問い合わせください．
+          </audio>
+        </figure>
+        <div class="controls">
+          <div class="ctrlsbutton">
+            <div id="play">Play</div>
+            <div id="stop">Stop</div>
+          </div>
+          <div class="seekbar-wrap"><div id="seekbar"></div></div>
+          <div id="time">
+            <span id="current">00:00</span><span id="duration">00:00</span>
+          </div>
+          <div class="volumebutton">
+            <button id="attenuater" onclick="attenuateVolume()" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button><button id="fullVolume" onclick="fullVolume()" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
+          </div>
+        </div>
+      </div></div>
+
       <h2 id="content-list" class="page-headline-large">List of Song</h2>
       <p>&#9660; 発表年をご選択ください &#9660;</p>
       <div class="tab-wrap">
@@ -96,7 +134,8 @@
           <h3 class="released-year">2023</h3>
           <h4 class="year-desc">真新しい未来を感じる，これからのビジョンを描き始める年です！</h4>
           <div class="img-classics">
-            <p style="padding-top: 2em;">以下に当時の資料画像やアルバムアートワークを併せて並べて掲載いたしましたので，こちらもお楽しみくださいね．<br><a href="./2023/0004_AMT.html"><img src="../media/png-artwork/AnthologicalMausoleumThemeTitleImage.png" title="詩集廟のある杜"></a>
+            <p style="padding-top: 2em;">以下に当時の資料画像やアルバムアートワークを併せて並べて掲載いたしましたので，こちらもお楽しみくださいね．<br>
+            <a href="./2023/0004_AMT.html"><img src="../media/png-artwork/AnthologicalMausoleumThemeTitleImage.png" title="詩集廟のある杜"></a>
             <a href="./2023/0005_MMM.html"><img src="../media/img-classics/monmon.png" title="悶Monもんっ！"></a>
             <a href="./2023/0003_FACE.html"><img src="../media/png-artwork/2023_FACE_mas.png" title="そんな貌 &#40;カオ&#41; しないで"></a></p>
           </div>
@@ -234,6 +273,11 @@
         <div class="tab-content">
           <h3 class="released-year">2018</h3>
           <h4 class="year-desc">こっそりとした名曲が生まれ，そこにいつも佇むのは静寂と悩乱の荒波．</h4>
+
+          <p class="inner-artwork">
+            <a href="./2018/0001_PC.html"><img src="../media/png-artwork/2018_0001_PC_mas_numbered_thumb.webp" title="Personal Condition"></a>
+            <a href="./2018/0002_SZ.html"><img src="../media/png-artwork/2018_0002_SZ_mas_numbered_thumb.webp" title="SZ Lullaby"></a>
+          </p>
           <ul class="song-list">
             <li class="artist-name">T.Miyatake
               <ul class="song-list-title">
@@ -532,7 +576,7 @@
           <ul class="song-list">
             <li class="type-name">わくわく！あそぼー！
               <ul class="song-list-title">
-                <li>*song name</li>
+                <li><a href="./2018/0003_DS.html">痩せよう！のうた (2018 Version)</a></li>
               </ul>
           </ul>
         </div>
@@ -544,7 +588,25 @@
           <ul class="song-list">
             <li class="type-name">かっこよく！決めてやるZ！
               <ul class="song-list-title">
-                <li>*song name</li>
+                <li><a href="./2013/0002_YFSv2.html">大和富士物語 V2</a></li>
+                <li><a href="./2020/0001_TNK.html">狸の骸と悦楽を</a> &#91;mp4 video&#93;</li>
+                <li><a href="./2018/0005_AILSD.html">夢のまま</a> &#91;m4v video&#93;</li>
+                <li><a href="./2018/0006_KANT.html">金木犀 〜秋の漂い〜 ボーカル版</a> &#91;mp4 video&#93;</li>
+                <li><a href="./2018/0001_PC.html">Personal Condition</a></li>
+                <li><a href="./2018/0007_NKRNKY.html">ぬかりなきよう</a></li>
+              </ul>
+          </ul>
+        </div>
+
+        <input id="tab_love" type="radio" name="type-tab" class="tab-switch"><label class="tab-label"
+          for="tab_love">LOVE</label>
+        <div class="tab-content">
+          <h3 class="song-type">LOVE</h3>
+          <ul class="song-list">
+            <li class="type-name">愛と恋と切なさと！込み上げる情念！
+              <ul class="song-list-title">
+                <li><a href="./2019/0001_MASK-HS.html">MASK〜光ちゃんへ捧ぐ (2019 Remaster)</a></li>
+                <li><a href="./2013/0003_MASK-ED.html">MASKED FIEND</a> &#91;mp4 video, mp3 audio&#93;</li>
               </ul>
           </ul>
         </div>
@@ -556,7 +618,8 @@
           <ul class="song-list">
             <li class="type-name">ノリノリ！踊りましょう！
               <ul class="song-list-title">
-                <li>*song name</li>
+                <li><a href="./2015/0001_IMB.html">痛みの罰</a> &#91;Inst&#93;</li>
+                <li><a href="./2021/0004_DRMN.html">Dreamin' 〜夢中遊行物語〜 (2021 Remake Version)</a></li>
               </ul>
           </ul>
         </div>
@@ -568,7 +631,10 @@
           <ul class="song-list">
             <li class="type-name">病んでもいいよね！別にさ...
               <ul class="song-list-title">
-                <li>*song name</li>
+                <li><a href="./2018/0002_SZ.html">SZ Lullaby</a></li>
+                <li><a href="./2016/0001_DEKK.html">企図DEKK (序盤語り)</a></li>
+                <li><a href="./2017/0001_SHOZ-doba.html">焦燥寂寥 &#40;しょうそうぜきりょう&#41; - 丘引</a></li>
+                <li><a href="./2018/0004_ASZ.html">嗚呼統失</a></li>
               </ul>
           </ul>
         </div>
@@ -580,7 +646,9 @@
           <ul class="song-list">
             <li class="type-name">ボーカル無しの楽曲だ！背景でも活躍するよ！
               <ul class="song-list-title">
-                <li>*song name</li>
+                <li><a href="./2021/0003_SPSM.html">春は唐辛子 夏は豆板醤</a> &#91;Inst&#93;</li>
+                <li><a href="./2021/demo0001_BS.html">ブルースカイ</a> &#91;VocalPart&colon; none&#59;&#93;</li>
+                <li><a href="./2021/demo0002_PW.html">水分の欲求</a> &#91;Inst&#93;</li>
               </ul>
           </ul>
         </div>
@@ -597,34 +665,6 @@
           </ul>
         </div>
       </div>
-
-      <h2 id="song-content">Top Song</h2>
-      <p>注目の作品を，高音質バージョンでお届けしております！<br>具体的には，該当曲のみ320kbps &#40;他は通常 96-160kbps 近辺で公開中&#41; の mp3 ファイルフォーマットでの公開となります．
-      </p>
-
-      <div class="song-part"><div class="song-part-inner">
-        <h3 class="song-title">&#x300E;<a href="./2023/0001_RCA.html">参照</a>&#x300F;システィみやたけ, 2023</h3>
-        <figure class="audio_figure">
-          <figcaption class="audio_cap">Listen to the &quot;Reference Consultation Applause - SYS. T.
-            Miyatake&quot;&colon;</figcaption>
-          <audio id="songPlayer" preload="metadata" src="../media/mp3-audio/RCA_MAS2_320kbps.mp3">
-            お使いのブラウザはこのプレイヤーでの再生に対応していないようです．詳しくは設置サイト管理者にお問い合わせください．
-          </audio>
-        </figure>
-        <div class="controls">
-          <div class="ctrlsbutton">
-            <div id="play">Play</div>
-            <div id="stop">Stop</div>
-          </div>
-<div id="seekbar"></div>
-                    <div id="time">
-                      <span id="current">00:00</span><span id="duration">00:00</span>
-                    </div>
-                    <div class="volumebutton">
-                      <button id="attenuater" onclick="attenuateVolume()" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button><button id="fullVolume" onclick="fullVolume()" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
-                    </div>
-        </div>
-      </div></div>
 
       <h2 class="page-headline-large">Questions and Answers</h2>
 
