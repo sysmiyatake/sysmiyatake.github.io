@@ -232,7 +232,7 @@
 }
 
 #seekbar {
-  width: 25vw;
+  width: 20vw;
   height: 25px;
   margin: 2em;
   border-radius: 5px;
@@ -389,6 +389,7 @@
 
   .song-part {
     margin: 1.5em 0 1.5em;
+    width: auto;
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
     border-radius: 1em;
