@@ -1020,7 +1020,7 @@ figcaption {
 }
 
 .others-video {
-  padding: 0 6em;
+  padding: 0 6em 3em;
 }
 
 .others-video video {
@@ -1028,7 +1028,7 @@ figcaption {
 }
 
 .others-music {
-  width: 70vw;
+  width: 75vw;
   padding: 0 6em;
 }
 

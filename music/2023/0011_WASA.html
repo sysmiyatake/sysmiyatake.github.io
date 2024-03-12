@@ -69,7 +69,19 @@
       </details>
       
       <h2 id="artworks-title">Artwork</h2>
-      <p>まだ存在しません．</p>
+      <div class="artworks_fig">
+        <figure>
+          <picture>
+            <source srcset="../../media/png-artwork/2023_WASA.webp" type="image/webp"
+              media="(max-width:768px)" width="256">
+            <source srcset="../../media/png-artwork/2023_WASA.webp" type="image/webp"
+              media="(min-width:769px)" width="512">
+            <img src="../../media/png-artwork/2023_WASA.webp" alt="わさび・からし Artwork Image">
+          </picture>
+          <figcaption class="artwork_cap">&quot;わさび・からし&quot; Artwork Image &#40;T.Joraku.M x Sys. T. Miyatake, 2023-2024&#41;</figcaption>
+        </figure>
+        <p class="enlarge-img"><a href="../../media/png-artwork/2023_WASA.webp" target="_blank">&#91;&plus;&#93; Enlarge the image</a></p>
+      </div>
 
       <h2 id="song-content">Song Content</h2>
       <details>
@@ -95,13 +107,13 @@
             <div id="play">Play</div>
             <div id="stop">Stop</div>
           </div>
-<div class="seekbar-wrap"><div id="seekbar"></div></div>
-                    <div id="time">
-                      <span id="current">00:00</span><span id="duration">00:00</span>
-                    </div>
-                    <div class="volumebutton">
-                      <button id="attenuater" onclick="attenuateVolume()" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button><button id="fullVolume" onclick="fullVolume()" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
-                    </div>
+          <div class="seekbar-wrap"><div id="seekbar"></div></div>
+          <div id="time">
+            <span id="current">00:00</span><span id="duration">00:00</span>
+          </div>
+          <div class="volumebutton">
+            <button id="attenuater" onclick="attenuateVolume()" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button><button id="fullVolume" onclick="fullVolume()" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
+          </div>
         </div>
       </div></div>
     <div id="page-end"></div>
