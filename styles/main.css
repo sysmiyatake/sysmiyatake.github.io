@@ -500,7 +500,7 @@ img.garally-img:hover {
 }
 
 .pic-img {
-  width: 65vw;
+  width: 50vw;
   height: auto;
   border-radius: 1%;
 }
@@ -516,24 +516,30 @@ img.garally-img:hover {
   padding: 3em 0;
 }
 
+.pic_num4_wrap {
+  width: fit-content;
+  height: fit-content;
+}
+
 .pic_num4 {
-  width: 75vw;
-  border-radius: 1%;
+  width: 50vw;
+  height: auto;
   background:url('../media/picture-webp/tbovc.webp');
-  background-size: 75vw;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .pic_num4:active {
-  width: 75vw;
-  border-radius: 1%;
+  width: 50vw;
+  height: auto;
   background:url('../media/picture-webp/tbovc_2.webp');
-  background-size: 75vw;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .pic_num4 img {
   opacity: 0;
+  aspect-ratio: 3350/2513;
 }
 
 .document-date {
