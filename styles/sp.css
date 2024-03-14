@@ -531,24 +531,30 @@ img.garally-img:hover {
   border-radius: 1%;
 }
 
+.pic_num4_wrap {
+  overflow: hidden;
+}
+
 .pic_num4 {
   width: 75vw;
-  border-radius: 1%;
+  height: 50vw;
   background:url('../media/picture-webp/tbovc.webp');
-  background-size: 75vw;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .pic_num4:active {
   width: 75vw;
-  border-radius: 1%;
+  height: 50vw;
   background:url('../media/picture-webp/tbovc_2.webp');
-  background-size: 75vw;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
 .pic_num4 img {
+  width: 75vw;
   opacity: 0;
+  aspect-ratio: 3350/2513;
 }
 
 .document-date {
@@ -651,6 +657,11 @@ img.garally-img:hover {
 
 .weblog-text h2::after {
   content:"\00020\02014";
+}
+
+.weblog-text h3 {
+  padding: 1.5em 1.25em 1em;
+  font-size: 1.125em;
 }
 
 .weblog-text p {

@@ -628,6 +628,11 @@ img.garally-img:hover {
   content:"\00020\02014";
 }
 
+.weblog-text h3 {
+  padding: 2em 4.5em 1em;
+  font-size: large;
+}
+
 .weblog-text p {
   padding: 1em 6em;
   line-height: 3.5em;
