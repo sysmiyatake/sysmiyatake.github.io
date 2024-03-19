@@ -1082,7 +1082,8 @@ figcaption {
 .song-type,
 .pic-img,
 .pic-img-vertical,
-.inline_img {
+.inline_img,
+.frame_img {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
