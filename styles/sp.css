@@ -75,11 +75,45 @@ a:hover {
 }
 
 hr {
-  margin: 1em;
-  height: 3px;
+  margin: 1.5em auto;
+  height: 1.5px;
+  width: 80vw;
   border-style: none;
   border-radius: 1.5px;
   background-color: hsla(135, 35%, 35%, 0.25);
+}
+
+.document-rule {
+  margin: 1.5em auto;
+  height: 3px;
+  width: 100%;
+  border-style: none;
+  border-radius: 1.5px;
+  background-color: hsla(135, 35%, 35%, 0.25);
+}
+
+.sec-dotted-rule {
+  margin: 1.5em auto 0;
+  width: 25vw;
+  border: none;
+  border-top: 3px dotted hsl(135, 35%, 25%);
+  border-radius: unset;
+  color:hsl(135, 35%, 25%);
+  background-color: unset;
+  overflow: visible;
+  text-align: center;
+  height: 1.5em;
+}
+
+.sec-dotted-rule::after {
+  font-family: 'Courier New', Courier, monospace;
+  color: hsla(0, 0%, 100%, 0.85);
+  background: hsl(135, 35%, 25%);
+  border-radius: 100%;
+  content: '§';
+  padding: 0 4px;
+  position: relative;
+  top: -1em;
 }
 
 summary {
@@ -466,6 +500,7 @@ article summary::selection {
 }
 
 .pic-garally {
+  margin: 0 auto;
   padding: .5em;
 }
 
@@ -665,16 +700,17 @@ img.garally-img:hover {
 }
 
 .weblog-text p {
-  padding: .5em 1.75em;
+  padding: .5em 1.5em;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 2.125em;
   text-indent: 1em;
 }
 
 .my-sign {
-  margin-top: 3em;
-  font-size: 1em;
+  margin: 1.5em;
+  font-size: .75em!important;
   font-style: italic;
+  line-height: 1.5em!important;
   text-align: right;
 }
 
@@ -691,12 +727,24 @@ img.garally-img:hover {
   border-radius: 1em;
 }
 
+.poem_fig figure {
+  text-align: center;
+}
+
+.poem_fig figcaption{
+  text-align: left;
+}
+
+.poem_fig img {
+  border-radius: 5px;
+}
+
 .poem_fig figure:hover {
   opacity: .85;
 }
 
 .column-flex {
-  margin: 1em .5em 1.5em;
+  margin: 1em auto 1.5em;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -719,7 +767,7 @@ img.garally-img:hover {
 
 .one-box {
   margin: 0 .25em;
-  width: fit-content;
+  width: auto;
   background-color: hsla(34, 78%, 91%, 0.5);
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
@@ -728,7 +776,7 @@ img.garally-img:hover {
 
 .two-box {
   margin: 0 .25em;
-  width: fit-content;
+  width: auto;
   background-color: hsla(34, 78%, 91%, 0.5);
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
@@ -737,7 +785,7 @@ img.garally-img:hover {
 
 .three-box {
   margin: 0 .25em;
-  width: fit-content;
+  width: auto;
   background-color: hsla(34, 78%, 91%, 0.5);
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
@@ -776,8 +824,6 @@ img.garally-img:hover {
 
 .update-box {
   margin: 0 .25em;
-  width: 70vw;
-  min-width: max-content;
   height: fit-content;
   background-color: hsla(34, 78%, 91%, 0.5);
   font-size: .75em;
@@ -906,7 +952,7 @@ img.garally-img:hover {
 .back-top {
   padding: .75em 1.5em;
   font-size: .75em;
-  background-color: hsla(0, 0%, 100%, 0.25);
+  background-color: hsla(0, 0%, 100%, 0.55);
 }
 
 .back-index {
@@ -934,6 +980,14 @@ img.garally-img:hover {
 }
 
 .back-page-top a::before {
+  width: 1.5em;
+  float: left;
+  padding-right: .25em;
+  text-align: right;
+  content: "\2191";
+}
+
+.back-page-top-b a::before {
   width: 1.5em;
   float: left;
   padding-right: .25em;
@@ -1013,11 +1067,11 @@ footer nav {
 .footer-nav {
   display: flex;
   list-style-type: none;
-  font-size: .75em;
+  font-size: 8px;
 }
 
 .footer-nav li:not(:first-child) {
-  padding-left: 1em;
+  padding-left: 12px;
 }
 
 .footer-nav li:before {
@@ -1051,16 +1105,70 @@ footer nav {
   color: hsl(0, 0%, 0%);
 }
 
+.others-list-box {
+  margin: 0 auto 3em;
+  padding: 1.75em;
+  width: fit-content;
+  background-color: hsla(34, 78%, 91%, 0.75);
+  border: 2.5px hsla(0, 0%, 0%, 0.25) solid;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+ul.others-list {
+  margin-top: 2em;
+  list-style: none;
+  font-size: .75em;
+  font-weight: bold;
+}
+
+.others-list ol {
+  margin: 1em 1.5em;
+  list-style-position: inside;
+  font-weight: normal;
+}
+
+.others-list ol li {
+  margin-top: 1em;
+}
+
+.others-title {
+  padding-left: .5em;
+}
+
 .others-video {
   padding: .5em;
+  text-align: center;
+}
+
+.others-video figcaption {
+  text-align: left;
 }
 
 .others-video video {
   width: 75vw;
 }
 
+.frame_img {
+  margin: 0 auto;
+  max-width: 75vw;
+}
+
+.frame_img img {
+  max-width: 75vw;
+}
+
 .others-music {
+  margin: 0 auto 3em;
   padding: 0;
+}
+
+.others-music audio {
+  width: 100%;
+}
+
+.demotape {
+  margin: 3em 0 .5em!important;
+  padding-left: 1em!important;
 }
 
 .sitemap-table {
