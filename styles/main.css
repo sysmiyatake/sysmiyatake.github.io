@@ -677,6 +677,7 @@ img.garally-img:hover {
   margin-top: 3em;
   font-style: italic;
   text-align: right;
+  text-decoration: underline;
 }
 
 .blog-inner-player {

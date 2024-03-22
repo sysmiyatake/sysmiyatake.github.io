@@ -708,10 +708,11 @@ img.garally-img:hover {
 
 .my-sign {
   margin: 1.5em;
-  font-size: .75em!important;
+  font-size: .6em!important;
   font-style: italic;
   line-height: 1.5em!important;
   text-align: right;
+  text-decoration: underline;
 }
 
 .blog-inner-player {
