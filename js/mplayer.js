@@ -68,11 +68,11 @@ const audio = document.getElementsByTagName("audio")[0]
 
         window.onload = function(){
           setCurrentTime(0);
-          document.getElementById("playerCurrentTime").value = 0;
+          document.getElementById("current").value = 0;
         }
 
         function setCurrentTime($currentTime) {
           var $elementReference = document.getElementById("songPlayer");
           $elementReference.currentTime = $currentTime;
-          document.getElementById("playerCurrentTime").innerHTML = $currentTime;
+          document.getElementById("current").innerHTML = $currentTime;
         }
