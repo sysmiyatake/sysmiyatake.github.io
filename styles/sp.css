@@ -1201,11 +1201,11 @@ ul.others-list {
   display: inline;
   width: 80vw;
   height: auto;
-  text-align: center;
 }
 
-.il_img_sp {
-  text-align: center;
+.il_img_sp > img {
+  margin: 1.5em auto 0;
+  display: block;
   text-indent: 0!important;
 }
 
