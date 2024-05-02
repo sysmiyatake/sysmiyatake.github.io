@@ -536,13 +536,13 @@ img.garally-img:hover {
 .pic-img {
   width: 50vw;
   height: auto;
-  border-radius: 1%;
+  border-radius: 15px;
 }
 
 .pic-img-vertical {
   width: auto;
   height: 75vh;
-  border-radius: 1%;
+  border-radius: 15px;
 }
 
 .picture-btt {
