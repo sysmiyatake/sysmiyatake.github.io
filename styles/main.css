@@ -1157,7 +1157,14 @@ ul.others-list {
 .inline_img {
   margin: 3em 0 0;
   display: inline;
-  width: 35vw;
+  width: 50%;
+  height: auto;
+}
+
+.inline_bigimg {
+  margin: 3em 0 0;
+  display: inline;
+  width: 90%;
   height: auto;
 }
 
@@ -1167,6 +1174,7 @@ ul.others-list {
 .pic-img,
 .pic-img-vertical,
 .inline_img,
+.inline_bigimg,
 .frame_img {
   user-select: none;
   -ms-user-select: none;

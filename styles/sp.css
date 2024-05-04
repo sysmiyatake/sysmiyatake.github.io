@@ -1203,6 +1203,13 @@ ul.others-list {
   height: auto;
 }
 
+.inline_bigimg {
+  margin: 1.5em 0 0;
+  display: inline;
+  width: 80vw;
+  height: auto;
+}
+
 .il_img_sp > img {
   margin: 1.5em auto 0;
   display: block;
@@ -1219,7 +1226,8 @@ ul.others-list {
 .song-type,
 .pic-img,
 .pic-img-vertical,
-.inline_img {
+.inline_img,
+.inline_bigimg {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
