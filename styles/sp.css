@@ -348,9 +348,9 @@ article summary::selection {
 }
 
 #fixed-menu {
-  margin: 8.5em 1em;
+  margin: 15em 1em;
   padding: .5em;
-  bottom: 0;
+  top: 0;
   right: 0;
   display: flex;
   position: fixed;
@@ -558,12 +558,14 @@ img.garally-img:hover {
   width: 100%;
   max-width: 75vw;
   border-radius: 5px;
+  transition: 1.5s;
 }
 
 .pic-img-vertical {
   width: 100%;
   max-width: 75vw;
   border-radius: 5px;
+  transition: 1.5s;
 }
 
 .pic_num4_wrap {
@@ -1014,7 +1016,7 @@ figcaption {
 }
 
 .back-page-top-button {
-  margin: 4em 1.5em;
+  margin: 10.25em 1.5em;
   width: 25px;
   height: 25px;
   position: fixed;
@@ -1038,7 +1040,7 @@ figcaption {
 }
 
 .go-page-fin-button {
-  margin: 1.5em;
+  margin: 8em 1.5em;
   width: 25px;
   height: 25px;
   position: fixed;
@@ -1068,7 +1070,7 @@ footer nav {
 .footer-nav {
   display: flex;
   list-style-type: none;
-  font-size: 8px;
+  font-size: 7.5px;
 }
 
 .footer-nav li:not(:first-child) {
@@ -1246,6 +1248,42 @@ ul.others-list {
   -webkit-user-select: none;
 }
 
+.img-blur {
+  filter: blur(6px);
+  -ms-filter: blur(6px);
+}
+
+.img-high-blur {
+  filter: blur(24px);
+  -ms-filter: blur(24px);
+  transition: 6s;
+}
+
+.blur-button {
+  position: fixed;
+  bottom: 1em;
+  right: 4.5em;
+}
+
+#toggle-blur {
+  margin-left: 1em;
+  padding: 0.5em;
+  width: fit-content;
+  color:hsl(135, 35%, 25%);
+  background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
+  text-align: center;
+  font-size: .5em;
+  cursor: pointer;
+  border: hsl(135, 15%, 35%) solid .25em;
+  border-radius: 7.5px;
+  transition: .5s;
+}
+
+#toggle-blur:hover {
+  background: linear-gradient(hsla(135, 45%, 75%, 0.5), hsl(135, 45%, 75%)) no-repeat hsla(135, 100%, 96%);
+  transition: .5s;
+}
+
 /* for SP-Landscape */
 @media screen and (max-height: 710px) {
   #fixed-menu {
@@ -1329,5 +1367,11 @@ ul.others-list {
 
   .go-page-fin-button a::before {
     content: url(../media/svg-icon/gotopagefin_sp.svg);
+  }
+
+  .blur-button {
+    position: fixed;
+    bottom: 1em;
+    right: 3em;
   }
 }

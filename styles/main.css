@@ -537,12 +537,14 @@ img.garally-img:hover {
   width: 50vw;
   height: auto;
   border-radius: 15px;
+  transition: 1.5s;
 }
 
 .pic-img-vertical {
   width: auto;
-  height: 75vh;
+  height: 65vh;
   border-radius: 15px;
+  transition: 1.5s;
 }
 
 .picture-btt {
@@ -1200,6 +1202,42 @@ ul.others-list {
   cursor: help;
 }
 
+.img-blur {
+  filter: blur(6px);
+  -ms-filter: blur(6px);
+}
+
+.img-high-blur {
+  filter: blur(24px);
+  -ms-filter: blur(24px);
+  transition: 6s;
+}
+
+.blur-button {
+  position: fixed;
+  bottom: 1em;
+  right: 3em;
+}
+
+#toggle-blur {
+  margin-left: 1em;
+  padding: 0.5em;
+  width: fit-content;
+  color:hsl(135, 35%, 25%);
+  background: linear-gradient(hsla(135, 35%, 75%, 0.5), hwb(135 66% 16%)) no-repeat hsla(135, 100%, 90%);
+  text-align: center;
+  font-size: .5em;
+  cursor: pointer;
+  border: hsl(135, 15%, 35%) solid .25em;
+  border-radius: 7.5px;
+  transition: .5s;
+}
+
+#toggle-blur:hover {
+  background: linear-gradient(hsla(135, 45%, 75%, 0.5), hsl(135, 45%, 75%)) no-repeat hsla(135, 100%, 96%);
+  transition: .5s;
+}
+
 /* for SP-Landscape */
 @media screen and (max-height: 710px) {
   #fixed-menu {
@@ -1283,5 +1321,12 @@ ul.others-list {
 
   .go-page-fin-button a::before {
     content: url(../media/svg-icon/gotopagefin_sp.svg);
+  }
+
+  .blur-button {
+  margin: 1em;
+  position: fixed;
+  bottom: 1em;
+  right: 3.5em;
   }
 }

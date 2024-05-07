@@ -508,7 +508,7 @@
   margin: 1em;
   position: fixed;
   bottom: 1em;
-  left: 50%;
+  right: 1em;
   }
 
   #play:hover,
