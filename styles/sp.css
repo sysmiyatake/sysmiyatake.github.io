@@ -679,7 +679,7 @@ img.garally-img:hover {
 }
 
 .weblog-text h1 {
-  padding: 1.5em 1em 1em;
+  padding: .5em 1em 1em;
   font-size: 1.5em;
 }
 
@@ -706,6 +706,16 @@ img.garally-img:hover {
   font-size: 1em;
   line-height: 2.125em;
   text-indent: 1em;
+}
+
+.article-data {
+  padding: 1.5em .75em .75em!important;
+  line-height: 0px!important;
+  text-indent: 0px!important;
+  text-align: right;
+  color: hsla(0, 0%, 0%, 0.5);
+  font-size: 0.75em!important;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .my-sign {
@@ -1241,7 +1251,7 @@ ul.others-list {
   pointer-events: none;
 }
 
-#fixed-menu, #site-title, .my-sign {
+#fixed-menu, #site-title, .article-data, .my-sign {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
