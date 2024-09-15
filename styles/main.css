@@ -233,7 +233,7 @@ cite::before {
   width: 5vw;
   height: auto;
   transition: 1.75s;
-  border-radius: 15%;
+  border-radius: 1em;
 }
 
 .top-pic-thumb img:hover {
@@ -730,6 +730,16 @@ img.garally-img:hover {
 
 .column-paragraph {
   margin-bottom: 30px;
+}
+
+.column-image {
+  margin: 2em 2em 0;
+}
+
+.column-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
 }
 
 .one-box {

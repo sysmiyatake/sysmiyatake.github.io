@@ -59,6 +59,17 @@ footer {
   background-color: hsla(135, 35%, 75%, 0.5);
 }
 
+.column-image {
+  margin: 1em 1em 0;
+  padding: 0 !important;
+}
+
+.column-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1em;
+}
+
 .open-in-new-tab::after {
   content: url(../media/svg-icon/open-in-new-tab.svg);
   margin-left: 3px;
