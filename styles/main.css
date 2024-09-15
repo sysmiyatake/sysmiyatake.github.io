@@ -734,6 +734,7 @@ img.garally-img:hover {
 
 .column-image {
   margin: 2em 2em 0;
+  text-align: center;
 }
 
 .column-image img {
