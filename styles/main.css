@@ -240,6 +240,13 @@ cite::before {
   opacity: 0.1;
 }
 
+.weblog-jacket-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  content: url("../media/weblog_jacket.webp");
+}
+
 article p::selection {
   color: hsl(0, 0%, 100%);
   background-color: hsl(135, 15%, 35%);
