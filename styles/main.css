@@ -703,6 +703,7 @@ img.garally-img:hover {
 }
 
 .poem_fig {
+  margin-top: 2em;
   margin-left: 3em;
   padding: 3em;
   width: fit-content;
@@ -1103,6 +1104,26 @@ figcaption {
 .address-box::after {
   content: "\a0 miyatakehtml [at] gmail.com";
   color: hsl(0, 0%, 0%);
+}
+
+.document-list-box {
+  margin: 0 3em;
+  padding: 3em;
+  width: fit-content;
+  background-color: hsla(34, 78%, 91%, 0.75);
+  border: .25em hsla(0, 0%, 0%, 0.15) solid;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+ul.document-list {
+  list-style: none;
+  font-weight: bold;
+}
+
+.document-list ol {
+  margin: 0 1.5em;
+  list-style-position: inside;
+  font-weight: normal;
 }
 
 .others-list-box {
