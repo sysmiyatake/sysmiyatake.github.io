@@ -682,6 +682,10 @@ img.garally-img:hover {
   text-indent: 1em;
 }
 
+.weblog-text ul {
+  padding: 1em 8em;
+}
+
 .article-data {
   padding: 1.5em 1.5em 0!important;
   line-height: 0px!important;
