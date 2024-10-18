@@ -14,11 +14,8 @@
   box-sizing: inherit;
 }
 
-html[lang="ja"] {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-}
-
 html {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -133,7 +130,6 @@ summary {
   color: hsl(135, 35%, 25%);
   font-size: .75em;
   font-weight: bold;
-  text-rendering: optimizeLegibility;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -142,6 +138,7 @@ summary {
 
 summary span {
   text-decoration: underline solid 2px hsl(135, 35%, 35%);
+  display: inline-block;
 }
 
 summary:hover {
