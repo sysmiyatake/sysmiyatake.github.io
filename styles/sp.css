@@ -126,6 +126,7 @@ hr {
 
 summary {
   margin: 1em;
+  width: fit-content;
   color: hsl(135, 35%, 25%);
   font-size: .75em;
   font-weight: bold;
