@@ -138,7 +138,6 @@ summary {
 
 summary span {
   text-decoration: underline solid 2px hsl(135, 35%, 35%);
-  display: inline-block;
 }
 
 summary:hover {
