@@ -133,6 +133,7 @@ summary {
   color: hsl(135, 35%, 25%);
   font-size: .75em;
   font-weight: bold;
+  text-rendering: optimizeLegibility;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
