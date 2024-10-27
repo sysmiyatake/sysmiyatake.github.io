@@ -87,8 +87,60 @@ document.addEventListener("DOMContentLoaded", function() {
     audio.volume = 1.0;
   }
 
-  // ページ読み込み時の初期化処理
-  setCurrentTime(0);
+// ページ読み込み時の初期化処理
+function setCurrentTime($currentTime) {
+  const currentElement = document.getElementById("current");
+  
+  if (audio) {
+    // 一時的にtimeupdateイベントを無効化
+    audio.removeEventListener("timeupdate", timeUpdateHandler);
+    
+    audio.currentTime = $currentTime; // audio要素のcurrentTimeを設定
+    
+    // timeupdateイベントを再登録
+    audio.addEventListener("timeupdate", timeUpdateHandler);
+  } else {
+    console.warn('Audio element not found.');
+  }
+
+  if (currentElement) {
+    currentElement.innerHTML = playTime($currentTime);
+  } else {
+    console.warn('Current time display element not found.');
+  }
+}
+
+  // timeupdate用のハンドラを関数として定義
+  function timeUpdateHandler(e) {
+    const current = Math.floor(audio.currentTime);
+    const duration = Math.round(audio.duration);
+
+    if (!isNaN(duration)) {
+      const currentElement = document.getElementById('current');
+      const durationElement = document.getElementById('duration');
+
+      if (currentElement) {
+        currentElement.innerHTML = playTime(current);
+      } else {
+        console.warn('Current time display element not found.');
+      }
+
+      if (durationElement) {
+        durationElement.innerHTML = playTime(duration);
+      } else {
+        console.warn('Duration display element not found.');
+      }
+
+      const percent = Math.round((audio.currentTime / audio.duration) * 1000) / 10;
+      if (seekbar) {
+        seekbar.style.backgroundSize = percent + '%';
+      }
+    }
+  }
+
+  // 初期化時にtimeupdateイベントリスナーを設定
+  audio.addEventListener("timeupdate", timeUpdateHandler);
+
 
   // 時間を設定する関数
   function setCurrentTime($currentTime) {
