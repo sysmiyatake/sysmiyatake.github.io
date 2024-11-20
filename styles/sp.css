@@ -102,7 +102,7 @@ hr {
 
 .sec-dotted-rule {
   margin: 1.5em auto 0;
-  width: 25vw;
+  width: 50vw;
   border: none;
   border-top: 3px dotted hsl(135, 35%, 25%);
   border-radius: unset;
@@ -496,6 +496,11 @@ article summary::selection {
 
 #content-list, #content-list-ii, #content-list-iii {
   margin-bottom: -1em;
+}
+
+.page-headline-xlarge {
+  padding: 1.75em 0em 1.5em;
+  font-size: 1.5em;
 }
 
 .page-headline-large {

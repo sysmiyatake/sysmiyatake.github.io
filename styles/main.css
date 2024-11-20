@@ -471,6 +471,11 @@ article summary::selection {
   content: ""!important;
 }
 
+.page-headline-xlarge {
+  padding: 1.5em;
+  font-size: 1.75em;
+}
+
 .page-headline-large {
   padding: 2em;
 }
@@ -1085,7 +1090,7 @@ figcaption {
 }
 
 .site-logo-img img {
-  width: 100%;
+  width: 28%;
   max-width: fit-content;
   padding-bottom: 1.5em;
 }
