@@ -726,10 +726,6 @@ img.garally-img:hover {
   border-radius: 1em;
 }
 
-.poem_fig figure:hover {
-  opacity: .95;
-}
-
 .poem_fig img {
   border-radius: 15px;
 }

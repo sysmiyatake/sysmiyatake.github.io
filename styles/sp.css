@@ -785,10 +785,6 @@ img.garally-img:hover {
   border-radius: 5px;
 }
 
-.poem_fig figure:hover {
-  opacity: .85;
-}
-
 .column-flex {
   margin: 1em auto 1.5em;
   width: fit-content;
