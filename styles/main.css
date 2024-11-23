@@ -247,6 +247,10 @@ cite::before {
   content: url("../media/weblog_jacket.webp");
 }
 
+.weblog-summary {
+  margin: 0 1em;
+}
+
 article p::selection {
   color: hsl(0, 0%, 100%);
   background-color: hsl(135, 15%, 35%);

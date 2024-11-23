@@ -260,6 +260,10 @@ cite::before {
   content: url("../media/weblog_jacket.webp");
 }
 
+.weblog-summary {
+  margin: 0 .75em;
+}
+
 article p::selection {
   color: hsl(0, 0%, 100%);
   background-color: hsl(135, 15%, 35%);
@@ -688,7 +692,7 @@ img.garally-img:hover {
   text-align: center;
 }
 
-.weblog-article-list span {
+.weblog-article-list span.hyphenated {
   display: none;
 }
 
@@ -1251,10 +1255,6 @@ ul.others-list {
 
 .sitemap-en {
   font-family: 'Courier New', Courier, monospace;
-}
-
-.sp-text {
-  font-size: .75em;
 }
 
 .file_list {
