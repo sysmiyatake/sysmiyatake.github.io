@@ -771,7 +771,7 @@ img.garally-img:hover {
 .poem_fig {
   margin: 1em 0em 3em;
   padding: 1em;
-  width: fit-content;
+  min-width: fit-content;
   background-color: hsla(135, 35%, 75%, 0.25);
   border: 0.5em hsl(135, 35%, 75%) solid;
   border-radius: 1em;
@@ -840,7 +840,7 @@ img.garally-img:hover {
 
 .four-box {
   margin: 0 .25em;
-  width: fit-content;
+  min-width: fit-content;
   background-color: hsla(34, 78%, 91%, 0.5);
   padding: 1.25em;
   border: 3px hsla(0, 0%, 0%, 0.25) solid;
@@ -852,7 +852,7 @@ img.garally-img:hover {
 }
 
 .wip-h {
-  margin-top: .5em;
+  margin-top: 2em;
   font-weight: bold;
 }
 

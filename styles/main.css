@@ -113,7 +113,7 @@ hr {
 }
 
 summary {
-  margin: 1.5em 5.25em 3em;
+  margin: 1.5em 5.25em 2.5em;
   width: fit-content;
   color: hsl(135, 35%, 25%);
   font-weight: bold;
@@ -750,6 +750,17 @@ img.garally-img:hover {
   padding: 0!important;
 }
 
+.column-summary {
+  margin: 1.5em 0 2em;
+  width: fit-content;
+  color: hsl(135, 35%, 25%);
+  font-weight: bold;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
 .column-paragraph {
   margin-bottom: 30px;
 }
@@ -797,8 +808,7 @@ img.garally-img:hover {
 .four-box {
   margin: 0 1.5em 1.5em;
   padding: 1.25em;
-  width: 20vw;
-  min-width: max-content;
+  min-width: 20vw;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: .25em hsla(0, 0%, 0%, 0.25) solid; 
   border-radius: 1em;

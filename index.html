@@ -121,7 +121,7 @@
           <div class="one-box">
             <p class="column-paragraph">公開中の作品数は<a href="music/index.html" title="Music Top" class="bold-font spacing-font">56</a>曲です．</p>
             <details>
-              <summary><span>詳しく</span></summary>
+              <summary class="column-summary"><span>詳しく表示</span></summary>
                 <p class="column-paragraph">中でも注目の作品は，<br>
                 &#x300E;<a href="./music/2024/0003_FRHT.html" class="bold-font">ふたりのヒ・ミ・ツ</a>&#x300F;<br>
                 &#x300E;<a href="./music/2013/0003_MASK-ED.html">MASKED FIEND</a>&#x300F;<br>
@@ -153,6 +153,7 @@
                       <button id="attenuater" onclick="attenuateVolume()" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button><button id="fullVolume" onclick="fullVolume()" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
                     </div>
                   </div>
+                <p style="margin-top: 1.5em;">&#9654;&#65038; <a href="music/index.html" title="Music Top">私はあらゆる独自音楽の鑑賞を希望しています（つまりは音楽カテゴリへ）</a></p>
           </div>
         </div>
 
@@ -195,41 +196,47 @@
         <div class="column-item">
           <h2 class="column-area weblog-top-icon"><a href="./weblog/index.html" title="Weblog Top">Weblog</a>&colon;</h2>
           <div class="three-box">
-            <p>主要テーマ：思想，哲学，物語，技術，健康，...<br>
-            個人ブログ&#12302;<a href="./weblog/index.html" title="Weblog Top" class="bold-font">そこには，いつかの残り香．</a>&#12303;です．</p>
-            <p class="column-image"><a href="./weblog/index.html#weblog-jacket"><img src="./media/weblog_jacket_thumb.webp" title="Weblog Top - ブログ表紙へGO！"></a></p>
+            <p><span class="sp-none">主要テーマ：</span>思想，哲学，物語，技術，健康，...<br>
+            個人ブログ&#12302;<a href="./weblog/index.html#page-title" title="&#12302;そこには，いつかの残り香．&#12303; Sys. T. Miyatake (2023-2024)" class="bold-font">そこには，いつかの残り香．</a>&#12303;です．</p>
+            <p class="column-image" style="margin-bottom: 1em;"><a href="./weblog/index.html#weblog-jacket"><img src="./media/weblog_jacket_thumb.webp" title="Weblog Top - ブログ表紙へGO！"></a></p>
             <p>公開中の全記事(音声記事含む)数は<a href="./weblog/index.html#general-article-list" title="Weblog Top - 記事一覧（総合）へGO！" class="bold-font spacing-font">91</a>件です．</p>
             <p>公開中の音声記事数は<a href="./weblog/index.html#with-audio-list" title="Weblog Top - 記事一覧（音声付のみ抽出）へGO！" class="bold-font spacing-font">11</a>件です．
-            <span class="sp-none"><br></span>音声記事の内，ラジオ放送は10件，学習記事は1件です．<span class="sp-none"><br></span>外，<span class="dotted-under-line">2件が現在一時非公開状態</span>です．</p>
+            <span class="sp-none"><br></span>音声記事の内，ラジオ放送は 10 件，学習記事は 1 件です．<span class="sp-none"><br></span>総数カウント外，<span class="dotted-under-line">現在 2 件が一時非公開状態</span>です．</p>
           </div>
         </div>
 
         <div class="column-item" id="wip-column">
           <h2 class="column-area others-icon"><a href="./others/index.html#wip" title="Others Top - WIP">Other Contents &rsaquo; WIP</a>&colon;</h2>
           <div class="four-box">
-            <p>WIP. Last updated: Nov 22, 2024;</p>
-            <p class="wip-h">&#12304;サイトデザイン（目標単位）&#12305;</p>
-            <p>c. ユーザが快適に扱える効率的且つ合理的な設計のウェブアプリ化．</p>
-            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="18">18%</progress>
-            <p>b. 雛形素材としてのデザインプロジェクト計画．</p>
-            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="5">5%</progress>
-            <p>a. 直感的に扱い易い UI 設計を目指す．</p>
-            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="8">8%</progress>
+            <p>セミリアルタイムの作業進捗です．<br>
+            目標・イベント・期間の単位を採用中．</p>
+            <details>
+              <summary class="column-summary"><span>Work In Progress を確認する</span></summary>
+                <p class="wip-h">&#12304;サイトデザイン（目標単位）&#12305;</p>
+                <p>c. ユーザが快適に扱える効率的且つ合理的な設計のウェブアプリ化．</p>
+                <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="18">18%</progress>
+                <p>b. 雛形素材としてのデザインプロジェクト計画．</p>
+                <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="5">5%</progress>
+                <p>a. 直感的に扱い易い UI 設計を目指す．</p>
+                <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="8">8%</progress>
 
-            <p class="wip-h">&#12304;音声記事を収録する（イベント単位）&#12305;</p>
-            <p>HTML 学習記事の第二回音声を録音・公開予定．<br>
-            HTML タグ打ちの編集画像などを交えた説明ノートを執筆・併せて公開．</p>
-            <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="0">0%</progress>
+                <p class="wip-h">&#12304;音声記事を収録する（イベント単位）&#12305;</p>
+                <p>HTML 学習記事の第二回音声を録音・公開予定．<br>
+                HTML タグ打ちの編集画像などを交えた説明ノートを執筆・併せて公開．</p>
+                <label for="prog_four">Progress: </label><progress id="prog_four" max="100" value="0">0%</progress>
 
-            <p class="wip-h">&#12304;文章記事を執筆する（イベント単位）&#12305;</p>
-            <p>現在，特別なイベントの予定なし．</p>
-            <label for="prog_three">Progress: </label><progress id="prog_three" max="100" value="0">0%</progress>
+                <p class="wip-h">&#12304;文章記事を執筆する（イベント単位）&#12305;</p>
+                <p>現在，特別なイベントの予定なし．</p>
+                <label for="prog_three">Progress: </label><progress id="prog_three" max="100" value="0">0%</progress>
 
-            <p class="wip-h">&#12304;これが私の音楽だ！2024（年単位）&#12305;</p>
-            <label for="prog_two">Progress: </label><progress id="prog_two" max="100" value="92">92%</progress>
+                <p class="wip-h">&#12304;これが私の音楽だ！2024（年単位）&#12305;</p>
+                <label for="prog_two">Progress: </label><progress id="prog_two" max="100" value="92">92%</progress>
 
-            <p class="wip-h">&#12304;これが私の絵画だ！2024（年単位）&#12305;</p>
-            <label for="prog_one">Progress: </label><progress id="prog_one" max="100" value="85">85%</progress>
+                <p class="wip-h">&#12304;これが私の絵画だ！2024（年単位）&#12305;</p>
+                <p>ドキュメントページ内のポエム画像作品を含む．</p>
+                <label for="prog_one">Progress: </label><progress id="prog_one" max="100" value="85">85%</progress>
+            </details>
+            <p style="text-align: right;">Last updated: Nov 28, 2024;</p>
           </div>
         </div>
 
