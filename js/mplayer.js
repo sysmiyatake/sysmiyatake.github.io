@@ -1,26 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // 初期化フラグを設定
+document.addEventListener("DOMContentLoaded", function () {
   let warnedAudioNotFound = false;
   let warnedPlayButtonNotFound = false;
   let warnedStopButtonNotFound = false;
   let warnedSeekbarNotFound = false;
-  let warnedAttenuateButtonNotFound = false;
-  let warnedFullVolumeButtonNotFound = false;
 
-  // audio要素の取得と存在チェック
   const audio = document.getElementsByTagName("audio")[0];
   if (!audio && !warnedAudioNotFound) {
     console.error('Audio element not found.');
     warnedAudioNotFound = true;
   }
 
-  // Playボタンの取得と存在チェック
   const playButton = document.getElementById("play");
   if (playButton) {
     playButton.addEventListener('click', () => {
       if (audio.paused) {
         audio.play();
-        playButton.innerHTML = playButton.innerHTML === 'Play' ? 'Pause' : 'Play';
+        playButton.innerHTML = 'Pause';
       } else {
         audio.pause();
         playButton.innerHTML = 'Play';
@@ -31,30 +26,32 @@ document.addEventListener("DOMContentLoaded", function() {
     warnedPlayButtonNotFound = true;
   }
 
-  // Stopボタンの取得と存在チェック
   const stopButton = document.getElementById("stop");
   if (stopButton) {
     stopButton.addEventListener('click', () => {
       audio.pause();
       audio.currentTime = 0;
+      playButton.innerHTML = 'Play';
+      updateSeekbar();
+      updateTime();
     });
   } else if (!warnedStopButtonNotFound) {
     console.warn('Stop button not found.');
     warnedStopButtonNotFound = true;
   }
 
-  // Seekbarの取得と存在チェック
   const seekbar = document.getElementById('seekbar');
-  if (seekbar) {
-    seekbar.addEventListener("click", (e) => {
-      const duration = Math.round(audio.duration);
-      if (!isNaN(duration)) {
-        const mouse = e.pageX;
-        const rect = seekbar.getBoundingClientRect();
-        const position = rect.left + window.scrollX;
-        const offset = mouse - position;
-        const width = rect.right - rect.left;
-        audio.currentTime = Math.round(duration * (offset / width));
+  const seekbarWrap = document.querySelector('.seekbar-wrap');
+  if (seekbar && seekbarWrap) {
+    seekbarWrap.addEventListener("click", (e) => {
+      const duration = audio.duration;
+      if (!isNaN(duration) && duration > 0) {
+        const rect = seekbarWrap.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const percentage = offsetX / rect.width;
+        audio.currentTime = duration * percentage;
+        updateSeekbar();
+        updateTime();
       }
     });
   } else if (!warnedSeekbarNotFound) {
@@ -62,51 +59,64 @@ document.addEventListener("DOMContentLoaded", function() {
     warnedSeekbarNotFound = true;
   }
 
-  // 音量アッテネータボタンの取得とイベントリスナー設定
-  const attenuateButton = document.getElementById("attenuater");
-  if (attenuateButton) {
-    attenuateButton.addEventListener('click', attenuateVolume);
-  } else if (!warnedAttenuateButtonNotFound) {
-    console.warn('Attenuate button not found.');
-    warnedAttenuateButtonNotFound = true;
+  const attenuater = document.getElementById("attenuater");
+  const fullVolume = document.getElementById("fullVolume");
+
+  if (attenuater) {
+    attenuater.addEventListener("click", () => {
+      if (audio) {
+        audio.volume = 0.33;
+      }
+    });
   }
 
-  // 音量フル設定ボタンの取得とイベントリスナー設定
-  const fullVolumeButton = document.getElementById("fullVolume");
-  if (fullVolumeButton) {
-    fullVolumeButton.addEventListener('click', fullVolume);
-  } else if (!warnedFullVolumeButtonNotFound) {
-    console.warn('Full Volume button not found.');
-    warnedFullVolumeButtonNotFound = true;
+  if (fullVolume) {
+    fullVolume.addEventListener("click", () => {
+      if (audio) {
+        audio.volume = 1;
+      }
+    });
   }
 
-  // 音量アッテネータ関数
-  function attenuateVolume() {
-    audio.volume = 0.33;
-  }
-
-  // 音量フル設定関数
-  function fullVolume() {
-    audio.volume = 1.0;
-  }
-
-  // 時間を表示する関数
-  function playTime(t) {
-    let hms = '';
-    const h = t / 3600 | 0;
-    const m = t % 3600 / 60 | 0;
-    const s = t % 60;
-    const z2 = (v) => ('00' + v).slice(-2);
-    
-    if (h != 0) {
-      hms = h + ':' + z2(m) + ':' + z2(s);
-    } else if (m != 0) {
-      hms = z2(m) + ':' + z2(s);
-    } else {
-      hms = '00:' + z2(s);
+  function updateSeekbar() {
+    const duration = audio.duration;
+    const currentTime = audio.currentTime;
+    if (seekbar && !isNaN(duration) && duration > 0) {
+      const percent = (currentTime / duration) * 100;
+      seekbar.style.width = `${percent}%`;
     }
-    return hms;
   }
+
+  function updateTime() {
+    const currentTime = audio.currentTime;
+    const duration = audio.duration;
+    const currentFormatted = formatTime(currentTime);
+    const durationFormatted = formatTime(duration);
+    const currentElem = document.getElementById('current');
+    const durationElem = document.getElementById('duration');
+    if (currentElem && durationElem) {
+      currentElem.textContent = currentFormatted;
+      durationElem.textContent = durationFormatted;
+    }
+  }
+
+  function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+  }
+
+  audio.addEventListener('timeupdate', () => {
+    if (seekbar) {
+      updateSeekbar();
+      updateTime();
+    }
+  });
+
+  if (seekbar) {
+    seekbar.style.width = '0%';
+  }
+  updateTime();
 });
 
-// This is "Sys. T. Player" beta ver.
+// "Sys. T. Player (beta)" Sys. T. Miyatake, (Last modified: Dec 02, 2024;)
