@@ -118,14 +118,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   updateTime();
 });
-
-  if (audio) {
-    if (audio.readyState >= 1) {
-      updateTime();
-    } else {
-      audio.addEventListener('loadedmetadata', () => {
-        updateTime();
-      });
-    }
-  }
 // "Sys. T. Player (beta)" Sys. T. Miyatake, (Last modified: Dec 02, 2024;)
