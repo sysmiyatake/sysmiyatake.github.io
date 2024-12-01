@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  height: 100%;
   background-color: hsla(135, 15%, 35%);
 }
 
@@ -225,15 +226,18 @@ cite::before {
 
 .top-pic-thumb {
   margin: 1em;
-  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  justify-items: center;
+  align-items: center; 
 }
 
 .top-pic-thumb img {
-  padding: .5em;
-  width: 5vw;
+  max-width: 100%;
   height: auto;
-  transition: 1.75s;
-  border-radius: 1em;
+  display: block;
+  transition: 1.5s;
 }
 
 .top-pic-thumb img:hover {
@@ -279,6 +283,32 @@ article h2::selection {
 article summary::selection {
   color: hsl(0, 0%, 100%);
   background-color: hsl(135, 15%, 35%);
+}
+
+article ul ol li::selection {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(135, 15%, 35%);
+}
+
+.note-title {
+  margin: 2em 3em 1em;
+  padding-left: 2em!important;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.25);
+  border-left: 1em solid hsl(135, 35%, 25%);
+}
+
+.note-subtitle {
+  margin-left: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+}
+
+.spacious {
+  margin-left: 1em;
+  margin-right: 1em;
+  text-indent: 0!important;
 }
 
 #site-header {
@@ -495,13 +525,16 @@ article summary::selection {
 }
 
 .pic-garally {
-  padding: 0 6em;
+  margin: 0 3em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5em;
 }
 
 .garally-wrapper {
-  margin: 1.5em;
-  width: 12.5vw;
-  height: 12.5vw;
+  padding: 0;
+  width: 100%;
+  height: auto;
   border-radius: 100%;
   border-spacing: 0;
   overflow: hidden;
@@ -509,8 +542,9 @@ article summary::selection {
 }
 
 img.garally-img {
-  width: 12.5vw;
-  height: 12.5vw;
+  display: block; 
+  width: 100%;
+  height: auto;
   transition: 3.5s;
   border-radius: 100%;
 }
@@ -700,6 +734,10 @@ img.garally-img:hover {
   font-size: 1.25em;
 }
 
+.readmore .text {
+  text-decoration: underline;
+}
+
 .article-data {
   padding: 1.5em 1.5em 0!important;
   line-height: 0px!important;
@@ -779,7 +817,7 @@ img.garally-img:hover {
 .one-box {
   margin: 0 1.5em 1.5em;
   padding: 1.25em;
-  width: 25vw;
+  width: 20vw;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: .25em hsla(0, 0%, 0%, 0.25) solid;
   border-radius: 1em;
@@ -788,7 +826,7 @@ img.garally-img:hover {
 .two-box {
   margin: 0 1.5em 1.5em;
   padding: 1.25em;
-  width: 35vw;
+  width: 40vw;
   min-width: 15vw;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: .25em hsla(0, 0%, 0%, 0.25) solid;
@@ -808,7 +846,7 @@ img.garally-img:hover {
 .four-box {
   margin: 0 1.5em 1.5em;
   padding: 1.25em;
-  min-width: 20vw;
+  min-width: 35vw;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: .25em hsla(0, 0%, 0%, 0.25) solid; 
   border-radius: 1em;
@@ -1146,7 +1184,6 @@ ul.document-list {
 
 .document-list ol {
   margin: 0 1.5em;
-  list-style-position: inside;
   font-weight: normal;
 }
 
@@ -1166,7 +1203,6 @@ ul.others-list {
 
 .others-list ol {
   margin: 0 1.5em;
-  list-style-position: inside;
   font-weight: normal;
 }
 

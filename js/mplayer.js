@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // 初期化フラグを設定
+  let warnedAudioNotFound = false;
+  let warnedPlayButtonNotFound = false;
+  let warnedStopButtonNotFound = false;
+  let warnedSeekbarNotFound = false;
+  let warnedAttenuateButtonNotFound = false;
+  let warnedFullVolumeButtonNotFound = false;
+
   // audio要素の取得と存在チェック
   const audio = document.getElementsByTagName("audio")[0];
-  if (!audio) {
+  if (!audio && !warnedAudioNotFound) {
     console.error('Audio element not found.');
-    return;
+    warnedAudioNotFound = true;
   }
 
   // Playボタンの取得と存在チェック
@@ -18,8 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
         playButton.innerHTML = 'Play';
       }
     });
-  } else {
+  } else if (!warnedPlayButtonNotFound) {
     console.warn('Play button not found.');
+    warnedPlayButtonNotFound = true;
   }
 
   // Stopボタンの取得と存在チェック
@@ -29,8 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
       audio.pause();
       audio.currentTime = 0;
     });
-  } else {
+  } else if (!warnedStopButtonNotFound) {
     console.warn('Stop button not found.');
+    warnedStopButtonNotFound = true;
   }
 
   // Seekbarの取得と存在チェック
@@ -47,116 +57,37 @@ document.addEventListener("DOMContentLoaded", function() {
         audio.currentTime = Math.round(duration * (offset / width));
       }
     });
-  } else {
+  } else if (!warnedSeekbarNotFound) {
     console.warn('Seekbar not found.');
+    warnedSeekbarNotFound = true;
   }
 
-  // Time updateのイベントリスナー
-  audio.addEventListener("timeupdate", (e) => {
-    const current = Math.floor(audio.currentTime);
-    const duration = Math.round(audio.duration);
-    if (!isNaN(duration)) {
-      const currentElement = document.getElementById('current');
-      const durationElement = document.getElementById('duration');
-      
-      if (currentElement) {
-        currentElement.innerHTML = playTime(current);
-      } else {
-        console.warn('Current time display element not found.');
-      }
-      
-      if (durationElement) {
-        durationElement.innerHTML = playTime(duration);
-      } else {
-        console.warn('Duration display element not found.');
-      }
+  // 音量アッテネータボタンの取得とイベントリスナー設定
+  const attenuateButton = document.getElementById("attenuater");
+  if (attenuateButton) {
+    attenuateButton.addEventListener('click', attenuateVolume);
+  } else if (!warnedAttenuateButtonNotFound) {
+    console.warn('Attenuate button not found.');
+    warnedAttenuateButtonNotFound = true;
+  }
 
-      const percent = Math.round((audio.currentTime / audio.duration) * 1000) / 10;
-      if (seekbar) {
-        seekbar.style.backgroundSize = percent + '%';
-      }
-    }
-  });
+  // 音量フル設定ボタンの取得とイベントリスナー設定
+  const fullVolumeButton = document.getElementById("fullVolume");
+  if (fullVolumeButton) {
+    fullVolumeButton.addEventListener('click', fullVolume);
+  } else if (!warnedFullVolumeButtonNotFound) {
+    console.warn('Full Volume button not found.');
+    warnedFullVolumeButtonNotFound = true;
+  }
 
-  // ボリューム調整関数
+  // 音量アッテネータ関数
   function attenuateVolume() {
-    audio.volume = 0.3;
+    audio.volume = 0.33;
   }
 
+  // 音量フル設定関数
   function fullVolume() {
     audio.volume = 1.0;
-  }
-
-// ページ読み込み時の初期化処理
-function setCurrentTime($currentTime) {
-  const currentElement = document.getElementById("current");
-  
-  if (audio) {
-    // 一時的にtimeupdateイベントを無効化
-    audio.removeEventListener("timeupdate", timeUpdateHandler);
-    
-    audio.currentTime = $currentTime; // audio要素のcurrentTimeを設定
-    
-    // timeupdateイベントを再登録
-    audio.addEventListener("timeupdate", timeUpdateHandler);
-  } else {
-    console.warn('Audio element not found.');
-  }
-
-  if (currentElement) {
-    currentElement.innerHTML = playTime($currentTime);
-  } else {
-    console.warn('Current time display element not found.');
-  }
-}
-
-  // timeupdate用のハンドラを関数として定義
-  function timeUpdateHandler(e) {
-    const current = Math.floor(audio.currentTime);
-    const duration = Math.round(audio.duration);
-
-    if (!isNaN(duration)) {
-      const currentElement = document.getElementById('current');
-      const durationElement = document.getElementById('duration');
-
-      if (currentElement) {
-        currentElement.innerHTML = playTime(current);
-      } else {
-        console.warn('Current time display element not found.');
-      }
-
-      if (durationElement) {
-        durationElement.innerHTML = playTime(duration);
-      } else {
-        console.warn('Duration display element not found.');
-      }
-
-      const percent = Math.round((audio.currentTime / audio.duration) * 1000) / 10;
-      if (seekbar) {
-        seekbar.style.backgroundSize = percent + '%';
-      }
-    }
-  }
-
-  // 初期化時にtimeupdateイベントリスナーを設定
-  audio.addEventListener("timeupdate", timeUpdateHandler);
-
-
-  // 時間を設定する関数
-  function setCurrentTime($currentTime) {
-    const songPlayer = document.getElementById("songPlayer");
-    if (songPlayer) {
-      songPlayer.currentTime = $currentTime;
-    } else {
-      console.warn('Song player element not found.');
-    }
-
-    const currentElement = document.getElementById("current");
-    if (currentElement) {
-      currentElement.innerHTML = playTime($currentTime);
-    } else {
-      console.warn('Current time display element not found.');
-    }
   }
 
   // 時間を表示する関数
@@ -177,3 +108,5 @@ function setCurrentTime($currentTime) {
     return hms;
   }
 });
+
+// This is "Sys. T. Player" beta ver.
