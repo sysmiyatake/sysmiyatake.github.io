@@ -772,6 +772,23 @@ img.garally-img:hover {
   border-radius: 15px;
 }
 
+.poem_headline {
+  display: inline-block;
+  margin: 3em 2em 0;
+  padding: .75em;
+  border-left: 1em hsl(135, 35%, 75%) solid;
+  border-right: 1em hsl(135, 35%, 75%) solid;
+  border-radius: 15px;
+  background-color :hsla(135, 35%, 75%, 0.25);
+}
+
+.poem_fig p {
+  margin: 1em 0 0;
+  padding: 3em!important;
+  background-color: hsla(33, 78%, 91%, 0.85);
+  border-radius: 15px;
+}
+
 .column-flex {
   margin: 1.5em 3em 1em;
   width: fit-content;
@@ -1177,14 +1194,32 @@ figcaption {
   border-radius: 50% 20% / 10% 40%;
 }
 
-ul.document-list {
-  list-style: none;
-  font-weight: bold;
+.secondary-list {
+  margin: 0 3em 6em;
 }
 
 .document-list ol {
   margin: 0 1.5em;
   font-weight: normal;
+}
+
+.document-list ol li {
+  margin-top: 1em;
+}
+
+.document-list > li {
+  margin: 1.5em 0;
+  list-style: decimal;
+  font-weight: normal;
+}
+
+.list-subtitle {
+  list-style: none!important;
+  font-weight: bold!important;
+}
+
+.list-top-margin {
+  margin-top: 3em!important;
 }
 
 .others-list-box {

@@ -803,7 +803,7 @@ img.garally-img:hover {
 
 .poem_fig {
   margin: 1em 0em 3em;
-  padding: 1em;
+  padding: 1.75em 1em 1em;
   min-width: fit-content;
   background-color: hsla(135, 35%, 75%, 0.25);
   border: 0.5em hsl(135, 35%, 75%) solid;
@@ -820,6 +820,23 @@ img.garally-img:hover {
 
 .poem_fig img {
   border-radius: 5px;
+}
+
+.poem_headline {
+  display: inline-block;
+  padding: .5em;
+  font-size: .75em;
+  border-left: .5em hsl(135, 35%, 75%) solid;
+  border-right: .5em hsl(135, 35%, 75%) solid;
+  border-radius: 15px;
+  background-color :hsla(135, 35%, 75%, 0.25);
+}
+
+.poem_fig p {
+  margin: 1em 0 0;
+  padding: 2.25em!important;
+  background-color: hsla(33, 78%, 91%, 0.85);
+  border-radius: 15px;
 }
 
 .column-flex {
@@ -1183,7 +1200,7 @@ footer nav {
 }
 
 .document-list-box {
-  margin: 0 auto 3em;
+  margin: 0 auto 1.5em;
   padding: 2.5em;
   width: max-content;
   background-color: hsla(34, 78%, 91%, 0.75);
@@ -1191,11 +1208,13 @@ footer nav {
   border-radius: 50% 20% / 10% 40%;
 }
 
-ul.document-list {
-  margin-top: 2em;
-  list-style: none;
+.secondary-list {
+  margin: 0 auto 3em;
+}
+
+.document-list {
+  margin-top: 1.5em;
   font-size: .75em;
-  font-weight: bold;
 }
 
 .document-list ol {
@@ -1205,6 +1224,19 @@ ul.document-list {
 
 .document-list ol li {
   margin-top: 1em;
+}
+
+.document-list > li {
+  margin: 1.5em 0;
+}
+
+.list-subtitle {
+  list-style: none;
+  font-weight: bold;
+}
+
+.list-top-margin {
+  margin-top: 2em;
 }
 
 .others-list-box {
