@@ -277,10 +277,6 @@
   border-radius: 1em;
 }
 
-.lyrics_fig  figure:hover {
-  opacity: .75;
-}
-
 .artworks_fig {
   margin-left: 3em;
   padding: 3em;
@@ -584,10 +580,6 @@
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
     border-radius: 1em;
-  }
-
-  .lyrics_fig figure:hover {
-    opacity: .75;
   }
 
   .artworks_fig {
