@@ -1353,9 +1353,7 @@ ul.others-list {
 .released-year,
 .song-type,
 .pic-img,
-.pic-img-vertical,
-.inline_img,
-.inline_bigimg {
+.pic-img-vertical {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;

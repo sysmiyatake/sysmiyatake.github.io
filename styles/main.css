@@ -1318,8 +1318,6 @@ ul.others-list {
 .song-type,
 .pic-img,
 .pic-img-vertical,
-.inline_img,
-.inline_bigimg,
 .frame_img {
   user-select: none;
   -ms-user-select: none;
