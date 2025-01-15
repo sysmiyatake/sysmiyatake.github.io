@@ -731,9 +731,15 @@ img.garally-img:hover {
 }
 
 .weblog-text h1 {
-  padding: 1em;
-  color: hsl(8, 80%, 8%);
-  font-size: 1.5em;
+  margin: 1.5em 1em;
+  padding: .5em .75em;
+  display: block;
+  border-radius: 1em;
+  color: hsl(0, 0%, 100%);
+  background-color: hsla(5, 84%, 15%, .5);
+  border: .5em solid hsla(0, 0%, 0%, 0.5);
+  font-size: 1em;
+  text-align: center;
 }
 
 .weblog-text h2 {
