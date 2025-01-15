@@ -732,6 +732,7 @@ img.garally-img:hover {
 
 .weblog-text h1 {
   padding: 1em;
+  color: hsl(8, 80%, 8%);
   font-size: 1.5em;
 }
 
