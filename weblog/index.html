@@ -16,6 +16,13 @@
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
   <link rel="stylesheet" type="text/css" href="../styles/music.css" media="screen">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.removeAttribute("loading");
+        });
+    });
+  </script>
 </head>
 
 <body>
