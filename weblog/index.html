@@ -17,15 +17,33 @@
   <link rel="stylesheet" type="text/css" href="../styles/music.css" media="screen">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const observer = new MutationObserver(() => {
-        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-          img.removeAttribute("loading");
-        });
+  document.addEventListener("DOMContentLoaded", function() {
+    const observer = new MutationObserver(() => {
+      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+        img.removeAttribute("loading");
       });
-
-      observer.observe(document.body, { childList: true, subtree: true });
     });
+
+    function scrollToTarget() {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        const img = target.querySelector('img');
+        if (img && img.complete) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        } else {
+          img.onload = () => {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          };
+        }
+      }
+    }
+
+    if (window.location.hash) {
+      setTimeout(scrollToTarget, 100);
+    }
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
   </script>
 </head>
 
