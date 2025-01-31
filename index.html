@@ -27,10 +27,14 @@
       }
   </script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new MutationObserver(() => {
         document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-            img.removeAttribute("loading");
+          img.removeAttribute("loading");
         });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
     });
   </script>
   <meta name="google-site-verification" content="kqWwBpw2c-7HbP0NYSf8d2BaPd5aFgpZIKUgNW8-XJ4" />
@@ -256,7 +260,8 @@
                 <tr>
                   <td class="update-date">Jan 31, 2025</td>
                   <td class="update-content">
-                  <a href="./others/index.html">その他のコンテンツ群ページ</a>更新&#65339;1本の音声作品新規公開: "paper-01 (Miyatake Lab, 2025)"&#65341;&#59;</td>
+                  <a href="./others/index.html">その他のコンテンツ群ページ</a>更新&#65339;1本の音声作品新規公開: "paper-01 (Miyatake Lab, 2025)"&#65341;,<br>
+                  ページ内移動で発生していた問題を修正（id属性をターゲットに指定したページ内リンクにおいて発生していたスクロール位置ズレ問題を解決したかもしれない．その詳細と経緯としては cssプロパティと値 "scroll-behavior: smooth" と画像表示時間との関係でリンク先のターゲットとは異なる誤った位置に移動してしまっていた問題を修正．Javascript の記述によりHTML画像タグの属性 loading の値を "eager" に一括して設定．デフォルト値は "auto" であるために場合によってはブラウザ側が "lazy" としていたことによる不具合であったと判定し修正を試みた．）&#59;</td>
                 </tr>
                 <tr>
                   <td class="update-date">Jan 28, 2025</td>

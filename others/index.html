@@ -16,10 +16,14 @@
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new MutationObserver(() => {
         document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-            img.removeAttribute("loading");
+          img.removeAttribute("loading");
         });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
     });
   </script>
 </head>
