@@ -533,7 +533,7 @@ article summary::selection {
 }
 
 .page-headline-xlarge {
-  padding: 1.75em 0em 1.5em;
+  padding: 1.5em 0em 1.5em;
   font-size: 1.5em;
 }
 
@@ -1206,13 +1206,22 @@ footer nav {
   color: hsl(0, 0%, 0%);
 }
 
+.table-wrap {
+  padding: 1em 0 0;
+}
+
 .document-list-box {
   margin: 0 auto 1.5em;
   padding: 2.5em;
-  width: max-content;
   background-color: hsla(34, 78%, 91%, 0.75);
   border: 2.5px hsla(0, 0%, 0%, 0.25) solid;
-  border-radius: 50% 20% / 10% 40%;
+  border-radius: 25% 10% / 5% 20%;
+}
+
+.document-list-box>h2 {
+  margin: .5em .5em 2em;
+  font-size: 1em;
+  text-align: center;
 }
 
 .secondary-list {
@@ -1249,10 +1258,19 @@ footer nav {
 .others-list-box {
   margin: 0 auto 3em;
   padding: 2.5em;
-  width: max-content;
   background-color: hsla(34, 78%, 91%, 0.75);
   border: 2.5px hsla(0, 0%, 0%, 0.25) solid;
-  border-radius: 50% 20% / 10% 40%;
+  border-radius: 25% 10% / 5% 20%;
+}
+
+.others-list-box>h2 {
+  margin: 0 .5em 2em;
+  font-size: 1em;
+  text-align: center;
+}
+
+.others-list-box>div {
+  margin: 0 auto;
 }
 
 ul.others-list {
