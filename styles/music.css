@@ -277,6 +277,10 @@
   border-radius: 1em;
 }
 
+.lyrics-text {
+  padding: 2em;
+}
+
 .artworks_fig {
   margin-left: 3em;
   padding: 3em;
@@ -571,6 +575,10 @@
     padding: 2em 1em;
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .lyrics-text {
+  padding: 1em;
   }
 
   .lyrics_fig {

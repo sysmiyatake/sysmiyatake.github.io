@@ -1353,7 +1353,8 @@ ul.others-list {
 .song-type,
 .pic-img,
 .pic-img-vertical,
-.frame_img {
+.frame_img,
+.lyrics-text {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;

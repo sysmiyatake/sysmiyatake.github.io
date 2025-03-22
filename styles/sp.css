@@ -1378,7 +1378,8 @@ ul.others-list {
 .released-year,
 .song-type,
 .pic-img,
-.pic-img-vertical {
+.pic-img-vertical,
+.lyrics-text {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
