@@ -776,6 +776,7 @@ img.garally-img:hover {
 
 .poem_fig img {
   border-radius: 15px;
+  width: 50vw;
 }
 
 .poem_headline {
@@ -983,7 +984,8 @@ img.garally-img:hover {
 }
 
 .tab-content {
-  margin: 0 1em 3em;
+  margin: 1.5em 1em 3em;
+  width: 100%;
   background: hsla(0, 0%, 100%, 0.5);
   border-radius: 1em;
 }
@@ -995,7 +997,6 @@ img.garally-img:hover {
 
 .tab-switch:checked+.tab-label+.tab-content {
   padding: 1em;
-  width: calc(100% - 150px);
   height: 100%;
   display: block;
 }

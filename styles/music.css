@@ -1,4 +1,42 @@
 @charset "utf-8";
+#content-list {
+  margin: 3em 1em 1.5em;
+  padding: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.2);
+  border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#content-list-i {
+  margin: 1.5em!important;
+  padding: 0 .75em .5em!important;
+  border-bottom: 1px solid hsla(135, 35%, 25%, 0.5);
+  color: hsl(135, 35%, 15%);
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#content-list-ii {
+  margin: 2.5em 1.5em 1.5em!important;
+  padding: 0 .75em .5em!important;
+  border-bottom: 1px solid hsla(135, 35%, 25%, 0.5);
+  color: hsl(135, 35%, 15%);
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.c-list-p {
+  color: hsla(0, 0%, 0%, 0.5);
+  text-align: center;
+  user-select: none;
+}
 
 .song-list {
   padding: 3em;
@@ -41,9 +79,41 @@
   font-weight: normal;
 }
 
-#song-content {
-  padding: 2em 2em 1em;
+#summary-title {
+  margin: 1em 1em 2em;
+  padding: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.2);
+  border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: .5em;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#qanda-title {
+  margin: 1em 1em 3em;
+  padding: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.2);
+  border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#song-content {
+  margin: 3em 1em 1.5em;
+  padding: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.2);
+  border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.get_properties > div {
+  margin: 0 0 2em;
 }
 
 .song-title {
@@ -55,7 +125,7 @@
 }
 
 .song-part {
-  margin: 3em;
+  margin: 0 3em 3em;
   width: fit-content;
   background-color: hsla(135, 35%, 75%, 0.25);
   border: 1em hsl(135, 35%, 75%) solid;
@@ -65,6 +135,17 @@
 .song-part-inner {
   padding: 3em 3em 1.25em;
   border-radius: 1em;
+}
+
+#related-content {
+  margin: 3em 1em 1.5em;
+  padding: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.2);
+  border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: .5em;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .related-content-list {
@@ -259,12 +340,24 @@
 }
 
 #artworks-title {
-  padding: 2em;
+  margin: 2em 1em 2em;
+  padding: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.2);
+  border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: .5em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #lyrics-title {
-  padding: 2em;
+  margin: 1em 1em 2em;
+  padding: 1em;
+  text-indent: 0!important;
+  font-weight: bold;
+  background-color: hsla(135, 6%, 38%, 0.2);
+  border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: .5em;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -343,6 +436,45 @@
 
 /* for SP */
 @media screen and (max-width:768px) {
+  #content-list {
+    margin: 1.5em 0 1.5em;
+    padding: .5em;
+    background-color: hsla(135, 6%, 38%, 0.2);
+    border-left: 1em solid hsl(135, 35%, 25%);
+    border-radius: .5em;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #content-list-i {
+    margin: 0 .75em .5em!important;
+    padding: 0 .75em .5em!important;
+    border-bottom: 1px solid hsla(135, 35%, 25%, 0.5);
+    color: hsl(135, 35%, 15%);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  #content-list-ii {
+    margin: 3.5em .75em .5em!important;
+    padding: 0 .75em .5em!important;
+    border-bottom: 1px solid hsla(135, 35%, 25%, 0.5);
+    color: hsl(135, 35%, 15%);
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  .c-list-p {
+    color: hsla(0, 0%, 0%, 0.5);
+    font-size: .7em!important;
+    text-align: center;
+  }
+
   .song-list {
     padding: 1em;
     font-size: 0.75em;
@@ -384,6 +516,17 @@
     margin-top: 3em;
   }
 
+  #summary-title {
+    margin: 1em 0 1.5em;
+    padding: .5em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: hsla(135, 6%, 38%, 0.2);
+    border-left: 1em solid hsl(135, 35%, 25%);
+    border-radius: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   .song-list-title {
     list-style-position: inside;
     font-weight: normal;
@@ -393,10 +536,30 @@
     margin-top: 1.25em;
   }
 
-  #song-content {
-    padding: 3em 1em 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
+  #qanda-title {
+    margin: 1.5em 0 2em;
+    padding: .5em;
     font-size: 1em;
+    font-weight: bold;
+    background-color: hsla(135, 6%, 38%, 0.2);
+    border-left: 1em solid hsl(135, 35%, 25%);
+    border-radius: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #song-content {
+    margin: 2em 0 1.5em;
+    padding: .5em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: hsla(135, 6%, 38%, 0.2);
+    border-left: 1em solid hsl(135, 35%, 25%);
+    border-radius: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .get_properties > div {
+    margin: 0;
   }
 
   .song-title {
@@ -409,7 +572,7 @@
   }
 
   .song-part {
-    margin: 1.5em 0 1.5em;
+    margin: .75em 0 1.25em;
     width: auto;
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
@@ -419,6 +582,17 @@
   .song-part-inner {
     padding: 1.5em;
     border-radius: 1em;
+  }
+
+  #related-content {
+    margin: 2em 0 1.5em;
+    padding: .5em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: hsla(135, 6%, 38%, 0.2);
+    border-left: 1em solid hsl(135, 35%, 25%);
+    border-radius: .5em;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .related-content-list {
@@ -566,14 +740,24 @@
   }
 
   #artworks-title {
-    padding: 2em 1em;
+    margin: 2em 0 1em;
+    padding: .5em;
     font-size: 1em;
+    font-weight: bold;
+    background-color: hsla(135, 6%, 38%, 0.2);
+    border-left: 1em solid hsl(135, 35%, 25%);
+    border-radius: .5em;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   #lyrics-title {
-    padding: 2em 1em;
+    margin: 1.5em 0;
+    padding: .5em;
     font-size: 1em;
+    font-weight: bold;
+    background-color: hsla(135, 6%, 38%, 0.2);
+    border-left: 1em solid hsl(135, 35%, 25%);
+    border-radius: .5em;
     font-family: Arial, Helvetica, sans-serif;
   }
 

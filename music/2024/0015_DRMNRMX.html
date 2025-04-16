@@ -52,9 +52,10 @@
   <main>
     <section id="content-area">
       <h1 id="page-title">Music&colon; &quot;Dreamin' 〜夢中遊行物語〜 (2024 Remix Version)&quot;&#59;</h1>
+      <h2 id="summary-title">Summary</h2>
       <details>
-        <summary><span>直下に概要を表示</span>...</summary>
-          <p>&#34;ふたりはチセツキッシン...&#34;</p>
+        <summary><span>説明を表示</span>...</summary>
+          <p class="solid-under-line bold-font">&#34;ふたりはチセツキッシン...&#34;</p>
           <p>こじらせたような世界，崩壊しそうな夢・精神をどこまでもポップに描き出した，空間交差的ディメンジョナリ・サウンド！<br>
           このヴアジオンではですね，"チャイルディッシュなスピードで突き進め！リミックス" といった次第であります！！</p>
           <p>ようこそ，しゅわしゅわとした波打つ夢の中へ...</p>
@@ -74,7 +75,7 @@
       </div>
 
       <h2 id="song-content">Song Content</h2>
-      <details>
+     <details class="get_properties">
         <summary>Get Properties</summary>
           <div class="monospacing">
             <p>Words&amp;Music &colon; T.Miyatake, 2019-2021 x DJ Masked SYS.T, 2024&#59;</p>
@@ -85,12 +86,28 @@
       </details>
       <div class="song-part"><div class="song-part-inner">
         <h3 class="song-title">&#x300E;Dreamin' 〜夢中遊行物語〜 (2024 Remix Version)&#x300F;T.Miyatake Classics, 2019-2021 x DJ Masked SYS.T, 2024</h3>
-        <p class="video-drive"><a href="https://drive.google.com/file/d/1l21Uw0f9SY4u1SDqC0qbLLIHrIgfaIQ9/preview" target="_blank" title="Google LLC さま. 別ドメインのサーバ上に公開されたファイルへジャンプします．" class="open-in-new-tab">Dreamin' 〜夢中遊行物語〜 (2024 Remix Version) Music Audio</a></p>
-        <p class="drive-summary"><span class="bold-font">ファイル再生について</span><br>
-        Google LLC <a href="https://www.google.com/" target="_blank" title="Google LLC さま. この別ドメインのサイトへジャンプします．" class="open-in-new-tab">https://www.google.com/</a> のクラウドストレージサービス，Google Drive に保存されているファイルを参照しています．<br>サイトにお越しの皆さまに鑑賞いただくことを目的として，どなたでも再生可能な状態に設定してあります．<br>当サイト利用者さまがオンラインサーバ上でファイルを再生してお楽しみいただく以外の，たとえばローカルへの保存などの行為はお控えくださいますよう，お願い申し上げます．</p>
-      </div></div>
+        <figure class="audio_figure">
+            <figcaption class="audio_cap">Listen to the &quot;Dreamin' (2024 Remix Version)&quot;&colon;</figcaption>
+            <audio id="songPlayer" preload="metadata" src="https://res.cloudinary.com/drtugcnem/video/upload/v1744788527/2024ver_DRMN_320kbps_ltqjy4.mp3">
+              お使いのブラウザはこのプレイヤーでの再生に対応していないようです．詳しくは設置サイト管理者にお問い合わせください．
+            </audio>
+          </figure>
+          <div class="controls">
+            <div class="ctrlsbutton">
+              <div id="play">Play</div>
+              <div id="stop">Stop</div>
+            </div>
+            <div class="seekbar-wrap"><div id="seekbar"></div></div>
+            <div id="time">
+              <span id="current">00:00</span><span id="duration">00:00</span>
+            </div>
+            <div class="volumebutton">
+              <button id="attenuater" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button><button id="fullVolume" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
+            </div>
+          </div>
+        </div></div>
 
-      <h2 class="page-headline-large">Related song</h2>
+      <h2 id="related-content">Related song</h2>
       <ul class="related-content-list">
         <li><a href="../2021/0004_DRMN.html">Dreamin' 〜夢中遊行物語〜 (2021 Remake Version)</a></li>
       </ul>
@@ -118,6 +135,7 @@
     <p class="copyright"><small>&copy; 2023-2025 SYS.T.Miyatake</small></p>
   </footer>
   <div class="page-bar" id="page-fin"></div>
+  <script src="../../js/mplayer.js" charset="utf-8"></script>
 </body>
 
 </html>

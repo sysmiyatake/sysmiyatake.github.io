@@ -59,13 +59,11 @@
       <p>&quot;<span class="bold-font">現実だろうと, 夢であろうと, 単なる宝玉でしかない. </span>&quot;</p>
       <p>私が管理・制作している音楽作品の自由鑑賞室です．</p>
       <details>
-        <summary><span>直下に詳しく表示</span></summary>
+        <summary><span>詳しく表示</span>...</summary>
         <p>発表年別や雰囲気別に整理された作品の一覧があり，その中には現在もお聴きいただける公開作品が含まれています．<br>おそらく，公開作品数は逓増しているかと思われます．<br>それでは，ごゆっくりご鑑賞ください！</p>
       </details>
 
-      <hr class="sec-dotted-rule">
-
-      <h2 class="page-headline-large">Artwork</h2>
+      <h2 id="artworks-title">Artwork</h2>
       <p class="top-artwork">
       <a href="./2023/0011_WASA.html"><img src="../media/png-artwork/2023_WASA.webp" title="わさび・からし"></a>
       <a href="./2023/0003_FACE.html"><img src="../media/png-artwork/2023_FACE_mas.png" title="そんな貌 &#40;カオ&#41; しないで"></a>
@@ -76,45 +74,10 @@
       <a href="./2013/0005_NAGU.html"><img src="../media/png-artwork/2024ver_NAGU.webp" title="慰めの夕立 (2024 Remix)"></a>
       </p>
 
-      <hr class="sec-dotted-rule">
+      <h2 id="content-list">List of Song</h2>
 
-      <h2 id="song-content">Top Song</h2>
-      <p>注目の作品を，高音質バージョンでお届けしております！<br>具体的には，該当曲のみ320kbps &#40;他は通常 96-160kbps 近辺で公開中&#41; の mp3 ファイルフォーマットでの公開となります．
-      </p>
-
-      <div class="song-part">
-        <div class="song-part-inner">
-          <h3 class="song-title">&#x300E;<a href="./2023/0001_RCA.html">参照</a>&#x300F;システィみやたけ, 2023</h3>
-          <figure class="audio_figure">
-            <figcaption class="audio_cap">Listen to the &quot;Reference Consultation Applause - SYS. T. Miyatake&quot;:</figcaption>
-            <audio id="songPlayer" preload="metadata" src="../media/mp3-audio/RCA_MAS2_320kbps.mp3">
-              お使いのブラウザはこのプレイヤーでの再生に対応していないようです．詳しくは設置サイト管理者にお問い合わせください．
-            </audio>
-          </figure>
-          <div class="controls">
-            <div class="ctrlsbutton">
-              <div id="play">Play</div>
-              <div id="stop">Stop</div>
-            </div>
-            <div class="seekbar-wrap">
-              <div id="seekbar"></div>
-            </div>
-            <div id="time">
-              <span id="current">00:00</span><span id="duration">00:00</span>
-            </div>
-            <div class="volumebutton">
-              <button id="attenuater" type="button" title="オリジナルプレイヤーのボリュームを1/3程度に減衰させます．">ATT</button>
-              <button id="fullVolume" type="button" title="ATTボタンで減衰させたボリュームをフル音量に復帰させます．">FULL</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <hr class="sec-dotted-rule">
-
-      <h2 id="content-list" class="page-headline-large">List of Song</h2>
-      <p>&#9660; 発表年をご選択ください &#9660;</p>
+      <p id="content-list-i">Timescapes</p>
+      <p class="c-list-p">&#9660; 発表年をご選択ください &#9660;</p>
       <div class="tab-wrap">
 
       <input id="tab_2024" type="radio" name="year-tab" class="tab-switch" checked="checked"><label class="tab-label"
@@ -605,10 +568,8 @@
         </div>
       </div>
 
-      <hr>
-
-      <h2 id="content-list-ii" class="page-headline-large">Moods</h2>
-      <p>&#9660; 雰囲気をご選択ください &#9660;</p>
+      <p id="content-list-ii">Moodscapes</p>
+      <p class="c-list-p">&#9660; 雰囲気をご選択ください &#9660;</p>
       <div class="tab-wrap">
 
         <input id="tab_pop" type="radio" name="type-tab" class="tab-switch" checked="checked"><label class="tab-label"
@@ -720,7 +681,7 @@
 
       <hr class="sec-dotted-rule">
 
-      <h2 class="page-headline-large">Questions and Answers</h2>
+      <h2 id="qanda-title">Questions and Answers</h2>
 
       <h3 class="page-headline-small question-n-colon">What&#39;s the file format&#63;</h3>
       <p class="answer-n-colon">オリジナルカスタムプレイヤーで採用される場合の音源は，基本的に一律 96-160kbps ほどの高圧縮率 mp3 ファイルでの公開となっております．<br>
@@ -751,6 +712,5 @@
     <p class="copyright"><small>&copy; 2023-2025 SYS.T.Miyatake</small></p>
   </footer>
   <div class="page-bar" id="page-fin"></div>
-  <script src="../js/mplayer.js" charset="utf-8"></script>
 </body>
 </html>
