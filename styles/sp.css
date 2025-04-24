@@ -304,18 +304,84 @@ article summary::selection {
   background-color: hsl(135, 15%, 35%);
 }
 
+.centering-wrap {
+  text-align: center;
+}
+
+.centering-wrap p {
+  font-size: .85em!important;
+  text-indent: 0!important;
+}
+
+.centering-wrap ul {
+  margin: 1em;
+  text-align: left;
+  font-size: .85em;
+  line-height: unset!important;
+}
+
+.centering-wrap li:not(:first-child) {
+  margin-top: 1em;
+}
+
+.weblog-info {
+  margin: 0 1.5em;
+  text-indent: 0!important;
+  font-size: .75em!important;
+}
+
+.weblog-det {
+  margin: 2em 1.5em;
+  font-size: .85em;
+}
+
+.weblog-det summary {
+  font-size: 1em;
+}
+
+.weblog-det ul {
+  line-height: unset!important;
+}
+
+.weblog-inn {
+  margin: 0;
+}
+
+.weblog-note {
+  margin: 2.5em .5em 1em;
+  padding: .5em!important;
+  text-align: center;
+  font-size: 1em!important;
+  color: hsla(0, 0%, 100%, 0.95);
+  background-color: hsla(5, 84%, 15%, .55);
+  border-left: 1em solid hsla(0, 0%, 0%, 0.5);
+  border-right: 1em solid hsla(0, 0%, 0%, 0.5);
+  border-radius: 1em;
+}
+
 .note-title {
-  margin: 2em 0 1em;
+  margin: 2em .75em 1em;
+  padding: 0 1em!important;
   text-indent: 0!important;
   font-weight: bold;
   background-color: hsla(135, 6%, 38%, 0.25);
   border-left: .5em solid hsl(135, 35%, 25%);
 }
 
+.note-font {
+  padding-bottom: 0!important;
+  text-indent: 0!important;
+  font-weight: bold;
+}
+
 .note-subtitle {
   margin-left: .25em;
   text-indent: 0!important;
   font-weight: bold;
+}
+
+.inner-list {
+  padding: 0 1em!important;
 }
 
 .spacious {

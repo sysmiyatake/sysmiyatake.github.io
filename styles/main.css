@@ -290,19 +290,73 @@ article ul ol li::selection {
   background-color: hsl(135, 15%, 35%);
 }
 
+.centering-wrap {
+  text-align: center;
+}
+
+.centering-wrap ul {
+  margin: 1em;
+  text-align: left;
+  line-height: unset!important;
+}
+
+.centering-wrap li:not(:first-child) {
+  margin-top: 1em;
+}
+
+.centering-wrap p {
+  font-size: 1.5em;
+  text-indent: 0!important;
+}
+
+.weblog-info {
+  margin: 0 1.5em;
+  text-indent: 0!important;
+}
+
+.weblog-det {
+  margin: 4.5em 0 0;
+}
+
+.weblog-inn {
+  margin: 0;
+}
+
+.weblog-note {
+  margin: 3em 2em 1em;
+  padding: 1em 6em!important;
+  text-align: center;
+  color: hsla(0, 0%, 100%, 0.95);
+  background-color: hsla(5, 84%, 15%, .55);
+  border-left: 1em solid hsla(0, 0%, 0%, 0.5);
+  border-right: 1em solid hsla(0, 0%, 0%, 0.5);
+  border-radius: 1em;
+}
+
 .note-title {
-  margin: 2em 3em 1em;
-  padding-left: 2em!important;
+  margin: 2em 4.5em 1em;
+  padding: 0 2em!important;
   text-indent: 0!important;
   font-weight: bold;
   background-color: hsla(135, 6%, 38%, 0.25);
   border-left: 1em solid hsl(135, 35%, 25%);
+  border-radius: 1em;
+}
+
+.note-font {
+  padding-top: 3em!important;
+  padding-bottom: 0!important;
+  font-weight: bold;
 }
 
 .note-subtitle {
   margin-left: 1em;
   text-indent: 0!important;
   font-weight: bold;
+}
+
+.inner-list {
+  padding: 0 1em!important;
 }
 
 .spacious {
