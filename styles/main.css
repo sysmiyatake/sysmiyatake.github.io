@@ -1362,6 +1362,15 @@ ul.others-list {
   width: 100%;
 }
 
+.radio-audio {
+  margin: 0!important;
+  text-indent: unset!important;
+}
+
+.radio-audio audio {
+  width: 100%;
+}
+
 .sitemap-table {
   margin: 0 1em 3em 6em;
   font-size: .85em;

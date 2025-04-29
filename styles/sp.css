@@ -1392,6 +1392,15 @@ ul.others-list {
   width: 100%;
 }
 
+.radio-audio {
+  margin: 0!important;
+  text-indent: unset!important;
+}
+
+.radio-audio audio {
+  width: 100%;
+}
+
 .demotape {
   margin: 3em 0 .5em!important;
   padding-left: 1em!important;
