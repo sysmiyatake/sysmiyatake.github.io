@@ -787,8 +787,25 @@ img.garally-img:hover {
   text-align: center;
 }
 
+.weblog-list-hl {
+  margin: 1em 0 1.5em!important;
+  font-size: 1.25em!important;
+  font-weight: bold;
+}
+
 .weblog-article-list span.hyphenated {
   display: none;
+}
+
+#general-article-list {
+  text-align: center;
+  padding-bottom: .5em!important;
+}
+
+#with-audio-list {
+  text-align: center;
+  margin-top: 1.5em;
+  padding-bottom: .5em!important;
 }
 
 .weblog-text {

@@ -727,10 +727,10 @@ img.garally-img:hover {
 }
 
 .weblog-article-list {
-  margin: 1em 0 4.5em 6em;
+  margin: 1em 6em 4.5em 6em;
   padding: 1.5em 3.5em;
   height: 25em;
-  width: 60vw;
+  width: auto;
   overflow-y: scroll;
   background-color: hsla(34, 78%, 91%, 0.5);
   border: hsl(135, 35%, 35%) solid thin;
@@ -743,6 +743,12 @@ img.garally-img:hover {
 .weblog-article-list p {
   margin: 2em;
   text-align: center;
+}
+
+.weblog-list-hl {
+  margin: 3em 0 2em!important;
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
 .weblog-text {
