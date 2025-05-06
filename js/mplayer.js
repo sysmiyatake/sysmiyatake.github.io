@@ -1,121 +1,118 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let warnedAudioNotFound = false;
-  let warnedSeekbarNotFound = false;
+  const audioPlayers = document.querySelectorAll('.audio-player');  // すべてのオーディオプレイヤーを取得
 
-  const audio = document.getElementsByTagName("audio")[0];
-  const seekbar = document.getElementById('seekbar');
-  const seekbarWrap = document.querySelector('.seekbar-wrap');
-
-  if (!audio && !warnedAudioNotFound) {
-    console.error('Audio element not found.');
-    warnedAudioNotFound = true;
-  }
-
-  // シークバー初期化（再生前に 0% に）
-  if (seekbar) {
-    seekbar.style.width = '0%';
-  }
-
-  // クリックイベントでシークバーを操作
-  if (seekbar && seekbarWrap) {
-    seekbarWrap.addEventListener("click", (e) => {
+  audioPlayers.forEach(audio => {
+    // オーディオのメタデータが読み込まれたときのイベント
+    audio.addEventListener("loadedmetadata", function() {
       const duration = audio.duration;
-      if (!isNaN(duration) && duration > 0) {
-        const rect = seekbarWrap.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left;
-        const percentage = offsetX / rect.width;
-        audio.currentTime = duration * percentage;
+      console.log("Duration: " + duration); // メタデータが読み込まれた後、オーディオの長さを確認
+
+      // durationが正しく取得できているか確認したい場合
+      if (!isNaN(duration)) {
+        console.log(`Audio duration: ${duration} seconds`);
+      }
+    });
+
+    const controls = audio.closest('.song-part').querySelector('.controls');  // audio の親の `.song-part` 内で `.controls` を検索
+
+    if (!controls) {
+      console.error("Controls element not found for this audio player.");
+      return;  // `.controls` がない場合は処理を中止
+    }
+
+    // 各種操作ボタン
+    const playButton = controls.querySelector('#play');
+    const stopButton = controls.querySelector('#stop');
+    const seekbar = controls.querySelector('#seekbar');
+    const seekbarWrap = controls.querySelector('.seekbar-wrap');
+    const currentTimeElem = controls.querySelector('#current');
+    const durationElem = controls.querySelector('#duration');
+
+    // 再生ボタンのクリックイベント
+    playButton.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        playButton.textContent = 'Pause';  // ボタン表示を「Pause」に変更
+      } else {
+        audio.pause();
+        playButton.textContent = 'Play';  // ボタン表示を「Play」に変更
+      }
+    });
+
+    // 停止ボタンのクリックイベント
+    stopButton.addEventListener('click', () => {
+      audio.pause();
+      audio.currentTime = 0;  // 停止と同時に再生位置を最初に戻す
+      playButton.textContent = 'Play';  // ボタン表示を「Play」に変更
+      updateSeekbar();  // シークバーをリセット
+      updateTime();  // 時間表示をリセット
+    });
+
+    // シークバーのクリックイベント
+    if (seekbarWrap) {
+      seekbarWrap.addEventListener("click", (e) => {
+        const duration = audio.duration;
+        if (!isNaN(duration) && duration > 0) {
+          const rect = seekbarWrap.getBoundingClientRect();
+          const offsetX = e.clientX - rect.left;
+          const percentage = offsetX / rect.width;
+          audio.currentTime = duration * percentage;
+          updateSeekbar();
+          updateTime();
+        }
+      });
+    }
+
+    // 再生中にシークバーと時間を更新
+    audio.addEventListener('timeupdate', () => {
+      if (seekbar) {
         updateSeekbar();
         updateTime();
       }
     });
-  } else if (!warnedSeekbarNotFound) {
-    console.warn('Seekbar not found.');
-    warnedSeekbarNotFound = true;
-  }
 
-  // 再生ボタンの動作
-  const playButton = document.getElementById("play");
-  const stopButton = document.getElementById("stop");
+    // 再生が終了したときの処理
+    audio.addEventListener('ended', () => {
+      playButton.textContent = 'Play';  // 再生が終了したらボタン表示を「Play」に戻す
+      updateSeekbar();
+      updateTime();
+    });
 
-  if (playButton) {
-    playButton.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play(); // 再生開始
-        playButton.innerHTML = 'Pause'; // ボタン表示変更
-      } else {
-        audio.pause(); // 一時停止
-        playButton.innerHTML = 'Play'; // ボタン表示変更
+    // メタデータが読み込まれたときに初期化
+    audio.addEventListener("loadedmetadata", () => {
+      updateSeekbar();
+      updateTime();
+    });
+
+    // シークバーを更新
+    function updateSeekbar() {
+      const duration = audio.duration;
+      const currentTime = audio.currentTime;
+      if (seekbar && !isNaN(duration) && duration > 0) {
+        const percent = (currentTime / duration) * 100;
+        seekbar.style.width = `${percent}%`;
       }
-    });
-  }
+    }
 
-  if (stopButton) {
-    stopButton.addEventListener('click', () => {
-      audio.pause();
-      audio.currentTime = 0;
-      playButton.innerHTML = 'Play';
-      updateSeekbar();
-      updateTime();
-    });
-  }
+    // 時間の更新
+    function updateTime() {
+      const currentTime = audio.currentTime;
+      const duration = audio.duration;
+      const currentFormatted = formatTime(currentTime);
+      const durationFormatted = formatTime(duration);
+      if (currentTimeElem && durationElem) {
+        currentTimeElem.textContent = currentFormatted;
+        durationElem.textContent = durationFormatted;
+      }
+    }
 
-  // シークバー更新のための timeupdate イベント
-  audio.addEventListener('timeupdate', () => {
-    if (seekbar) {
-      updateSeekbar();
-      updateTime();
+    // 時間を00:00形式にフォーマット
+    function formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
     }
   });
-
-  // 再生が終了したらPlayに戻す
-  audio.addEventListener('ended', () => {
-    playButton.innerHTML = 'Play'; // 再生完了後に「Play」に戻す
-    updateSeekbar();
-    updateTime();
-  });
-
-  // メタデータが読み込まれたらシークバーと時間を更新
-  audio.addEventListener("loadedmetadata", () => {
-    updateSeekbar();
-    updateTime();
-  });
-
-  // 初期化
-  function updateSeekbar() {
-    const duration = audio.duration;
-    const currentTime = audio.currentTime;
-    if (seekbar && !isNaN(duration) && duration > 0) {
-      const percent = (currentTime / duration) * 100;
-      seekbar.style.width = `${percent}%`;
-    }
-  }
-
-  function updateTime() {
-    const currentTime = audio.currentTime;
-    const duration = audio.duration;
-    const currentFormatted = formatTime(currentTime);
-    const durationFormatted = formatTime(duration);
-    const currentElem = document.getElementById('current');
-    const durationElem = document.getElementById('duration');
-    if (currentElem && durationElem) {
-      currentElem.textContent = currentFormatted;
-      durationElem.textContent = durationFormatted;
-    }
-  }
-
-  function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-  }
-
-  // 初期化時にシークバーの幅を 0% にしておく
-  if (seekbar) {
-    seekbar.style.width = '0%';
-  }
-
-  updateTime(); // 初期時間表示
 });
 
-// "Sys. T. Player (beta)" Sys. T. Miyatake, (Last modified: Apr 16, 2025;)
+// "Sys. T. Player (beta)" Sys. T. Miyatake, (Last modified: May 06, 2025;)
