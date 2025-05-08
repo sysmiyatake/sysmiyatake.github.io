@@ -1377,6 +1377,28 @@ ul.others-list {
   width: 100%;
 }
 
+.chapter-box{
+  margin: 0 6.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.chapter-list {
+  width: 100%;
+  all: unset;
+  display: inline;
+  color: hsl(135, 35%, 25%);
+  font: inherit;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chapter-list::before {
+  content: "・ ";
+  color: hsl(0, 0%, 0%);
+}
+
 .sitemap-table {
   margin: 0 1em 3em 6em;
   font-size: .85em;

@@ -1418,6 +1418,25 @@ ul.others-list {
   width: 100%;
 }
 
+
+.chapter-box{
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.chapter-list {
+  width: 100%;
+  all: unset;
+  display: inline;
+  color: hsl(135, 35%, 25%);
+  font: inherit;
+  font-size: .75em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .demotape {
   margin: 3em 0 .5em!important;
   padding-left: 1em!important;
