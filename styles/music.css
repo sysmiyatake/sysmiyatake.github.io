@@ -569,6 +569,18 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
+  .song-hl {
+    margin: 1em 0 1.5em;
+    padding: .75em;
+    width: auto;
+    background-color: hsla(135, 6%, 38%, 0.15);
+    border-left: 1.25em solid hsl(135, 35%, 35%);
+    border-radius: .5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+    font-weight: bold;
+  }
+
   .get_properties > div {
     margin: 0;
   }
