@@ -394,8 +394,9 @@
   border-radius: 1em;
 }
 
-.artworks_fig > figure > picture > source, img {
+.artworks_fig > figure > picture > img {
   border-radius: 10px;
+  width: 50vw;
 }
 
 .artwork_cap {
@@ -800,7 +801,7 @@
   .artworks_fig {
     margin-left: 0;
     padding: 1em;
-    width: fit-content;
+    width: auto;
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
     border-radius: 1em;

@@ -256,6 +256,7 @@ cite::before {
   height: auto;
   display: block;
   transition: 1.5s;
+  border-radius: 15px;
 }
 
 .weblog-jacket-image {
