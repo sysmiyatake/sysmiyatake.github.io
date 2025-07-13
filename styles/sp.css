@@ -234,6 +234,14 @@ cite::before {
   content: "出典：";
 }
 
+.white-board {
+  margin: 1em auto;
+  padding: 1.5em .5em;
+  width: auto;
+  border-radius: 1em;
+  background-color: hsla(0, 0%, 100%, 0.95);
+}
+
 .site-index-image {
   width: 100%;
   height: auto;
