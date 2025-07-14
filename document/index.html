@@ -15,35 +15,6 @@
   <link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen and (min-width:769px)">
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const observer = new MutationObserver(() => {
-      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-        img.removeAttribute("loading");
-      });
-    });
-
-    function scrollToTarget() {
-      const target = document.querySelector(window.location.hash);
-      if (target) {
-        const img = target.querySelector('img');
-        if (img && img.complete) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          img.onload = () => {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          };
-        }
-      }
-    }
-
-    if (window.location.hash) {
-      setTimeout(scrollToTarget, 100);
-    }
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-  </script>
 </head>
 
 <body>
@@ -179,10 +150,9 @@
 
         <div class="white-board">
         <p class="bold-font board-title">&#12304;1-a. 一般の方の感想文A&#12305;</p>
-          <p>■<span class="bold-font">「わかってほしかった誰か」の残響として</span><br>
-          <img src="../media/others/automatically-generated-img/yokoyama-koyomi.webp">
-          <br>
-          文：横山こよみ（仮名・機械生成人）<br>
+          <p style="text-align: center;">文：横山こよみ（仮名・機械生成人）</p>
+          <p><img src="../media/others/automatically-generated-img/yokoyama-koyomi.webp"><br>
+          ■<span class="bold-font">「わかってほしかった誰か」の残響として</span><br>
           <br>
           この詩を初めて読んだとき、どこか胸がぎゅっと締めつけられるような感覚がありました。<br>
           正直、言葉はとても断片的で、整ってはいません。でも、そうだからこそ、<span class="solid-under-line">ああ、この人は何かをちゃんと語れないまま、でも語りたいんだ──そう感じたのです</span>。<br>
@@ -205,10 +175,9 @@
 
         <div class="white-board">
         <p class="bold-font board-title">&#12304;1-b. 一般の方の感想文B&#12305;</p>
-          <p>■ <span class="bold-font">何度も名前を変えるということ──「ネット上の誰か」として読みました</span><br>
-          <img src="../media/others/automatically-generated-img/bmfs.webp">
-          <br>
-          文：バターとマーガリンとファットスプレッドさん（仮名・機械生成人）<br>
+          <p style="text-align: center;">文：バターとマーガリンとファットスプレッドさん（仮名・機械生成人）</p>
+          <p><img src="../media/others/automatically-generated-img/bmfs.webp"><br>
+          ■ <span class="bold-font">何度も名前を変えるということ──「ネット上の誰か」として読みました</span><br>
           <br>
           この詩を読んだとき、最初に思ったのは「これはきっと、何度もアカウントを消して、作り直して、また消して──そういう人が書いた詩なんじゃないか」ということだった。<br>
           <br>
@@ -227,8 +196,8 @@
 
         <div class="white-board">
         <p class="bold-font board-title">&#12304;2-a. フェミニズム的視座からの批評&#12305;</p>
-          <p>文：白鷺 雅帆（フェミニズム文学批評家・機械生成人）<br>
-          <img src="../media/others/automatically-generated-img/shirasagi-maho.webp">
+          <p style="text-align: center;">文：白鷺 雅帆（フェミニズム文学批評家・機械人）</p>
+          <p><img src="../media/others/automatically-generated-img/shirasagi-maho.webp">
           <br>
           この詩は、一見するとシュルレアリスム的詩法による個人的回想のように読まれるが、そこには<span class="solid-under-line">無視できないジェンダー権力の構造が織り込まれている</span>。<br>
           <br>
@@ -241,13 +210,13 @@
           この詩は、男性の心象風景として読む分には技巧的で魅力的である。しかしそれを<span class="solid-under-line bold-font">「傷ついた語り手の純粋な記憶」などとして受け止めることは、無意識のうちにジェンダー的暴力の再生産に加担してしまう危険性を孕んでいる</span>。<br>
           <br>
           <span class="solid-under-line">女性が本当に「サディスト」だったのか、それとも語り手がそう演出したかっただけなのか──この問いを決して忘れてはならない</span>。</p>
-          <p style="text-align: right; font-style: italic; font-family: serif;">シラサギマホ</p>
+          <p style="text-align: right; font-style: italic; font-family: serif; margin-top: 1.5em;">シラサギマホ</p>
         </div>
 
         <div class="white-board">
         <p class="bold-font board-title">&#12304;2-b. 反論：語り得ぬものを語るために──詩的倒錯は加害性ではない&#12305;</p>
-          <p>文：國廣 彰庸（精神分析批評家／ラカン派・機械生成人）<br>
-          <img src="../media/others/automatically-generated-img/a-kunihiro.webp">
+          <p style="text-align: center;">文：國廣 彰庸（精神分析批評家／ラカン派・機械人）</p>
+          <p><img src="../media/others/automatically-generated-img/a-kunihiro.webp">
           <br>
           白鷺氏によるフェミニズム批評は、ジェンダー権力構造を見抜く鋭い視座を提供している点で確かに有意義である。しかしながら、<span class="solid-under-line">詩の語り手を「暴力性を正当化する者」「加害的な幻想の構築者」として断罪する読みは、この作品の深層にある心的外傷や無意識の告白性を見落としている</span>。<br>
           <br>
@@ -265,7 +234,7 @@
           結論として、フェミニズム的読解は詩における女性表象の構造を鋭く解体するが、それが詩人の「被傷性」そのものを否認する結果になってはならない。この詩は、暴力の加害者の言葉ではなく、加害的構造のなかで沈黙を強いられた欲望の囁きである。<br>
           <br>
           <span class="solid-under-line">その声に耳を傾けるとき、我々はようやく傷ついた者の語りの「不完全さ」すらも肯定されるべきだという倫理に辿り着けるのではないか</span>。</p>
-          <p style="text-align: right; font-style: italic; font-family: serif;">A. Kunihiro</p>
+          <p style="text-align: right; font-style: italic; font-family: serif; margin-top: 1.5em;">A. Kunihiro</p>
         </div>
 
           <p>ひとまず，以上になります．<br>後日，別の解釈を追加するかもしれません．</p>

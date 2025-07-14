@@ -248,7 +248,7 @@ cite::before {
 }
 
 .white-board p>img {
-  margin-top: 1.5em;
+  margin-top: 0;
   width: 100%;
   height: auto;
   display: block;
