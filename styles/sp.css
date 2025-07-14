@@ -234,12 +234,32 @@ cite::before {
   content: "出典：";
 }
 
+.general-list {
+  margin-left: 1.5em;
+  font-size: .75em;
+}
+
 .white-board {
   margin: 1em auto;
   padding: 1.5em .5em;
   width: auto;
   border-radius: 1em;
   background-color: hsla(0, 0%, 100%, 0.95);
+}
+
+.white-board p>img {
+  margin-top: 1.5em;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1em;
+  pointer-events: none;
+}
+
+.board-title {
+  margin-bottom: .5em;
+  width: auto;
+  text-align: center;
 }
 
 .site-index-image {
