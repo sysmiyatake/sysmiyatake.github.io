@@ -239,6 +239,16 @@ cite::before {
   font-size: .75em;
 }
 
+.thumb_fit {
+  text-align: center;
+}
+
+.thumb_fit img {
+  width: 75%;
+  height: auto;
+  border-radius: .75em;
+}
+
 .white-board {
   margin: 1em auto;
   padding: 1.5em .5em;

@@ -15,35 +15,6 @@
   <link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen and (min-width:769px)">
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const observer = new MutationObserver(() => {
-      document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-        img.removeAttribute("loading");
-      });
-    });
-
-    function scrollToTarget() {
-      const target = document.querySelector(window.location.hash);
-      if (target) {
-        const img = target.querySelector('img');
-        if (img && img.complete) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          img.onload = () => {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          };
-        }
-      }
-    }
-
-    if (window.location.hash) {
-      setTimeout(scrollToTarget, 100);
-    }
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-  </script>
 </head>
 
 <body>
@@ -208,6 +179,7 @@
         <p class="bold-font">Concept&colon; "<span class="dotted-under-line">Two Voices，One Moment，Zero Speaking.</span>"&semi;</p>
         <p class="solid-under-line bold-font">"We Were Speaking, Weren’t We?"</p>
         <p class="video-drive"><a href="https://drive.google.com/file/d/1z7Qp5xvhzvRyhUlu4Jl-UIeWwgccX9pw/preview" target="_blank" title="Google LLC さま. 別ドメインのサーバ上に公開されたファイルへジャンプします．" class="open-in-new-tab bold-font">"Compassion" Video Work</a>, Born and Launched on Jul 25, 2025.</p>
+        <p class="thumb_fit"><a href="https://drive.google.com/file/d/1z7Qp5xvhzvRyhUlu4Jl-UIeWwgccX9pw/preview" target="_blank" class="open-in-new-tab bold-font"><img src="../media/others/compassion_thumb.webp"></a></p>
 
       <hr id="omoide_zarazara">
 
