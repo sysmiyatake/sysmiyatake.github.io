@@ -1465,6 +1465,7 @@ ul.others-list {
   display: inline;
   width: 50%;
   height: auto;
+  border-radius: 1em;
 }
 
 .inline_bigimg {
