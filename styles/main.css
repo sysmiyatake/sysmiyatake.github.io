@@ -1433,6 +1433,14 @@ ul.others-list {
   color: hsl(0, 0%, 0%);
 }
 
+.book-citation {
+  margin-left: -1em;
+  padding: .75em 1em .75em .75em;
+  border-left: .5em solid hsla(5, 84%, 15%, 1);
+  border-radius: 5px;
+  background: hsla(5, 84%, 15%, 0.15);
+}
+
 .sitemap-table {
   margin: 0 1em 3em 6em;
   font-size: .85em;

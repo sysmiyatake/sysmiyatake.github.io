@@ -1476,6 +1476,15 @@ ul.others-list {
   cursor: pointer;
 }
 
+.book-citation {
+  margin: -1.5em;
+  padding: .5em .75em .5em .5em;
+  font-size: .75em;
+  border-left: .5em solid hsla(5, 84%, 15%, 1);
+  border-radius: 5px;
+  background: hsla(5, 84%, 15%, 0.15);
+}
+
 .demotape {
   margin: 3em 0 .5em!important;
   padding-left: 1em!important;
