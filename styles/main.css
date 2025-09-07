@@ -221,6 +221,10 @@ cite::before {
   margin-left: 6.5em;
 }
 
+.general-list2 {
+  margin-left: 8.5em;
+}
+
 .thumb_fit img {
   width: 25%;
   height: auto;

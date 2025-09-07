@@ -239,6 +239,11 @@ cite::before {
   font-size: .75em;
 }
 
+.general-list2 {
+  margin-left: 3em;
+  font-size: .75em;
+}
+
 .thumb_fit {
   text-align: center;
 }
