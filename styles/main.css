@@ -224,6 +224,7 @@ cite::before {
 .thumb_fit img {
   width: 25%;
   height: auto;
+  margin-right: .5em;
   border-radius: .75em;
 }
 
