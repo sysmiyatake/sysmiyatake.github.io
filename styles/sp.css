@@ -234,6 +234,21 @@ cite::before {
   content: "出典：";
 }
 
+.iframe-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.iframe-full iframe {
+  margin: .5em auto;
+  width: 85%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+  border-radius: 1em;
+}
+
 .general-list {
   margin-left: 1.5em;
   font-size: .75em;
