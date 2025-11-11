@@ -1497,10 +1497,17 @@ ul.others-list {
 }
 
 .inline_bigimg {
-  margin: 3em 0 0;
+  margin: 3em auto 0;
   display: inline;
-  width: 90%;
+  width: 100%;
   height: auto;
+  border-radius: 1em;
+}
+
+.il_img_sp > img {
+  margin: 1.5em auto 0;
+  display: block;
+  text-indent: 0!important;
 }
 
 .copyright,

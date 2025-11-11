@@ -1543,6 +1543,7 @@ ul.others-list {
   display: inline;
   width: 80vw;
   height: auto;
+  border-radius: .5em;
 }
 
 .il_img_sp > img {
