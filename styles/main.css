@@ -805,6 +805,10 @@ img.garally-img:hover {
   font-weight: bold;
 }
 
+.list-bolds>li>a {
+  font-weight: bold;
+}
+
 .weblog-text {
   padding: 2em 2em 3em;
   background-color:  hsla(33, 78%, 91%, 0.85);
