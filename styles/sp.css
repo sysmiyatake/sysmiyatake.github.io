@@ -852,6 +852,10 @@ img.garally-img:hover {
   font-weight: bold;
 }
 
+.list-bolds>li>a {
+  font-weight: bold;
+}
+
 .weblog-article-list span.hyphenated {
   display: none;
 }
