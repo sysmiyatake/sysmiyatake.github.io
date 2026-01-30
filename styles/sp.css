@@ -200,7 +200,7 @@ summary:hover {
 }
 
 blockquote {
-  margin: 1em 3em;
+  margin: 1.5em 2em;
   padding: 1em .5em;
   border-left: 4px solid hsla(0, 0%, 0%, 0.5);
   color: hsl(0, 0%, 20%);
@@ -212,14 +212,22 @@ blockquote:has(cite) {
   padding: 1.5em .5em 2em;
 }
 
+blockquote p{
+  padding: .5em!important;
+}
+
 blockquote p::before {
   content: "\201C";
   font-weight: bold;
+  font-size: 200%;
+  opacity: .75;
 }
 
 blockquote p::after {
   content: "\201D";
   font-weight: bold;
+  font-size: 200%;
+  opacity: .75;
 }
 
 cite {
