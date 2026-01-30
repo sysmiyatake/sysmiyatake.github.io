@@ -183,8 +183,8 @@ summary:hover {
 }
 
 blockquote {
-  margin: 1em 3em;
-  padding: 1em .5em;
+  margin: 1em 6em;
+  padding: 2.5em 1em 2em;
   border-left: 4px solid hsla(0, 0%, 0%, 0.5);
   color: hsl(0, 0%, 20%);
   background-color: hsla(0, 0%, 0%, 0.125);
@@ -192,17 +192,21 @@ blockquote {
 }
 
 blockquote:has(cite) {
-  padding: 1.5em .5em 2em;
+  padding: 2.5em  1em 2em;
 }
 
 blockquote p::before {
   content: "\201C";
   font-weight: bold;
+  font-size: 250%;
+  opacity: .75;
 }
 
 blockquote p::after {
   content: "\201D";
   font-weight: bold;
+  font-size: 250%;
+  opacity: .75;
 }
 
 cite {
