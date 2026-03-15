@@ -267,6 +267,12 @@ cite::before {
   font-size: .75em;
 }
 
+.special_img img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
 
 .ghost_img img {
   opacity: 1;
