@@ -244,8 +244,61 @@ cite::before {
   margin-left: 8.5em;
 }
 
+.ghost_img img {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.ghost_img img:hover,
+.ghost_img img:active,
+.ghost_img img:focus {
+  opacity: 0.2;
+}
+
+.ghost_img {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sexy_img img {
+  transition: filter 0.6s ease-in;
+}
+
+.sexy_img img:hover,
+.sexy_img img:active,
+.sexy_img img:focus {
+  filter: grayscale(100%) contrast(150%) brightness(120%);
+}
+
+.dead_img img{
+  filter: grayscale(0%);
+  transition: filter 16s ease;
+}
+
+.dead_img img:hover{
+  filter: grayscale(100%) brightness(0%);
+  transition: filter 6s ease;
+}
+
+.fantasy_img img {
+  filter: grayscale(100%);
+  transition: filter 16s ease;
+}
+
+.fantasy_img img:hover,
+.fantasy_img img:active,
+.fantasy_img img:focus {
+  filter: grayscale(0%) brightness(300%) contrast(300%);
+}
+
 .thumb_fit img {
   width: 25%;
+  height: auto;
+  margin-right: .5em;
+  border-radius: .75em;
+}
+
+.thumb_fitbig img {
+  width: 85%;
   height: auto;
   margin-right: .5em;
   border-radius: .75em;
