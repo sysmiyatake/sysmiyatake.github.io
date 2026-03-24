@@ -1654,7 +1654,8 @@ ul.others-list {
 .song-type,
 .pic-img,
 .pic-img-vertical,
-.lyrics-text {
+.lyrics-text,
+.inline_bigimg {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;

@@ -1584,7 +1584,8 @@ ul.others-list {
 .pic-img,
 .pic-img-vertical,
 .frame_img,
-.lyrics-text {
+.lyrics-text,
+.inline_bigimg {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
