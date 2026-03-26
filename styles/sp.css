@@ -236,6 +236,8 @@ cite {
   color: hsl(0, 0%, 45%);
   font-size: .8em;
   text-align: right;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 cite::before {
