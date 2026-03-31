@@ -1648,6 +1648,45 @@ ul.others-list {
   transition: .5s;
 }
 
+.aha_wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.inline_bigimg {
+  display: block;
+  width: 100%;
+}
+
+.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.aha_wrap.is-active .after {
+  opacity: 1;
+  animation: ahaReveal 3s ease forwards;
+}
+
+@keyframes ahaReveal {
+  0% {
+    opacity: 0;
+    mask-image: radial-gradient(circle at 65% 40%, black 0%, transparent 10%);
+  }
+
+  60% {
+    opacity: 1;
+    mask-image: radial-gradient(circle at 65% 40%, black 50%, transparent 70%);
+  }
+
+  100% {
+    opacity: 0;
+    mask-image: radial-gradient(circle at 65% 40%, black 70%, transparent 90%);
+  }
+}
+
 /* for SP-Landscape */
 @media screen and (max-height: 710px) {
   #fixed-menu {
