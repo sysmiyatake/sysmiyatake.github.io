@@ -71,7 +71,8 @@
           <img src="../media/others/weblog/radio/weblog_2026_03_26_after.webp" class="inline_bigimg after">
         </span>
       </p>
-      <p class="weblog-info">※上記画像は生成AI（OpenAI社のChatGPT）によって作成された素材を用いて，ホモ・サピエンス（システィ）の手によって完成されました．</p>
+      <p class="weblog-info">※上記画像は生成AI（OpenAI社のChatGPT）によって作成された素材を用いて，ホモ・サピエンス（システィ）の手によって完成されました．<br>
+      ちょっとしたギミックもあります．ご注意ください……（&#128578;&#128128;&#128578;）</p>
 
 
       <h2 class="weblog-note">メニュー</h2>
@@ -176,7 +177,7 @@
           <p class="bold-font spacious">【第28回】[Part.c] 全 16 項</p>
           <ul>
             <li>&#128591;&#65039;奇跡の復活とは？&#10024;&#65039;</li>
-            <li>&#128560;&#65039;チヨマツテ，&#128561;&#65039;アセリンチョス and the &#129503;NMEROYA!</li>
+            <li>&#128560;&#65039;チヨマツテ，&#128561;&#65039;アセリンチヨス and the &#129503;NMEROYA!</li>
             <li>&#9996;&#65039;いえい！〜副詞「非常に」を名詞にかけながら&#128527;〜</li>
             <li class="bold-font">&#127932;私の音楽制作&#127911;の歴史&#128220;&#65039;を振り返ります&#128368;&#65039;</li>
             <li>&#128567;&#65039;生々しい＝口臭？&#129314;&#65039;（何を言っとるんだ&#128520;）</li>
@@ -288,7 +289,6 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       const el = entry.target;
 
-      // 初回スキップ
       if (!el._seenOnce) {
         el._seenOnce = true;
         return;
@@ -296,16 +296,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (el._activated) return;
 
-      // 画面から離れ始めたら発動
       if (entry.intersectionRatio < 0.8 && entry.intersectionRatio > 0) {
         el.classList.add("is-active");
         el._activated = true;
 
-        // アニメ終了後に消す
         setTimeout(() => {
           el.classList.remove("is-active");
           el.classList.add("is-done");
-        }, 3000); // アニメ時間と合わせる
+        }, 3000);
 
         observer.unobserve(el);
       }
