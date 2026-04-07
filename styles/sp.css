@@ -1640,7 +1640,11 @@ ul.others-list {
   border-radius: .5em;
 }
 
-.il_img_sp > img {
+.il_img_sp {
+  text-indent: 0!important;
+}
+
+.il_img_sp img {
   margin: 1.5em auto 0;
   display: block;
   text-indent: 0!important;
