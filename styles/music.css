@@ -192,7 +192,7 @@
 
 .video_figure video {
   margin-top: 1em;
-  height: 270px;
+  width: 100%;
 }
 
 .video-drive {
@@ -655,9 +655,7 @@
   }
 
   .video_figure video {
-    width: 58vw;
-    height: auto;
-    min-width: 230px;
+    width: 100%;
   }
 
   .video-drive {
