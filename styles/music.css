@@ -148,6 +148,20 @@
   border-radius: 1em;
 }
 
+.video-part {
+  width: calc(100% - 6em);
+  margin: 0 3em 3em;
+  box-sizing: border-box;
+  background-color: hsla(135, 35%, 75%, 0.25);
+  border: 1em hsl(135, 35%, 75%) solid;
+  border-radius: 1em;
+}
+
+.video-part-inner {
+  padding: 3em 3em 1.25em;
+  border-radius: 1em;
+}
+
 #related-content {
   margin: 3em 1em 1.5em;
   padding: 1em;
@@ -193,6 +207,8 @@
 .video_figure video {
   margin-top: 1em;
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 .video-drive {
@@ -362,7 +378,7 @@
 }
 
 #lyrics-title {
-  margin: 1em 1em 2em;
+  margin: 2em 1em 2em;
   padding: 1em;
   text-indent: 0!important;
   font-weight: bold;
@@ -788,25 +804,49 @@
   }
 
   .lyrics_fig {
-    margin-left: 0;
+    margin: 0 auto;
     padding: 1em;
-    width: fit-content;
+    width: 100%;
+    max-width: 800px;
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
     border-radius: 1em;
+    box-sizing: border-box;
+  }
+
+  .lyrics_fig figure {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .lyrics_fig img {
+  width: 100%;
+  height: auto;
+  display: block;
   }
 
   .artworks_fig {
-    margin-left: 0;
+    margin: 0 auto;
     padding: 1em;
-    width: auto;
+    width: 100%;
+    max-width: 800px;
     background-color: hsla(135, 35%, 75%, 0.25);
     border: 0.5em hsl(135, 35%, 75%) solid;
     border-radius: 1em;
+    box-sizing: border-box;
   }
 
   .artworks_fig figure {
+    margin: 0;
+    width: 100%;
     text-align: center;
+  }
+  
+  .artworks_fig img {
+    width: 100%!important;
+    height: auto;
+    display: block;
   }
 
   .artwork_cap {
