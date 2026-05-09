@@ -15,6 +15,16 @@
   <link rel="stylesheet" type="text/css" href="../styles/main.css" media="screen and (min-width:769px)">
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
+  <style>
+  @keyframes skew {
+    0%, 100% { transform: skewX(0deg); }
+    50%       { transform: skewX(20deg); }
+  }
+  @keyframes resetMatrix {
+  0%   { transform: matrix(0.3, 0.5, 0.1, 1, 1, 0.1); }
+  100% { transform: matrix(1, 0, 0, 1, 0, 0); }
+  }
+  </style>
 </head>
 
 <body>
@@ -64,6 +74,7 @@
           <ul class="others-list">
             <li><a href="#vid-hl">映像領域（ムービー作品）</a>
               <ol reversed>
+                <li><span style="color:brown;">[!sensitive!]</span> <a href="#koushu">意味の要請</a></li>
                 <li><span style="color:brown;">[!sensitive!]</span> <a href="#trahit">Trahit me quam fugio</a></li>
                 <li><span style="color:brown;">[!sensitive!]</span> <a href="#oyasumi">愛、おやすみ。</a></li>
                 <li><span style="color:brown;">[!sensitive!]</span> <a href="#optimization">このクリエイターは最適化済みです</a></li>
@@ -195,10 +206,27 @@
       <hr id="vid-hl" class="sec-dotted-rule">
 
       <h2 class="page-headline-xlarge">&#9632; 映像領域（ムービー作品）</h2>
-        <p>以下 29 作品の制作・著作: Sys. T. Miyatake, 2022-2026</p>
+        <p>以下 30 作品の制作・著作: Sys. T. Miyatake, 2022-2026</p>
         
         <details><summary>ファイル再生についての状況とお願い</summary>
         <p class="drive-summary">この項のコンテンツは，Google LLC <a href="https://www.google.com/" target="_blank" title="Google LLC さま. この別ドメインのサイトへジャンプします．" class="open-in-new-tab">https://www.google.com/</a> のクラウドストレージサービス，Google Drive に保存されているファイルを屡々参照しています．<br>サイトにお越しの皆さまに鑑賞いただくことを目的として，どなたでも閲覧・再生可能な状態に設定してあります．<br>当サイト利用者さまがオンラインサーバ上でファイルを再生してお楽しみいただく以外の，たとえばローカルへの保存などの行為はお控えくださいますよう，お願い申し上げます．</p></details>
+
+      <hr id="koushu">
+
+      <h3 class="others-title"><span style="color:brown;">[!sensitive!]</span> 意味の要請 (T.Joraku.M, 2026)</h3>
+        <p class="bold-font">テーマ（あるいは問い）&colon; "<span class="dotted-under-line">あなたが笑うとき，彼はアロマを知る．彼が悲しむとき，あなたはお風呂に入っている．</span>"&semi;</p>
+        <p class="solid-under-line bold-font" style="margin-top: 3em; margin-bottom: 3em;"><span style="font-size: 1.5em;">"SUPERスッパチキンIVを舐めてはいけませんよ……"</span></p>
+        <p class="thumb_fitbig"><a href="https://drive.google.com/file/d/1otgtuhe_2mpnpXR_6vTRGvf9nfUeKPiH/preview" target="_blank" class="open-in-new-tab"><img src="../media/others/koushu_2024-26_thumb.webp"></a></p>
+        <p class="bold-font" style="animation: resetMatrix 1s ease-in-out infinite alternate; text-align: center;"><span style="font-size: 4.5em;">&#128147;間主観性を、ありがとう。</span></p>
+
+        <p class="video-drive" style="margin-top: 6em;"><a href="https://drive.google.com/file/d/1otgtuhe_2mpnpXR_6vTRGvf9nfUeKPiH/preview" target="_blank" title="Google LLC さま. 別ドメインのサーバ上に公開されたファイルへジャンプします．" class="open-in-new-tab bold-font">"Koushu（にらめっこ）" Video Work</a>, 2024-2026.</p>
+        <p><span style="color:brown;">[!sensitive!]</span> ※ホラー要素（複雑な心境・良心の呵責・ノスタルジック老人等）が含まれます．体調のすぐれない方は再生をお控えになることを推奨いたします．</p>
+        <p style="margin-top: 3em;">【含有を認められるオリジナル作品】</p>
+        <ul class="general-list2">
+          <li>音楽『koushu.mp3』(T.Joraku.M, 2024)</li>
+        </ul>
+        <p style="margin-top: 3em;">【今作での制作データおよび生成AIの関与について】<br>
+        ※ 映像作品において，生成AIに出力させた一枚の画像（限定激レア友情出演：テュルッパゲーニョ中島チュパシティ氏）を素材として活用し，ホモ・サピエンスである作者が創作を行いました．音楽は過去の未公開オリジナル作品デモ音源を採用いたしました．</p>
 
       <hr id="trahit">
 
@@ -296,7 +324,7 @@
 
       <h3 class="others-title">すべてうまくいく (T.Joraku.M, 2026)</h3>
         <p class="bold-font">メッセージ&colon; "<span class="dotted-under-line">すこやかな管理社会，いつも見守っているよ，やさしさでできた世界</span>"&semi;</p>
-        <p class="solid-under-line bold-font">"あなたの欲望，何が計算していますか？"</p>
+        <p class="solid-under-line bold-font; animation: skew 1s infinite;">"あなたの欲望，何が計算していますか？"</p>
         <p class="video-drive"><a href="https://drive.google.com/file/d/1iRHktbs1Q-VRvDmS1wWVR2-6EdEHlpkj/preview" target="_blank" title="Google LLC さま. 別ドメインのサーバ上に公開されたファイルへジャンプします．" class="open-in-new-tab bold-font">"The Benevolent Algorithmic Dictatorship" Video Work</a>, Born and Launched on Feb 22, 2026.</p>
         <p class="thumb_fitbig"><a href="https://drive.google.com/file/d/1iRHktbs1Q-VRvDmS1wWVR2-6EdEHlpkj/preview" target="_blank" class="open-in-new-tab"><img src="../media/others/theBAD_thumb_2026.webp"></a></p>
         <p><span style="color:brown;">[!semi-sensitive!]</span> ※わずかにホラー要素（びっくり，暗黒，皮肉）が含まれます．体調のすぐれない方は再生をお控えになることを推奨いたします．</p>
