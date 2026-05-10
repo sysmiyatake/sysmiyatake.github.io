@@ -18,13 +18,54 @@
   <style>
   @keyframes skew {
     0%, 100% { transform: skewX(0deg); }
-    50%       { transform: skewX(20deg); }
+    50%      { transform: skewX(20deg); }
   }
   @keyframes resetMatrix {
   0%   { transform: matrix(0.3, 0.5, 0.1, 1, 1, 0.1); }
   100% { transform: matrix(1, 0, 0, 1, 0, 0); }
   }
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(8);
+    }
+  }
   </style>
+  <script>
+    let audioBuffer;
+
+    const audioContext = new AudioContext();
+
+    async function init() {
+      const response = await fetch("../media/mp3-audio/se/mask-hi_SE.mp3");
+
+      const arrayBuffer =
+        await response.arrayBuffer();
+
+      audioBuffer =
+        await audioContext.decodeAudioData(arrayBuffer);
+    }
+
+    init();
+
+    async function playSound() {
+      await audioContext.resume();
+
+      const source =
+        audioContext.createBufferSource();
+
+      source.buffer = audioBuffer;
+
+      source.playbackRate.value =
+        0.9 + Math.random() * 0.2;
+
+      source.connect(audioContext.destination);
+
+      source.start();
+    }
+    </script>
 </head>
 
 <body>
@@ -302,8 +343,14 @@
 
       <h3 class="others-title">思舂期とは？［バイオ・アート作品］(T.Joraku.M, 2026)</h3>
         <p class="solid-under-line bold-font">"この人たちの生命はどこにあるのか？"</p>
+
         <p class="video-drive"><a href="https://drive.google.com/file/d/1PPMkahTwroOIzPa1ZkmHgmgh-DTTMYVy/preview" target="_blank" title="Google LLC さま. 別ドメインのサーバ上に公開されたファイルへジャンプします．" class="open-in-new-tab bold-font">"What Is Shi-Shou-ki?" Video Work</a>, Born and Launched on Mar 15, 2026.</p>
         <p class="thumb_fitbig"><a href="https://drive.google.com/file/d/1PPMkahTwroOIzPa1ZkmHgmgh-DTTMYVy/preview" target="_blank" class="open-in-new-tab"><img src="../media/others/title_shi-shou-ki_2026.webp"></a></p>
+
+        <div style="text-align: center;">
+        <p style="display: inline-block; animation: pulse 1s ease-in-out infinite; transform-origin: center; position: relative; z-index: 10;" onclick="playSound()">
+          &#128068;
+        </p></div>
 
         <p style="margin-top: 3.5em;">メッセージ a: <span class="solid-under-line bold-font" style="font-size: 1.25em">これは私の顔ではなく，バージョンです．</span></p>
         <p>メッセージ b: <span class="solid-under-line bold-font" style="font-size: 1.25em">いいねの数だけ，私はいなくなる．</span></p>
@@ -324,7 +371,7 @@
 
       <h3 class="others-title">すべてうまくいく (T.Joraku.M, 2026)</h3>
         <p class="bold-font">メッセージ&colon; "<span class="dotted-under-line">すこやかな管理社会，いつも見守っているよ，やさしさでできた世界</span>"&semi;</p>
-        <p class="solid-under-line bold-font; animation: skew 1s infinite;">"あなたの欲望，何が計算していますか？"</p>
+        <p class="solid-under-line bold-font;" style="animation: skew 1s infinite;">"あなたの欲望，何が計算していますか？"</p>
         <p class="video-drive"><a href="https://drive.google.com/file/d/1iRHktbs1Q-VRvDmS1wWVR2-6EdEHlpkj/preview" target="_blank" title="Google LLC さま. 別ドメインのサーバ上に公開されたファイルへジャンプします．" class="open-in-new-tab bold-font">"The Benevolent Algorithmic Dictatorship" Video Work</a>, Born and Launched on Feb 22, 2026.</p>
         <p class="thumb_fitbig"><a href="https://drive.google.com/file/d/1iRHktbs1Q-VRvDmS1wWVR2-6EdEHlpkj/preview" target="_blank" class="open-in-new-tab"><img src="../media/others/theBAD_thumb_2026.webp"></a></p>
         <p><span style="color:brown;">[!semi-sensitive!]</span> ※わずかにホラー要素（びっくり，暗黒，皮肉）が含まれます．体調のすぐれない方は再生をお控えになることを推奨いたします．</p>

@@ -840,6 +840,7 @@ img.garally-img:hover {
 
 #content-area {
   padding: 2em;
+  overflow-x: hidden;
 }
 
 #content-area p {
