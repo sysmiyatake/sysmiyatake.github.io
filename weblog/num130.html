@@ -16,6 +16,56 @@
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
   <link rel="stylesheet" type="text/css" href="../styles/music.css" media="screen">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
+  <style>
+  .weblog-fade-img {
+    position: relative;
+    display: block;
+    margin: 1.5em auto 0;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    border-radius: 1em;
+    overflow: hidden;
+    background-image: url("../media/others/weblog/radio/weblog_2026_07_16.webp");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .il_img_sp .weblog-fade-img__pic {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    object-fit: cover;
+    display: block;
+  }
+
+  .weblog-fade-img__pic--1 {
+    animation: weblog-fade-1 24s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+  .weblog-fade-img__pic--2 {
+    animation: weblog-fade-2 24s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  }
+  @keyframes weblog-fade-1 {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes weblog-fade-2 {
+    0%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @media screen and (max-width: 768px) {
+    .weblog-fade-img {
+      margin: 1.5em auto 0;
+      width: 80vw;
+      border-radius: .5em;
+    }
+  }
+  </style>
 </head>
 
 <body>
@@ -65,7 +115,12 @@
       <p class="weblog-info">テーマ: <span class="bold-font solid-under-line">&#127925;酸っぱい音楽を作ってるZ&#128536;</span>，<span class="bold-font solid-under-line">&#127759;「地元どこ？」に真剣に困る&#128547;</span>，<span class="bold-font solid-under-line">&#128234;お便りが来ないのでAIに書かせてしまった人と申します&#128546;</span>，etc…<span class="sp-none">&#65372;</span><br class="sp-text">
       時間: 約 <span class="bold-font solid-under-line">130</span> 分<span class="sp-none">&#65372;</span><br class="sp-text">
       料金: <span class="bold-font solid-under-line">無償</span>（サイト共通）</p>
-      <p class="il_img_sp"><img src="../media/others/weblog/radio/weblog_2026_07_16.webp" class="inline_bigimg">
+      <p class="il_img_sp">
+        <span class="weblog-fade-img">
+          <img src="../media/others/weblog/radio/weblog_2026_07_16.webp" class="weblog-fade-img__pic weblog-fade-img__pic--1">
+          <img src="../media/others/weblog/radio/weblog_2026_07_16_alt.webp" class="weblog-fade-img__pic weblog-fade-img__pic--2">
+        </span>
+      </p>
       <p class="weblog-info">※上記アイキャッチ画像は生成AI（OpenAI社のChatGPT）に作成させた素材を基本として構築されています．<br>
       ※この会場には<span class="bold-font solid-under-line">4人の怨霊が棲みついている</span>模様……あなたは全員を無事発見できましたか？（システィによる人為的悪戯であるとのウワサも．）</p>
       <h2 class="weblog-note">メニュー</h2>

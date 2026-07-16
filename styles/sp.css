@@ -1661,7 +1661,8 @@ ul.others-list {
 .pic-img,
 .pic-img-vertical,
 .lyrics-text,
-.inline_bigimg {
+.inline_bigimg,
+.weblog-fade-img {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -1719,11 +1720,6 @@ ul.others-list {
 .aha_wrap {
   position: relative;
   display: inline-block;
-}
-
-.inline_bigimg {
-  display: block;
-  width: 100%;
 }
 
 .after {
