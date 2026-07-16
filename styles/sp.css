@@ -1003,7 +1003,7 @@ img.garally-img:hover {
   text-indent: 1em;
 }
 
-.weblog-text ul {
+.weblog-text ul, ol {
   padding: 1em 2.25em;
   line-height: 2.125em;
 }
