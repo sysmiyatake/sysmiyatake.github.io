@@ -485,6 +485,32 @@ article ul ol li::selection {
   text-indent: 0!important;
 }
 
+.version-history {
+  display: block;
+  width: fit-content;
+  margin-top: 1.5em;
+  margin-right: 8em;
+  margin-left: auto;
+  padding: 0.4rem 0.8rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #c9d1d9;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+.version.current {
+  color: #7ee787;
+}
+
+.separator {
+  color: #6e7681;
+  margin: 0 0.5em;
+}
+
 #site-header {
   position: relative;
   margin-left: 84px;
@@ -1593,7 +1619,8 @@ ul.others-list {
 .frame_img,
 .lyrics-text,
 .inline_bigimg,
-.weblog-fade-img {
+.weblog-fade-img,
+.version-history {
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;

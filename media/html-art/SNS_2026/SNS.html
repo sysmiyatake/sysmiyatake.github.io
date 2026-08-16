@@ -677,18 +677,18 @@
             }, 2600);
         }
 
-        const hoverCapable = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         letters.forEach(id => {
             const el = document.getElementById(id);
-            if (hoverCapable) {
-                el.addEventListener('mouseenter', () => triggerReveal(id));
-            }
-            el.addEventListener('touchstart', (e) => {
-                e.preventDefault();
+
+            el.addEventListener('pointerenter', e => {
+                if (e.pointerType === 'mouse') {
+                    triggerReveal(id);
+                }
+            });
+
+            el.addEventListener('pointerdown', e => {
                 triggerReveal(id);
-            }, { passive: false });
-            // fallback for click-based environments (e.g. hybrid devices)
-            el.addEventListener('click', () => triggerReveal(id));
+            });
         });
 
         const sounds = {
