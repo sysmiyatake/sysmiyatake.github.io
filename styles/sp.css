@@ -1677,6 +1677,12 @@ ul.others-list {
   text-indent: 0!important;
 }
 
+.il_img_sp video {
+  margin: 1.5em auto 0;
+  display: block;
+  text-indent: 0!important;
+}
+
 .sp-none {
   display: none;
 }

@@ -1587,7 +1587,7 @@ ul.others-list {
 
 .inline_img {
   margin: 3em 0 0;
-  display: inline;
+  display: inline-block;
   width: 50%;
   height: auto;
   border-radius: 1em;
@@ -1606,6 +1606,29 @@ ul.others-list {
 }
 
 .il_img_sp img {
+  margin: 1.5em auto 0;
+  display: block;
+  text-indent: 0!important;
+}
+
+.il_img_pair {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.il_img_pair > a {
+  flex: 1;
+  min-width: 0;
+}
+
+.il_img_pair .inline_img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.il_img_sp video {
   margin: 1.5em auto 0;
   display: block;
   text-indent: 0!important;
