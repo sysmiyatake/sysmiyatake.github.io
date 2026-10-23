@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="../styles/music.css" media="screen">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
   <style>
-  .weblog-fade-img{
+  .weblog-fade-img {
     position:relative;
     display:block;
     width:100%;
@@ -30,7 +30,7 @@
     background:#000;
   }
 
-  .weblog-fade-img__pic{
+  .weblog-fade-img__pic {
     position:absolute;
     inset:0;
     width:100% !important;
@@ -45,8 +45,62 @@
     will-change:opacity;
   }
 
-  .weblog-fade-img__pic.is-active{
+  .weblog-fade-img__pic.is-active {
     opacity:1;
+  }
+
+  .emoji-chaos {
+    display: inline-block;
+    animation: star-glitch 3.8s infinite steps(1);
+  }
+
+  @keyframes star-glitch {
+    0% {
+      transform: scale(1) rotate(0);
+      filter: hue-rotate(0deg);
+    }
+    20% {
+      transform: scaleX(4) rotate(90deg);
+      filter: invert(1);
+    }
+    40% {
+      transform: scaleY(.1) rotate(270deg);
+      filter: hue-rotate(180deg);
+    }
+    60% {
+      transform: scale(3) rotate(-90deg);
+      filter: hue-rotate(300deg);
+    }
+    80% {
+      transform: scale(.2) rotate(180deg);
+      filter: brightness(4);
+    }
+  }
+
+  .emoji-sparkle {
+    display: inline-block;
+    animation: vortex 8s linear infinite;
+  }
+
+  @keyframes vortex {
+    0% {
+      transform: rotate(0) scale(1, 1);
+      filter: hue-rotate(0deg);
+    }
+    25% {
+      transform: rotate(270deg) scale(2.5, .3) skew(45deg);
+    }
+    50% {
+      transform: rotate(720deg) scale(.2, 2.5) skew(-45deg);
+      filter: hue-rotate(180deg);
+    }
+    75% {
+      transform: rotate(1080deg) scale(2, .4) skew(60deg);
+    }
+    100% {
+      transform: rotate(1440deg) scale(1, 1);
+      filter: hue-rotate(360deg);
+    }
   }
   </style>
 </head>
@@ -178,7 +232,9 @@
 
         </span>
       </p>
-      <p style="text-align: center; text-indent: 0px; font-size: 1.5em;" class="bold-font">&#128124;そして天国へ……&#10024;</p>
+            <p style="text-align: center; text-indent: 0px; font-size: 2em; margin-top: 6em;"><span class="emoji-chaos">🌟🫠🌟</span></p>
+            <p style="text-align: center; text-indent: 0px; font-size: 2em; margin-top: 6em;"><span class="emoji-sparkle">👁️🪼👁️</span></p>
+      <p style="text-align: center; text-indent: 0px; font-size: 1.5em; margin-top: 6em;" class="bold-font">&#128124;そして天国へ……&#10024;</p>
         
       <p class="il_img_sp"><img src="../media/others/weblog/radio/weblog_2026_10_23_5.webp" class="inline_bigimg">
 
