@@ -16,6 +16,39 @@
   <link rel="stylesheet" type="text/css" href="../styles/sp.css" media="screen and (max-width:768px)">
   <link rel="stylesheet" type="text/css" href="../styles/music.css" media="screen">
   <link rel="icon" type="image/svg+xml" href="../media/svg-icon/favicon.svg">
+  <style>
+  .weblog-fade-img{
+    position:relative;
+    display:block;
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:1em;
+    overflow:hidden;
+    isolation:isolate;
+    clip-path:inset(0 round 1em);
+    -webkit-mask-image:-webkit-radial-gradient(white, black);
+    background:#000;
+  }
+
+  .weblog-fade-img__pic{
+    position:absolute;
+    inset:0;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    object-fit:cover;
+    object-position:center;
+    border-radius:inherit;
+    opacity:0;
+    transition:opacity 1.6s ease;
+    will-change:opacity;
+  }
+
+  .weblog-fade-img__pic.is-active{
+    opacity:1;
+  }
+  </style>
 </head>
 
 <body>
@@ -71,7 +104,7 @@
       
       <h2 class="weblog-note">メニュー</h2>
       <div class="centering-wrap">
-        <p class="bold-font"><a href="#files">ファイル</a>（←再生はこちら）</p>
+        <p class="bold-font"><a href="#files">ファイル</a>（←再生はこちら）&#65372;<a href="#extra_img">幻想写真サーチ&#128270;</a></p>
         <!-- <details class="weblog-det-inn">
           <summary><span class="solid-under-line">（第 回）</span></summary>
           <ul>
@@ -112,7 +145,7 @@
 
         <hr>
 
-        <p class="weblog-info">※上記画像群はホモ・サピエンスの一個体が思考し，生成AI（OpenAI社・ChatGPT）に指示して出力させました．</p>
+        <p class="weblog-info">※上記画像群はホモ・サピエンスの一個体が思考し，生成AI（OpenAI社・ChatGPT）に指示して出力させた素材を用いて独自に酸っぱエグく構成しました．</p>
         <p class="weblog-info">音源: <span class="bold-font dotted-under-line">320kbps mp3</span>（高音質）;<!-- チャプタ項のもの（<span class="dotted-under-line">64kbps mp3</span>）と比較して高ビットレートの音声です．--> 参照先: Google Drive オンラインストレージ</p>
         <details>
           <summary>ファイル及びデータについての詳細表示</summary>
@@ -120,6 +153,36 @@
           <p style="text-indent:0;"><span class="bold-font">ファイルに関する説明とお願い&colon;</span><br>Google LLC <a href="https://www.google.com/" target="_blank" title="Google LLC さま. この別ドメインのサイトへジャンプします．" class="open-in-new-tab">https://www.google.com/</a> のクラウドストレージサービス，Google Drive に保存されているファイルを参照しています．<br>サイトにお越しの皆さまに鑑賞いただくことを目的として，誰でも再生可能な状態に設定してあります．<br>当サイト利用者さまがオンラインサーバ上でファイルを再生してお楽しみいただく以外の，たとえばローカルへの保存などの行為はお控えくださいますよう，お願い申し上げます．</p>
           <p style="text-indent:0;"><span class="bold-font">ドライブにアップロードする理由&colon;</span><br>ファイルサイズが大きいため．</p>
         </details>
+
+      <h2 class="weblog-note" id="extra_img">幻想写真サーチ&#128270;</h2>
+        <p style="text-align: center; text-indent: 0px; font-size: 1.5em;" class="bold-font">&#128444;&#65039;どこが変化するか発見してみて！&#128151;</p>
+        <p style="text-align: center; text-indent: 0px;">ヒント：それぞれの人物ごとに観察してみよう！&#128269;</p>
+        <p class="il_img_sp">
+        <span class="weblog-fade-img" id="weblogSlider">
+
+          <img
+            src="../media/others/weblog/radio/weblog_2026_10_23_1.webp"
+            class="weblog-fade-img__pic is-active">
+
+          <img
+            src="../media/others/weblog/radio/weblog_2026_10_23_2.webp"
+            class="weblog-fade-img__pic">
+
+          <img
+            src="../media/others/weblog/radio/weblog_2026_10_23_3.webp"
+            class="weblog-fade-img__pic">
+
+          <img
+            src="../media/others/weblog/radio/weblog_2026_10_23_4.webp"
+            class="weblog-fade-img__pic">
+
+        </span>
+      </p>
+      <p style="text-align: center; text-indent: 0px; font-size: 1.5em;" class="bold-font">&#128124;そして天国へ……&#10024;</p>
+        
+      <p class="il_img_sp"><img src="../media/others/weblog/radio/weblog_2026_10_23_5.webp" class="inline_bigimg">
+
+      <p class="weblog-info">※上記スライドショー等の各画像は生成AI（OpenAI社のChatGPT）に作成させました．因みに，ホモ・サピエンスの一個体は少しばかり暗躍しています．</p>
 
 
 <!--
@@ -140,7 +203,7 @@
         <p>貴重なご意見・ご感想・ご希望などをお聴かせくださると，ありがたいのです！ご協力いただける方は是非 <a href="../contact/index.html" title="お問い合わせページ" target="_blank" class="open-in-new-tab">筆者宛にご連絡</a> お願いいたします...！</p>
         <p>以上になります．今回もご清聴ありがとうございました！</p>
 
-        <p class="my-sign">[ Sys. T. Miyatake, (Oct 16, 2026. Last modified: Oct 20, 2026.;) ]</p>
+        <p class="my-sign">[ Sys. T. Miyatake, (Oct 16, 2026. Last modified: Oct 23, 2026.;) ]</p>
     </article>
 
     <div class="back-top">
@@ -164,6 +227,27 @@
     <p class="copyright"><small>&copy; 2023-2026 SYS.T.Miyatake</small></p>
   </footer>
   <div class="page-bar" id="page-fin"></div>
+  <script>
+  (() => {
+
+    const slides = document.querySelectorAll(
+      '#weblogSlider .weblog-fade-img__pic'
+    );
+
+    let current = 0;
+
+    setInterval(() => {
+
+      slides[current].classList.remove('is-active');
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.add('is-active');
+
+    }, 8000);
+
+  })();
+  </script>
 </body>
 
 </html>
