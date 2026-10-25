@@ -102,6 +102,38 @@
       filter: hue-rotate(360deg);
     }
   }
+
+  .x-mark {
+    position: relative;
+    display: inline-block;
+    padding: 0 4px;
+  }
+
+  .x-mark::before,
+  .x-mark::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background: red;
+  }
+
+  .x-mark::before {
+    transform: rotate(15deg);
+  }
+
+  .x-mark::after {
+    transform: rotate(-15deg);
+  }
+
+  .dots {
+    text-emphasis: filled dot;
+    text-emphasis-position: over;
+    -webkit-text-emphasis: filled dot;
+  }
+
   </style>
 </head>
 
@@ -158,7 +190,7 @@
       
       <h2 class="weblog-note">メニュー</h2>
       <div class="centering-wrap">
-        <p class="bold-font"><a href="#files">ファイル</a>（←再生はこちら）&#65372;<a href="#extra_img">幻想写真サーチ&#128270;</a></p>
+        <p class="bold-font"><a href="#files">ファイル</a>（←再生はこちら）&#65372;<a href="#extra_sound">切実な聴覚&#127925;</a>&#65372;<a href="#extra_img">幻想写真サーチ&#128270;</a></p>
         <!-- <details class="weblog-det-inn">
           <summary><span class="solid-under-line">（第 回）</span></summary>
           <ul>
@@ -207,6 +239,24 @@
           <p style="text-indent:0;"><span class="bold-font">ファイルに関する説明とお願い&colon;</span><br>Google LLC <a href="https://www.google.com/" target="_blank" title="Google LLC さま. この別ドメインのサイトへジャンプします．" class="open-in-new-tab">https://www.google.com/</a> のクラウドストレージサービス，Google Drive に保存されているファイルを参照しています．<br>サイトにお越しの皆さまに鑑賞いただくことを目的として，誰でも再生可能な状態に設定してあります．<br>当サイト利用者さまがオンラインサーバ上でファイルを再生してお楽しみいただく以外の，たとえばローカルへの保存などの行為はお控えくださいますよう，お願い申し上げます．</p>
           <p style="text-indent:0;"><span class="bold-font">ドライブにアップロードする理由&colon;</span><br>ファイルサイズが大きいため．</p>
         </details>
+
+
+      <h2 class="weblog-note" id="extra_sound">切実な聴覚&#127925;</h2>
+        <p style="text-align: center; text-indent: 0px; font-size: 1.5em;" class="bold-font">&#127911; 本エピソードに関係する貴重ミュージック<span class="x-mark">臭</span>集！&#128187;</p>
+        <p style="text-align: center; text-indent: 0px;" class="bold-font">&#127928; 青二才的悩乱のヘドニアや，キモチイ振動の海へようこそ！&#129724;</p>
+        
+        <p class="note-title">&#128074;&#129694; 成人式うらめしや &#129503;&zwj;&#9792;&#65039; &#128123;</p>
+        <p style="text-indent:0;">&#127925; <span class="bold-font">ボーカル版『<a href="https://drive.google.com/file/d/1cfvSu0PBHZ5c2s1qVfdip2v5b0eJ1-9Y/preview" target="_blank" class="open-in-new-tab">成人式うらめしや / Ghostwriting Myself: Fight Me, Crybaby (It's Me)</a>』</span>(C)T.Miyatake, 2016<br>
+        絶賛自意識暴走中の酸っぱい青年が歌い上げる「この世でただ独り浮いている存在のこの俺は」の美学とはなにか（それは非常にしくしくしちゃうもん！）<br>
+        控えめに言って，黄ばんでいます．そして，彼の魂の雄叫びが轟く頃，汝はこころやさしいプールに浮かんでいることでしょう．<br>
+        ※壁のような押し寄せるサウンドをお楽しみいただくため，音量は大きめ推奨であります（然れども汝の聴覚をお大事になさって）．
+        </p>
+
+        <p class="note-title">&#127929; &#128374;&#65039; クラヴィ - パラディドル練習曲 &#128131; &#128094;</p>
+        <p style="text-indent:0;">&#127925; <span class="bold-font">BGMフル版『<a href="https://drive.google.com/file/d/1onVLETWc8sIRXJQyuY2fkDT63sW4pHUQ/preview" target="_blank" class="open-in-new-tab">funk-paradiddle_demo</a>』</span>(C)T.Miyatake, 20??<br>
+        かっこよく歯切れがあるので，ガチBGMに最適！皆さんもこのページをブックマークして，この曲を作業用に活用するのぢや！&#128521;（※Oops! このファイルから末尾がループに向いていない状態であるという致命的欠陥が発見されたようです&#128561;）
+        </p>
+
 
       <h2 class="weblog-note" id="extra_img">幻想写真サーチ&#128270;</h2>
         <p style="text-align: center; text-indent: 0px; font-size: 1.5em;" class="bold-font">&#128444;&#65039;どこが変化するか発見してみて！&#128151;</p>
@@ -259,7 +309,7 @@
         <p>貴重なご意見・ご感想・ご希望などをお聴かせくださると，ありがたいのです！ご協力いただける方は是非 <a href="../contact/index.html" title="お問い合わせページ" target="_blank" class="open-in-new-tab">筆者宛にご連絡</a> お願いいたします...！</p>
         <p>以上になります．今回もご清聴ありがとうございました！</p>
 
-        <p class="my-sign">[ Sys. T. Miyatake, (Oct 16, 2026. Last modified: Oct 23, 2026.;) ]</p>
+        <p class="my-sign">[ Sys. T. Miyatake, (Oct 16, 2026. Last modified: Oct 26, 2026.;) ]</p>
     </article>
 
     <div class="back-top">
