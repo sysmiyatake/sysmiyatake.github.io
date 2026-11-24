@@ -67,39 +67,42 @@
     }
   }
   </style>
+  
   <script>
-    let audioBuffer;
+  const audioContext = new AudioContext();
+  const buffers = {};
 
-    const audioContext = new AudioContext();
+  const soundFiles = {
+    sound1: "../media/mp3-audio/se/mask-hi_SE.mp3",
+    sound2: "../media/mp3-audio/se/professor_SE.mp3"
+  };
 
-    async function init() {
-      const response = await fetch("../media/mp3-audio/se/mask-hi_SE.mp3");
+  async function loadSound(name, url) {
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
+    buffers[name] = await audioContext.decodeAudioData(arrayBuffer);
+  }
 
-      const arrayBuffer =
-        await response.arrayBuffer();
+  async function init() {
+    await Promise.all(
+      Object.entries(soundFiles).map(([name, url]) => loadSound(name, url))
+    );
+  }
 
-      audioBuffer =
-        await audioContext.decodeAudioData(arrayBuffer);
-    }
+  init();
 
-    init();
+  async function playSound(name) {
+    await audioContext.resume();
 
-    async function playSound() {
-      await audioContext.resume();
+    if (!buffers[name]) return;
 
-      const source =
-        audioContext.createBufferSource();
-
-      source.buffer = audioBuffer;
-
-      source.playbackRate.value =
-        0.9 + Math.random() * 0.2;
-
-      source.connect(audioContext.destination);
-
-      source.start();
-    }
-    </script>
+    const source = audioContext.createBufferSource();
+    source.buffer = buffers[name];
+    source.playbackRate.value = 0.9 + Math.random() * 0.2;
+    source.connect(audioContext.destination);
+    source.start();
+  }
+</script>
 </head>
 
 <body>
@@ -267,6 +270,7 @@
               </ol>
             <li style="margin-top: 2em;"><a href="#noise-hl">【音響実験】天国とそのノイズ</a>
               <ol reversed>
+                <li><a href="#amp_noise">Remix『詩集廟のある杜 x NOISE』</a></li>
                 <li><a href="#broken_mask">Remix『ブロークンMASKの奇数倍音官能』</a></li>
                 <li><a href="#merry_go">Remix『ピチ狂った八宝菜MERRY-GO』</a></li>
                 <li><a href="#ibasho">Remix『居場所がほしい』</a></li>
@@ -532,7 +536,7 @@
 
         <div style="text-align: center; user-select: none;">
         <p style="display: inline-block; animation: pulse 1s ease-in-out infinite; transform-origin: center; position: relative; z-index: 10;">
-          <span onclick="playSound()">&#128068;</span>
+          <span onclick="playSound('sound1')" style="cursor: pointer;">&#128068;</span>
         </p></div>
 
         <p style="margin-top: 3.5em;">メッセージ a: <span class="solid-under-line bold-font" style="font-size: 1.25em">これは私の顔ではなく，バージョンです．</span></p>
@@ -1610,6 +1614,22 @@
       <p style="color: brown;">【ご注意】※音源は<span class="bold-font solid-under-line">非常に音圧が高い</span>場合があります．お使いのデバイスの<span class="bold-font solid-under-line">オーディオ出力レベルを小さくしてから再生</span>し，心地よいポイントをお探しの上，お愉しみください．</p>
       <p>ちなみに，制作者のおすすめは「大音量」であります．とはいえ，呉呉も<span class="bold-font solid-under-line">聴覚をお大事に</span>．</p>
 
+      <hr id="amp_noise">
+
+      <h3 class="others-title">#5 天国Remix『詩集廟のある杜 x NOISE』</h3>
+        <p class="bold-font">メッセージ&colon; "<span class="dotted-under-line">懐メロ系であり，ゲーム脳であり，トマト歯茎かもしれない．</span>"&semi;</p>
+        <p>2023年オリジナル制作・2026年リミックス制作・同年11月24日公開作品<br>&#12302;詩集廟のある杜 Noise Remix&#12303;</p>
+        <p class="solid-under-line">大きな音の波に襲われ，ここはチイプなフアンシイ領土！&#127880;
+        </p>
+        <p class="thumb_fitbig"><span style="cursor: pointer;" onclick="playSound('sound2')"><img src="../media/others/suisen_joraku_2026.webp"></span></p>
+        <p class="bold-font" style="text-align: center; font-size: 1.5em;">&#128070; 指でつんつん &#127925; してあげてネ &#128070;</p>
+        <p style="color: brown;">※まずは音量を下げましたか？（↓確認してから再生）</p>
+        <p class="others-music"><audio preload="metadata" src="https://res.cloudinary.com/drtugcnem/video/upload/v1795515624/amp_noise_2026_oeynfe.mp3" controls>
+              お使いのブラウザはこのプレイヤーでの再生に対応していないようです．代替案として<a href="https://res.cloudinary.com/drtugcnem/video/upload/v1795515624/amp_noise_2026_oeynfe.mp3">こちらからお聴きください</a>．
+        </audio></p>
+        <p>【オドロ＝クホード・ヴェロシロイ（作者コメント）】教授もきっと，おネムです……（すぴすぴ。）</p>
+        <p><span class="bold-font">★ オリジナル曲は "『<a href="../music/2023/0004_AMT.html" class="open-in-new-tab" target="_blank">詩集廟のある杜</a>』T.Joraku.M, 2023</span>" であります．</p>
+
 
       <hr id="broken_mask">
 
@@ -1622,6 +1642,7 @@
               お使いのブラウザはこのプレイヤーでの再生に対応していないようです．代替案として<a href="https://res.cloudinary.com/drtugcnem/video/upload/v1787068936/mask-2014-demo_remix_2026_wzw6fe.mp3">こちらからお聴きください</a>．
         </audio></p>
         <p>【ワキガー・スッパ・ポー（作者コメント）】ポー！ポー！ポー！＾＾</p>
+        <p><span class="bold-font">★ オリジナル曲は "『<a href="../music/2015/0009_MASK.html" class="open-in-new-tab" target="_blank">MASK 2015 春秋覆面時代</a>』T.Miyatake, 2015</span>" であります．</p>
 
       <hr id="merry_go">
 
@@ -1659,7 +1680,9 @@
         <p class="others-music"><audio preload="metadata" src="https://res.cloudinary.com/drtugcnem/video/upload/v1778486190/SECRET_MASK_2025_niscko.mp3" controls>
               お使いのブラウザはこのプレイヤーでの再生に対応していないようです．代替案として<a href="https://res.cloudinary.com/drtugcnem/video/upload/v1778486190/SECRET_MASK_2025_niscko.mp3">こちらからお聴きください</a>．
         </audio></p>
-        <p>【ちゅっぱ・オブ・ザ・レモン（作者コメント）】2017年に，作者の代表曲と目される "MASK" シリーズがついに「終了宣言」とともに終止符を打たれた．しかし，こうして甦る．ここはもしかして，かの天国でしょうか……？（此岸からのインバウンドより）</p>    
+        <p>【ちゅっぱ・オブ・ザ・レモン（作者コメント）】2017年に，作者の代表曲と目される "MASK" シリーズがついに「終了宣言」とともに終止符を打たれた．しかし，こうして甦る．ここはもしかして，かの天国でしょうか……？（此岸からのインバウンドより）</p>
+
+        <p><span class="bold-font">★ オリジナル曲は "『<a href="../music/2017/0004_MASK-F.html" class="open-in-new-tab" target="_blank">MASK's FOREVER〜終了宣言〜</a>』T.Miyatake, 2017</span>" であります．</p>
       <hr>
 
       <p class="back-page-top-b"><a href="#table-of-contens">目次へ戻る</a></p>
