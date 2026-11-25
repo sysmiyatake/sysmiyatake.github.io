@@ -66,6 +66,52 @@
       filter: brightness(1.01) saturate(0.97); 
     }
   }
+
+  .suisen_crossfade {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  /* 1枚目 */
+  .suisen_crossfade img:first-child {
+    display: block;
+    border-radius: .75em;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* 2枚目 */
+  .suisen_crossfade img:last-child {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    border-radius: .75em;
+    height: 100%;
+    width: auto;
+  }
+
+  .suisen_crossfade img {
+    transition: opacity .8s ease-in-out;
+  }
+
+  #suisenImage1 {
+    opacity: 1;
+  }
+
+  #suisenImage2 {
+    opacity: 0;
+  }
+
+  .suisen_crossfade.alt #suisenImage1 {
+    opacity: 0;
+  }
+
+  .suisen_crossfade.alt #suisenImage2 {
+    opacity: 1;
+  }
   </style>
   
   <script>
@@ -91,8 +137,20 @@
 
   init();
 
+  let isAltImage = false;
+
+  function toggleImage() {
+    const container = document.querySelector(".suisen_crossfade");
+
+    isAltImage = !isAltImage;
+
+    container.classList.toggle("alt", isAltImage);
+  }
+
   async function playSound(name) {
     await audioContext.resume();
+
+    toggleImage();
 
     if (!buffers[name]) return;
 
@@ -102,7 +160,7 @@
     source.connect(audioContext.destination);
     source.start();
   }
-</script>
+  </script>
 </head>
 
 <body>
@@ -1621,7 +1679,10 @@
         <p>2023年オリジナル制作・2026年リミックス制作・同年11月24日公開作品<br>&#12302;詩集廟のある杜 Noise Remix&#12303;</p>
         <p class="solid-under-line">大きな音の波に襲われ，ここはチイプなフアンシイ領土！&#127880;
         </p>
-        <p class="thumb_fitbig"><span style="cursor: pointer;" onclick="playSound('sound2')"><img src="../media/others/suisen_joraku_2026.webp"></span></p>
+        <p class="thumb_fitbig suisen_crossfade" onclick="playSound('sound2')">
+          <img id="suisenImage1" src="../media/others/suisen_joraku_2026.webp">
+          <img id="suisenImage2" src="../media/others/suisen_joraku_alt_2026.webp">
+        </p>
         <p class="bold-font" style="text-align: center; font-size: 1.5em;">&#128070; 指でつんつん &#127925; してあげてネ &#128070;</p>
         <p style="color: brown;">※まずは音量を下げましたか？（↓確認してから再生）</p>
         <p class="others-music"><audio preload="metadata" src="https://res.cloudinary.com/drtugcnem/video/upload/v1795515624/amp_noise_2026_oeynfe.mp3" controls>
